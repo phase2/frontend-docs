@@ -1,0 +1,74 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "This is the start of our docs. Neat!", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/getting-started/system-requirements/", 
+            "text": "Use node 6 or node 8. Avoid node 7.\n\n\nES6 javascript", 
+            "title": "System Requirements"
+        }, 
+        {
+            "location": "/getting-started/first-steps/", 
+            "text": "npm install\nnpm start", 
+            "title": "First Steps"
+        }, 
+        {
+            "location": "/pattern-lab/atomic/", 
+            "text": "Pattern Lab information here.", 
+            "title": "Atomic design"
+        }, 
+        {
+            "location": "/gulp/tasks/", 
+            "text": "Gulp task information here.", 
+            "title": "Tasks"
+        }, 
+        {
+            "location": "/webpack/config/", 
+            "text": "Webpack information here.", 
+            "title": "Config"
+        }, 
+        {
+            "location": "/faq/general/", 
+            "text": "what is pattern lab?\n\n\nthe future, man", 
+            "title": "General"
+        }, 
+        {
+            "location": "/faq/general/#what-is-pattern-lab", 
+            "text": "the future, man", 
+            "title": "what is pattern lab?"
+        }, 
+        {
+            "location": "/faq/troubleshooting/", 
+            "text": "npm rebuild node-sass", 
+            "title": "Troubleshooting"
+        }, 
+        {
+            "location": "/faq/how-to-contribute/", 
+            "text": "", 
+            "title": "How to contribute"
+        }, 
+        {
+            "location": "/appendix/glossary/", 
+            "text": "", 
+            "title": "Glossary"
+        }, 
+        {
+            "location": "/appendix/architecture/", 
+            "text": "simplified pl folder structure\n\n\natoms / molecules / organisms (components)\n\n\nwebpack goodness\n\n\ngulp task runner to tie things together", 
+            "title": "Architecture"
+        }, 
+        {
+            "location": "/appendix/background/", 
+            "text": "i've got a disease, and the only prescription is more documentation", 
+            "title": "Background"
+        }, 
+        {
+            "location": "/appendix/library/", 
+            "text": "libraries", 
+            "title": "Library"
+        }
+    ]
+}

@@ -9,7 +9,7 @@
   
   <link rel="shortcut icon" href="../../favicon.ico">
   
-  <title>Background - Phase2 Front End Tools Documentation</title>
+  <title>Config - Phase2 Front End Tools Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Background";
-    var mkdocs_page_input_path = "appendix/background.md";
-    var mkdocs_page_url = "/appendix/background/";
+    var mkdocs_page_name = "Config";
+    var mkdocs_page_input_path = "gulp/gulpfile.md";
+    var mkdocs_page_url = "/gulp/gulpfile/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -87,25 +87,37 @@
 		
     <span class="caption-text">Gulp</span>
     <ul class="subnav">
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../gulp/gulpfile/">Config</a>
+    <a class="current" href="./">Config</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#configuration">Configuration</a></li>
+    
+
+    <li class="toctree-l3"><a href="#tasks">Tasks</a></li>
+    
+
+    <li class="toctree-l3"><a href="#example">Example</a></li>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../gulp/tasks/pl-compile/">pl Compile</a>
+    <a class="" href="../tasks/pl-compile/">pl Compile</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../gulp/tasks/twig-namespaces/">twig namespaces</a>
+    <a class="" href="../tasks/twig-namespaces/">twig namespaces</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../gulp/tasks/sass-to-json/">sass to json</a>
+    <a class="" href="../tasks/sass-to-json/">sass to json</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../gulp/tasks/wpds/">webpack dev server</a>
+    <a class="" href="../tasks/wpds/">webpack dev server</a>
                 </li>
     </ul>
 	    </li>
@@ -146,22 +158,19 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../glossary/">Glossary</a>
+    <a class="" href="../../appendix/glossary/">Glossary</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../architecture/">Architecture</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Background</a>
-    <ul class="subnav">
-            
-    </ul>
+    <a class="" href="../../appendix/architecture/">Architecture</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../library/">Library</a>
+    <a class="" href="../../appendix/background/">Background</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendix/library/">Library</a>
                 </li>
     </ul>
 	    </li>
@@ -188,11 +197,11 @@
     
       
         
-          <li>Appendix &raquo;</li>
+          <li>Gulp &raquo;</li>
         
       
     
-    <li>Background</li>
+    <li>Config</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -202,7 +211,52 @@
           <div role="main">
             <div class="section">
               
-                <p>i've got a disease, and the only prescription is more documentation</p>
+                <h1 id="configuration">Configuration</h1>
+<p>All gulp tasks and associated configuration are declared inside <strong>gulpfile.js</strong>. 
+You can see a full list of available tasks by running <code>npm run gulp -- -T</code>. The extra -- passes any flags to the gulp function. This method allows us to keep gulp as a local project dependency, instead of relying on global installs.</p>
+<h1 id="tasks">Tasks</h1>
+<p>All gulp task functions are exported from <code>./tools/tasks/*.js</code>, wrapped in a callback. The callback signals to gulp to move through the task list.</p>
+<h1 id="example">Example</h1>
+<pre><code class="js">const { exec } = require('child_process');
+
+/**
+ * Compile Pattern Lab
+ * @param plPath Full path to PL
+ * @returns {function(*)} A compile function that takes a callback
+ */
+module.exports = function plCompile(plPath) {
+  // Note returns a function with the plPath in closure
+  return (done) =&gt; {
+    exec(`php ${plPath}/core/console --generate`, (err, stdout, stderr) =&gt; {
+      console.log(stdout);
+
+      if (err) {
+        console.log(stderr);
+        done();
+        return false;
+      }
+
+      done();
+      return true;
+    });
+  };
+};
+</code></pre>
+
+<p>This function is then included in our main gulpfile.js and wrapped in a task like so:</p>
+<pre><code class="js">/**
+ * Pattern Lab raw compile function.
+ */
+// Config: Path to Pattern Lab installation.
+const plPath = path.resolve(__dirname, 'tools/pattern-lab');
+// PL compilation function, loaded up with the the PL path
+const plCompile = require('./tools/tasks/pl-compile')(plPath);
+
+/**
+ * Compile Pattern Lab completely.
+ */
+gulp.task('compile:pl', plCompile);
+</code></pre>
               
             </div>
           </div>
@@ -210,10 +264,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../library/" class="btn btn-neutral float-right" title="Library">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../tasks/pl-compile/" class="btn btn-neutral float-right" title="pl Compile">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../architecture/" class="btn btn-neutral" title="Architecture"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../pattern-lab/atomic/" class="btn btn-neutral" title="Atomic design"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -239,10 +293,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../architecture/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../pattern-lab/atomic/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../library/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../tasks/pl-compile/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

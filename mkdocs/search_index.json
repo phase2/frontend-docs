@@ -7,23 +7,103 @@
         }, 
         {
             "location": "/getting-started/system-requirements/", 
-            "text": "Use node 6 or node 8. Avoid node 7.\n\n\nES6 javascript", 
+            "text": "Prerequisites\n\n\n\n\nNode\n v6 or v8. (v7 will explode)\n\n\nPHP 5.4, 5.5, 5.6, OR 7 (5.3 might work, no promises)\n\n\ncomposer", 
             "title": "System Requirements"
         }, 
         {
+            "location": "/getting-started/system-requirements/#prerequisites", 
+            "text": "Node  v6 or v8. (v7 will explode)  PHP 5.4, 5.5, 5.6, OR 7 (5.3 might work, no promises)  composer", 
+            "title": "Prerequisites"
+        }, 
+        {
             "location": "/getting-started/first-steps/", 
-            "text": "npm install\nnpm start", 
+            "text": "From a fresh install:\n\n\nnpm install\nnpm run setup\nnpm run start\n\n\n\n\nDay to day:\n\n\nnpm run start", 
             "title": "First Steps"
         }, 
         {
+            "location": "/getting-started/drupal-requirements/", 
+            "text": "Drupal 8\n\n\nGet the \nComponent Libraries module\n:\n\n\ndrush dl components\ndrush en components -y\n\n\n\n\nIntegration\n\n\nEnsure the \ntwig-namespaces gulp task\n is also writing to the theme file. This allows for shorthand pattern inclusion inside of Drupal templates, ie \n{% include '@molecules/card.twig %}\n\n\nFrom your Drupal Twig templates in templates/ you can \n{% include %}\n, \n{% extends %}\n, and \n{% embed %}\n your Pattern Lab Twig template files (found in \n/source/_patterns\n). Each of the top level folders has a Twig Namespace like @organisms and then you append the path down to the file like below.\n\n\n{% include \n@organisms/path/to/file.twig\n with {\n  title: label,\n  largeCTA: true\n} %}\n\n\n\n\nFor a demonstration in a sample codebase of how exactly to integrate templates, we will include examples in the default /templates/ folder eventually. :)\n\n\nNot using Drupal?\n\n\nThese files are only used for Drupal integration and can be safely ignored/removed:\n\n\n\n\ndrupal/\n\n\ntemplates/\n\n\npatternlab.info.yml\n\n\npatternlab.libraries.yml\n\n\npatternlab.theme\n\n\nwebpack.drupal.config.js\n\n\n\n\nMake sure the twig-namespaces task is not still attempting to write to the non-existent theme-file!", 
+            "title": "Drupal Requirements"
+        }, 
+        {
+            "location": "/getting-started/drupal-requirements/#drupal-8", 
+            "text": "Get the  Component Libraries module :  drush dl components\ndrush en components -y", 
+            "title": "Drupal 8"
+        }, 
+        {
+            "location": "/getting-started/drupal-requirements/#integration", 
+            "text": "Ensure the  twig-namespaces gulp task  is also writing to the theme file. This allows for shorthand pattern inclusion inside of Drupal templates, ie  {% include '@molecules/card.twig %}  From your Drupal Twig templates in templates/ you can  {% include %} ,  {% extends %} , and  {% embed %}  your Pattern Lab Twig template files (found in  /source/_patterns ). Each of the top level folders has a Twig Namespace like @organisms and then you append the path down to the file like below.  {% include  @organisms/path/to/file.twig  with {\n  title: label,\n  largeCTA: true\n} %}  For a demonstration in a sample codebase of how exactly to integrate templates, we will include examples in the default /templates/ folder eventually. :)", 
+            "title": "Integration"
+        }, 
+        {
+            "location": "/getting-started/drupal-requirements/#not-using-drupal", 
+            "text": "These files are only used for Drupal integration and can be safely ignored/removed:   drupal/  templates/  patternlab.info.yml  patternlab.libraries.yml  patternlab.theme  webpack.drupal.config.js   Make sure the twig-namespaces task is not still attempting to write to the non-existent theme-file!", 
+            "title": "Not using Drupal?"
+        }, 
+        {
             "location": "/pattern-lab/atomic/", 
-            "text": "Pattern Lab information here.", 
+            "text": "Pattern Lab\n\n\nRefer to the \nPattern Lab Documentation\n for extensive info on how to use it. This toolset is built upon a custom Pattern Lab 2 \nEdition\n that is heavily influenced by the \nDrupal Edition of Pattern Lab\n and uses the Twig engine to bring it inline with Drupal 8's use of Twig.\n\n\nFolder Structure Differences\n\n\nOur folder structure makes some convenient alterations to the typical Pattern Lab folder setup. Basically we move \npattern-lab/source/\n up one level because it's the \"source\" for the entirety of the design system. Here's the difference between the typical and our structure. See \narchitecture\n for a more in-depth explanation of the structure.\n\n\nTypical Folder Structure\n\n\n\n\npattern-lab/\n\n\nconfig/\n\n\npublic/\n\n\nsource/\n\n\n_patterns/ (contains atoms, molecules, etc folders)\n\n\n\n\n\n\ncomposer.json\n\n\n\n\n\n\n\n\nOur Folder Structure\n\n\n\n\nsource/\n\n\n_patterns/ (contains atoms, molecules, etc folders)\n\n\n\n\n\n\ntools/\n\n\npattern-lab/\n\n\nconfig/\n\n\ncomposer.json\n\n\n\n\n\n\n\n\n\n\ndist/\n\n\npublic/ (compiled patternlab files)", 
             "title": "Atomic design"
         }, 
         {
-            "location": "/gulp/tasks/", 
-            "text": "Gulp task information here.", 
+            "location": "/pattern-lab/atomic/#pattern-lab", 
+            "text": "Refer to the  Pattern Lab Documentation  for extensive info on how to use it. This toolset is built upon a custom Pattern Lab 2  Edition  that is heavily influenced by the  Drupal Edition of Pattern Lab  and uses the Twig engine to bring it inline with Drupal 8's use of Twig.", 
+            "title": "Pattern Lab"
+        }, 
+        {
+            "location": "/pattern-lab/atomic/#folder-structure-differences", 
+            "text": "Our folder structure makes some convenient alterations to the typical Pattern Lab folder setup. Basically we move  pattern-lab/source/  up one level because it's the \"source\" for the entirety of the design system. Here's the difference between the typical and our structure. See  architecture  for a more in-depth explanation of the structure.", 
+            "title": "Folder Structure Differences"
+        }, 
+        {
+            "location": "/pattern-lab/atomic/#typical-folder-structure", 
+            "text": "pattern-lab/  config/  public/  source/  _patterns/ (contains atoms, molecules, etc folders)    composer.json", 
+            "title": "Typical Folder Structure"
+        }, 
+        {
+            "location": "/pattern-lab/atomic/#our-folder-structure", 
+            "text": "source/  _patterns/ (contains atoms, molecules, etc folders)    tools/  pattern-lab/  config/  composer.json      dist/  public/ (compiled patternlab files)", 
+            "title": "Our Folder Structure"
+        }, 
+        {
+            "location": "/gulp/gulpfile/", 
+            "text": "Configuration\n\n\nAll gulp tasks and associated configuration are declared inside \ngulpfile.js\n. \nYou can see a full list of available tasks by running \nnpm run gulp -- -T\n. The extra -- passes any flags to the gulp function. This method allows us to keep gulp as a local project dependency, instead of relying on global installs.\n\n\nTasks\n\n\nAll gulp task functions are exported from \n./tools/tasks/*.js\n, wrapped in a callback. The callback signals to gulp to move through the task list.\n\n\nExample\n\n\nconst { exec } = require('child_process');\n\n/**\n * Compile Pattern Lab\n * @param plPath Full path to PL\n * @returns {function(*)} A compile function that takes a callback\n */\nmodule.exports = function plCompile(plPath) {\n  // Note returns a function with the plPath in closure\n  return (done) =\n {\n    exec(`php ${plPath}/core/console --generate`, (err, stdout, stderr) =\n {\n      console.log(stdout);\n\n      if (err) {\n        console.log(stderr);\n        done();\n        return false;\n      }\n\n      done();\n      return true;\n    });\n  };\n};\n\n\n\n\nThis function is then included in our main gulpfile.js and wrapped in a task like so:\n\n\n/**\n * Pattern Lab raw compile function.\n */\n// Config: Path to Pattern Lab installation.\nconst plPath = path.resolve(__dirname, 'tools/pattern-lab');\n// PL compilation function, loaded up with the the PL path\nconst plCompile = require('./tools/tasks/pl-compile')(plPath);\n\n/**\n * Compile Pattern Lab completely.\n */\ngulp.task('compile:pl', plCompile);", 
+            "title": "Config"
+        }, 
+        {
+            "location": "/gulp/gulpfile/#configuration", 
+            "text": "All gulp tasks and associated configuration are declared inside  gulpfile.js . \nYou can see a full list of available tasks by running  npm run gulp -- -T . The extra -- passes any flags to the gulp function. This method allows us to keep gulp as a local project dependency, instead of relying on global installs.", 
+            "title": "Configuration"
+        }, 
+        {
+            "location": "/gulp/gulpfile/#tasks", 
+            "text": "All gulp task functions are exported from  ./tools/tasks/*.js , wrapped in a callback. The callback signals to gulp to move through the task list.", 
             "title": "Tasks"
+        }, 
+        {
+            "location": "/gulp/gulpfile/#example", 
+            "text": "const { exec } = require('child_process');\n\n/**\n * Compile Pattern Lab\n * @param plPath Full path to PL\n * @returns {function(*)} A compile function that takes a callback\n */\nmodule.exports = function plCompile(plPath) {\n  // Note returns a function with the plPath in closure\n  return (done) =  {\n    exec(`php ${plPath}/core/console --generate`, (err, stdout, stderr) =  {\n      console.log(stdout);\n\n      if (err) {\n        console.log(stderr);\n        done();\n        return false;\n      }\n\n      done();\n      return true;\n    });\n  };\n};  This function is then included in our main gulpfile.js and wrapped in a task like so:  /**\n * Pattern Lab raw compile function.\n */\n// Config: Path to Pattern Lab installation.\nconst plPath = path.resolve(__dirname, 'tools/pattern-lab');\n// PL compilation function, loaded up with the the PL path\nconst plCompile = require('./tools/tasks/pl-compile')(plPath);\n\n/**\n * Compile Pattern Lab completely.\n */\ngulp.task('compile:pl', plCompile);", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/gulp/tasks/pl-compile/", 
+            "text": "This is the compile function used by pattern lab to generate all the static assets from your twig files.", 
+            "title": "pl Compile"
+        }, 
+        {
+            "location": "/gulp/tasks/twig-namespaces/", 
+            "text": "This file is the sauce that lets us compile pattern lab error-free, without manually adding every new pattern folder \nto the pattern lab config file.\n\n\nAn additional option can be turned on to also write the namespaces to the drupal theme.info.yml. This lets you use the pattern shorthands when referencing twig.", 
+            "title": "twig namespaces"
+        }, 
+        {
+            "location": "/gulp/tasks/sass-to-json/", 
+            "text": "This gulp task watches our global configuration-related sass files, ie the ones that are setting variables, in order to generate sample data objects for our configuration-related patterns.\n\n\nBasically, it's looking for any variables prefixed with certain strings, as defined in the gulpfile configuration, to write those variables into an array of individual json objects that a few patterns are looking at.\n\n\nBy default, it checks for:\n\n\n\n\ncolors (\n$c-\n)\n\n\nfont families (\n$ff--\n)\n\n\nfont sizes (\n$fs--\n)\n\n\nbreakpoints (\n$bp--\n)\n\n\nspacing (\n$spacing--\n)", 
+            "title": "sass to json"
+        }, 
+        {
+            "location": "/gulp/tasks/wpds/", 
+            "text": "This is the gulp task that launches our webpack dev server, which does all of the other content watching and HMR goodness.", 
+            "title": "webpack dev server"
         }, 
         {
             "location": "/webpack/config/", 
@@ -57,8 +137,18 @@
         }, 
         {
             "location": "/appendix/architecture/", 
-            "text": "simplified pl folder structure\n\n\natoms / molecules / organisms (components)\n\n\nwebpack goodness\n\n\ngulp task runner to tie things together", 
+            "text": "Project Architecture\n\n\nFolder Structure\n\n\n\n\nsource/\n\n\n_patterns/\n (contains atoms, molecules, etc.)\n\n\n_meta/\n (styleguide meta patterns)\n\n\n_data/\n (global data objects for prototyping patterns)\n\n\nfonts/\n \n\n\nscss/\n  (vendor sass (bootstrap, etc))\n\n\nicons/\n \n\n\ndesign-system.js\n \n\n\n\n\n\n\ntools/\n \n\n\npattern-lab/\n\n\nconfig/\n\n\ncomposer.json\n\n\n\n\n\n\n\n\n\n\ndist/\n (all compiled assets)\n\n\npublic/\n (compiled patternlab files)\n\n\n\n\n\n\ndrupal/\n (compiled assets specifically for drupal)\n\n\ntemplates/\n (drupal theme templates)", 
             "title": "Architecture"
+        }, 
+        {
+            "location": "/appendix/architecture/#project-architecture", 
+            "text": "", 
+            "title": "Project Architecture"
+        }, 
+        {
+            "location": "/appendix/architecture/#folder-structure", 
+            "text": "source/  _patterns/  (contains atoms, molecules, etc.)  _meta/  (styleguide meta patterns)  _data/  (global data objects for prototyping patterns)  fonts/    scss/   (vendor sass (bootstrap, etc))  icons/    design-system.js      tools/    pattern-lab/  config/  composer.json      dist/  (all compiled assets)  public/  (compiled patternlab files)    drupal/  (compiled assets specifically for drupal)  templates/  (drupal theme templates)", 
+            "title": "Folder Structure"
         }, 
         {
             "location": "/appendix/background/", 
@@ -67,8 +157,28 @@
         }, 
         {
             "location": "/appendix/library/", 
-            "text": "libraries", 
+            "text": "Pattern Lab\n\n\nRefer to the \nPattern Lab Documentation\n for extensive info on how to use it. This theme starter is a custom Pattern Lab 2 \nEdition\n that is heavily influenced by the \nDrupal Edition of Pattern Lab\n and uses the Twig engine to bring it inline with Drupal 8's use of Twig.\n\n\nFolder Structure Differences\n\n\nOur folder structure makes a slight but convenient alteration to the typical Pattern Lab folder setup. Basically we move \npattern-lab/source/\n up one level because we keep Sass in there too and it's the \"source\" for much of the theme. Here's the difference between the typical and our structure (few folders mentioned for brevity; please see Orientation above for a more thorough list).\n\n\nTypical Folder Structure\n\n\n\n\npattern-lab/\n\n\nconfig/\n\n\npublic/\n\n\nsource/\n\n\n_patterns/ (contains atoms, molecules, etc folders)\n\n\n\n\n\n\ncomposer.json\n\n\n\n\nOur Folder Structure\n\n\n\n\nsource/\n\n\n_patterns/ (contains atoms, molecules, etc folders)\n\n\npattern-lab/\n\n\nconfig/\n\n\npublic/\n\n\ncomposer.json", 
             "title": "Library"
+        }, 
+        {
+            "location": "/appendix/library/#pattern-lab", 
+            "text": "Refer to the  Pattern Lab Documentation  for extensive info on how to use it. This theme starter is a custom Pattern Lab 2  Edition  that is heavily influenced by the  Drupal Edition of Pattern Lab  and uses the Twig engine to bring it inline with Drupal 8's use of Twig.", 
+            "title": "Pattern Lab"
+        }, 
+        {
+            "location": "/appendix/library/#folder-structure-differences", 
+            "text": "Our folder structure makes a slight but convenient alteration to the typical Pattern Lab folder setup. Basically we move  pattern-lab/source/  up one level because we keep Sass in there too and it's the \"source\" for much of the theme. Here's the difference between the typical and our structure (few folders mentioned for brevity; please see Orientation above for a more thorough list).", 
+            "title": "Folder Structure Differences"
+        }, 
+        {
+            "location": "/appendix/library/#typical-folder-structure", 
+            "text": "pattern-lab/  config/  public/  source/  _patterns/ (contains atoms, molecules, etc folders)    composer.json", 
+            "title": "Typical Folder Structure"
+        }, 
+        {
+            "location": "/appendix/library/#our-folder-structure", 
+            "text": "source/  _patterns/ (contains atoms, molecules, etc folders)  pattern-lab/  config/  public/  composer.json", 
+            "title": "Our Folder Structure"
         }
     ]
 }

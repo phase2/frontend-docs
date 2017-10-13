@@ -65,6 +65,10 @@
                     
     <a class="" href="../../getting-started/first-steps/">First Steps</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../../getting-started/drupal-requirements/">Drupal Requirements</a>
+                </li>
     </ul>
 	    </li>
           
@@ -85,7 +89,23 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../gulp/tasks/">Tasks</a>
+    <a class="" href="../../gulp/gulpfile/">Config</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gulp/tasks/pl-compile/">pl Compile</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gulp/tasks/twig-namespaces/">twig namespaces</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gulp/tasks/sass-to-json/">sass to json</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gulp/tasks/wpds/">webpack dev server</a>
                 </li>
     </ul>
 	    </li>
@@ -133,6 +153,15 @@
     <a class="current" href="./">Architecture</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#project-architecture">Project Architecture</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#folder-structure">Folder Structure</a></li>
+        
+        </ul>
+    
+
     </ul>
                 </li>
                 <li class="">
@@ -182,10 +211,34 @@
           <div role="main">
             <div class="section">
               
-                <p>simplified pl folder structure</p>
-<p>atoms / molecules / organisms (components)</p>
-<p>webpack goodness</p>
-<p>gulp task runner to tie things together</p>
+                <h1 id="project-architecture">Project Architecture</h1>
+<h2 id="folder-structure">Folder Structure</h2>
+<ul>
+<li><strong>source/</strong><ul>
+<li><strong>_patterns/</strong> (contains atoms, molecules, etc.)</li>
+<li><strong>_meta/</strong> (styleguide meta patterns)</li>
+<li><strong>_data/</strong> (global data objects for prototyping patterns)</li>
+<li><strong>fonts/</strong> </li>
+<li><strong>scss/</strong>  (vendor sass (bootstrap, etc))</li>
+<li><strong>icons/</strong> </li>
+<li><strong>design-system.js</strong> </li>
+</ul>
+</li>
+<li><strong>tools/</strong> <ul>
+<li><strong>pattern-lab/</strong><ul>
+<li><strong>config/</strong></li>
+<li><strong>composer.json</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>dist/</strong> (all compiled assets)<ul>
+<li><strong>public/</strong> (compiled patternlab files)</li>
+</ul>
+</li>
+<li><strong>drupal/</strong> (compiled assets specifically for drupal)</li>
+<li><strong>templates/</strong> (drupal theme templates)</li>
+</ul>
               
             </div>
           </div>

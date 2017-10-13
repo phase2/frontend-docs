@@ -65,6 +65,10 @@
                     
     <a class="" href="../../getting-started/first-steps/">First Steps</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../../getting-started/drupal-requirements/">Drupal Requirements</a>
+                </li>
     </ul>
 	    </li>
           
@@ -85,7 +89,23 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../gulp/tasks/">Tasks</a>
+    <a class="" href="../../gulp/gulpfile/">Config</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gulp/tasks/pl-compile/">pl Compile</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gulp/tasks/twig-namespaces/">twig namespaces</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gulp/tasks/sass-to-json/">sass to json</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gulp/tasks/wpds/">webpack dev server</a>
                 </li>
     </ul>
 	    </li>
@@ -141,6 +161,15 @@
     <a class="current" href="./">Library</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#pattern-lab">Pattern Lab</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#folder-structure-differences">Folder Structure Differences</a></li>
+        
+        </ul>
+    
+
     </ul>
                 </li>
     </ul>
@@ -182,7 +211,30 @@
           <div role="main">
             <div class="section">
               
-                <p>libraries</p>
+                <h2 id="pattern-lab">Pattern Lab</h2>
+<p>Refer to the <a href="http://patternlab.io/docs">Pattern Lab Documentation</a> for extensive info on how to use it. This theme starter is a custom Pattern Lab 2 <em>Edition</em> that is heavily influenced by the <a href="https://github.com/pattern-lab/edition-php-drupal-standard">Drupal Edition of Pattern Lab</a> and uses the Twig engine to bring it inline with Drupal 8's use of Twig.</p>
+<h3 id="folder-structure-differences">Folder Structure Differences</h3>
+<p>Our folder structure makes a slight but convenient alteration to the typical Pattern Lab folder setup. Basically we move <code>pattern-lab/source/</code> up one level because we keep Sass in there too and it's the "source" for much of the theme. Here's the difference between the typical and our structure (few folders mentioned for brevity; please see Orientation above for a more thorough list).</p>
+<h4 id="typical-folder-structure">Typical Folder Structure</h4>
+<ul>
+<li>pattern-lab/</li>
+<li>config/</li>
+<li>public/</li>
+<li>source/<ul>
+<li>_patterns/ (contains atoms, molecules, etc folders)</li>
+</ul>
+</li>
+<li>composer.json</li>
+</ul>
+<h4 id="our-folder-structure">Our Folder Structure</h4>
+<ul>
+<li>source/</li>
+<li>_patterns/ (contains atoms, molecules, etc folders)</li>
+<li>pattern-lab/</li>
+<li>config/</li>
+<li>public/</li>
+<li>composer.json</li>
+</ul>
               
             </div>
           </div>

@@ -9,7 +9,7 @@
   
   <link rel="shortcut icon" href="../../favicon.ico">
   
-  <title>Tasks - Phase2 Front End Tools Documentation</title>
+  <title>Drupal Requirements - Phase2 Front End Tools Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Tasks";
-    var mkdocs_page_input_path = "gulp/tasks.md";
-    var mkdocs_page_url = "/gulp/tasks/";
+    var mkdocs_page_name = "Drupal Requirements";
+    var mkdocs_page_input_path = "getting-started/drupal-requirements.md";
+    var mkdocs_page_url = "/getting-started/drupal-requirements/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -59,11 +59,29 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../getting-started/system-requirements/">System Requirements</a>
+    <a class="" href="../system-requirements/">System Requirements</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../getting-started/first-steps/">First Steps</a>
+    <a class="" href="../first-steps/">First Steps</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Drupal Requirements</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#drupal-8">Drupal 8</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#integration">Integration</a></li>
+        
+            <li><a class="toctree-l4" href="#not-using-drupal">Not using Drupal?</a></li>
+        
+        </ul>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -83,12 +101,25 @@
 		
     <span class="caption-text">Gulp</span>
     <ul class="subnav">
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Tasks</a>
-    <ul class="subnav">
-            
-    </ul>
+    <a class="" href="../../gulp/gulpfile/">Config</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gulp/tasks/pl-compile/">pl Compile</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gulp/tasks/twig-namespaces/">twig namespaces</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gulp/tasks/sass-to-json/">sass to json</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gulp/tasks/wpds/">webpack dev server</a>
                 </li>
     </ul>
 	    </li>
@@ -168,11 +199,11 @@
     
       
         
-          <li>Gulp &raquo;</li>
+          <li>Getting Started &raquo;</li>
         
       
     
-    <li>Tasks</li>
+    <li>Drupal Requirements</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -182,7 +213,33 @@
           <div role="main">
             <div class="section">
               
-                <p>Gulp task information here.</p>
+                <h1 id="drupal-8">Drupal 8</h1>
+<p>Get the <a href="https://www.drupal.org/project/components">Component Libraries module</a>:</p>
+<pre><code class="bash">drush dl components
+drush en components -y
+</code></pre>
+
+<h2 id="integration">Integration</h2>
+<p>Ensure the <a href="../../gulp/tasks/twig-namespaces/">twig-namespaces gulp task</a> is also writing to the theme file. This allows for shorthand pattern inclusion inside of Drupal templates, ie <code>{% include '@molecules/card.twig %}</code></p>
+<p>From your Drupal Twig templates in templates/ you can <code>{% include %}</code>, <code>{% extends %}</code>, and <code>{% embed %}</code> your Pattern Lab Twig template files (found in <code>/source/_patterns</code>). Each of the top level folders has a Twig Namespace like @organisms and then you append the path down to the file like below.</p>
+<pre><code class="twig">{% include &quot;@organisms/path/to/file.twig&quot; with {
+  title: label,
+  largeCTA: true
+} %}
+</code></pre>
+
+<p>For a demonstration in a sample codebase of how exactly to integrate templates, we will include examples in the default /templates/ folder eventually. :)</p>
+<h2 id="not-using-drupal">Not using Drupal?</h2>
+<p>These files are only used for Drupal integration and can be safely ignored/removed:</p>
+<ul>
+<li>drupal/</li>
+<li>templates/</li>
+<li>patternlab.info.yml</li>
+<li>patternlab.libraries.yml</li>
+<li>patternlab.theme</li>
+<li>webpack.drupal.config.js</li>
+</ul>
+<p>Make sure the twig-namespaces task is not still attempting to write to the non-existent theme-file!</p>
               
             </div>
           </div>
@@ -190,10 +247,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../webpack/config/" class="btn btn-neutral float-right" title="Config">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../pattern-lab/atomic/" class="btn btn-neutral float-right" title="Atomic design">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../pattern-lab/atomic/" class="btn btn-neutral" title="Atomic design"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../first-steps/" class="btn btn-neutral" title="First Steps"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -219,10 +276,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../pattern-lab/atomic/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../first-steps/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../webpack/config/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../pattern-lab/atomic/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

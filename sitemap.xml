@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,13 +13,19 @@
         
     <url>
      <loc>/getting-started/system-requirements/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/getting-started/first-steps/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2017-10-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/getting-started/drupal-requirements/</loc>
+     <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -29,7 +35,7 @@
         
     <url>
      <loc>/pattern-lab/atomic/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -38,8 +44,32 @@
     
         
     <url>
-     <loc>/gulp/tasks/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <loc>/gulp/gulpfile/</loc>
+     <lastmod>2017-10-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/gulp/tasks/pl-compile/</loc>
+     <lastmod>2017-10-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/gulp/tasks/twig-namespaces/</loc>
+     <lastmod>2017-10-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/gulp/tasks/sass-to-json/</loc>
+     <lastmod>2017-10-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/gulp/tasks/wpds/</loc>
+     <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -49,7 +79,7 @@
         
     <url>
      <loc>/webpack/config/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -59,19 +89,19 @@
         
     <url>
      <loc>/faq/general/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/faq/troubleshooting/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/faq/how-to-contribute/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -81,25 +111,25 @@
         
     <url>
      <loc>/appendix/glossary/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/appendix/architecture/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/appendix/background/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/appendix/library/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2017-10-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

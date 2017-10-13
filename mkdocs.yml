@@ -6,10 +6,15 @@ pages:
   - Getting Started:
     - System Requirements: 'getting-started/system-requirements.md'
     - First Steps: 'getting-started/first-steps.md'
+    - Drupal Requirements: 'getting-started/drupal-requirements.md'
   - Pattern Lab:
     - Atomic design: 'pattern-lab/atomic.md'
   - Gulp:
-    - Tasks: 'gulp/tasks.md'
+    - Config: 'gulp/gulpfile.md'
+    - pl Compile: 'gulp/tasks/pl-compile.md'
+    - twig namespaces: 'gulp/tasks/twig-namespaces.md'
+    - sass to json: 'gulp/tasks/sass-to-json.md'
+    - webpack dev server: 'gulp/tasks/wpds.md'
   - Webpack:
     - Config: 'webpack/config.md'
   - FAQ:

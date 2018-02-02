@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../favicon.ico">
+  
+  <title>Gulp - Particle Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Gulp";
+    var mkdocs_page_input_path = "config/gulpfile.md";
+    var mkdocs_page_url = "/config/gulpfile/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Particle Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/system-requirements/">Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/commands/">Commands</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/architecture/">Architecture</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Config</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../general/">General</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../webpack/">Webpack</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Gulp</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#configuration">Configuration</a></li>
+    
+
+    <li class="toctree-l3"><a href="#tasks">Tasks</a></li>
+    
+
+    <li class="toctree-l3"><a href="#twig-namespaces">twig-namespaces</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../sass/">Sass</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../linting/">Linting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../testing/">Testing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Apps</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../apps/pl/">Pattern Lab</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apps/drupal/">Drupal</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apps/grav/">Grav</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apps/general/">Adding or Removing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../faq/">FAQ</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/">Appendix</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Particle Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Config &raquo;</li>
+        
+      
+    
+    <li>Gulp</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Gulp steps in to handle the gaps that Webpack misses. In two words, Twig support. In more words, Twig namespacing support for appropriate apps, some helper tasks for Pattern Lab, and the previously mentioned tasks for starting and refreshing the webpack dev server locally.</p>
+<h1 id="configuration">Configuration</h1>
+<p>All gulp tasks and associated configuration are declared inside <strong>gulpfile.js</strong>. 
+You can see a full list of available tasks by running <code>npm run gulp -- -T</code>. The extra -- passes any flags to the gulp function. This method allows us to keep gulp as a local project dependency, instead of relying on global installs.</p>
+<h1 id="tasks">Tasks</h1>
+<p>All gulp task functions are exported from <code>./tools/tasks/*.js</code>, wrapped in a callback. The callback signals to gulp to move through the task list.</p>
+<p>For example, this is the task that compiles Pattern Lab, found in <code>./tools/tasks/pl-compile.js</code> </p>
+<pre><code class="js">const { exec } = require('child_process');
+
+/**
+ * Compile Pattern Lab
+ * @param plPath Full path to PL
+ * @returns {function(*)} A compile function that takes a callback
+ */
+module.exports = function plCompile(plPath) {
+  // Note returns a function with the plPath in closure
+  return (done) =&gt; {
+    exec(`php ${plPath}/core/console --generate`, (err, stdout, stderr) =&gt; {
+      console.log(stdout);
+
+      if (err) {
+        console.log(stderr);
+        done();
+        return false;
+      }
+
+      done();
+      return true;
+    });
+  };
+};
+</code></pre>
+
+<p>This function is then included in our main <code>gulpfile.js</code> and wrapped in a task like so:</p>
+<pre><code class="js">/**
+ * Pattern Lab raw compile function.
+ */
+// Config: Path to Pattern Lab installation.
+const plPath = path.resolve(__dirname, 'tools/pattern-lab');
+// PL compilation function, loaded up with the the PL path
+const plCompile = require('./tools/tasks/pl-compile')(plPath);
+
+/**
+ * Compile Pattern Lab completely.
+ */
+gulp.task('compile:pl', plCompile);
+</code></pre>
+
+<p>Every new task should be defined in a similar manner to this, to ensure gulp and webpack play nicely together.</p>
+<h1 id="twig-namespaces">twig-namespaces</h1>
+<p>This task is the sauce that lets us compile pattern lab error-free, without manually adding every new pattern folder 
+to the pattern lab config file. Each app that needs to know about twig namespaces needs an object like so: </p>
+<pre><code class="json">      {
+        // Note: PL will NOT compile unless the namespaces are explicitly declared
+        configFile: path.join(PATH_PL, 'pattern-lab/config/config.yml'),
+        atKey: 'plugins.twigNamespaces.namespaces',
+        pathRelativeToDir: path.join(PATH_PL, 'pattern-lab/'),
+      },
+</code></pre>
+
+<p>This is all the info gulp needs to plop down the namespace paths at. 
+The namespaces themselves are defined right underneath those objects: </p>
+<pre><code class="json">// What are the top-level namespace paths, and which sub paths should we ignore?
+    sets: {
+      protons: {
+        root: 'source/_patterns/00-protons',
+        ignore: '/demo',
+      },
+</code></pre>
+
+<p>If you adjust the namespace sets, be sure to also adjust the accompanying namespace in <code>webpack.shared.config.js</code>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../sass/" class="btn btn-neutral float-right" title="Sass">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../webpack/" class="btn btn-neutral" title="Webpack"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../webpack/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../sass/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

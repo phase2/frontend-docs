@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../favicon.ico">
+  
+  <title>Linting - Particle Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Linting";
+    var mkdocs_page_input_path = "config/linting.md";
+    var mkdocs_page_url = "/config/linting/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Particle Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/system-requirements/">Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/commands/">Commands</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/architecture/">Architecture</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Config</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../general/">General</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../webpack/">Webpack</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../gulpfile/">Gulp</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../sass/">Sass</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Linting</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#javascript">Javascript</a></li>
+    
+
+    <li class="toctree-l3"><a href="#sass">Sass</a></li>
+    
+
+    <li class="toctree-l3"><a href="#twig">Twig</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../testing/">Testing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Apps</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../apps/pl/">Pattern Lab</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apps/drupal/">Drupal</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apps/grav/">Grav</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apps/general/">Adding or Removing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../faq/">FAQ</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/">Appendix</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Particle Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Config &raquo;</li>
+        
+      
+    
+    <li>Linting</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>While particle does not care <em>what</em> application ultimately consumes your design system, out of the box, it does care about how that design system is written. Particularly when it comes to linting. <strong>The linting should hurt your feelings</strong>.</p>
+<h2 id="javascript">Javascript</h2>
+<p>All javascript should be written in ES6 (ES2015) according to the <a href="https://github.com/airbnb/javascript">AirBnB JavaScript Style Guide</a>. Webpack will use Babel to transpile all javascript back to ES5 in emitted bundles.</p>
+<p>To adjust the default rules edit <code>.eslintrc.js</code></p>
+<h2 id="sass">Sass</h2>
+<p><a href="https://stylelint.io/user-guide">Stylelint</a> is included as part of our webpack buildchain. Our ruleset is an in-house blend that we've found makes for clean, readable, maintainable stylesheets. </p>
+<p>To adjust the default rules edit <code>.stylelintrc</code></p>
+<h2 id="twig">Twig</h2>
+<p>A Twig linter is not currently included in Particle. We recommend following the official <a href="https://twig.symfony.com/doc/2.x/coding_standards.html">Twig standards</a>.</p>
+<p>We also heavily encourage using <a href="http://getbem.com/introduction/">BEM syntax</a> for your HTML and Sass. This is not enforced, but we find that BEM syntax plays very nicely with Atomic Design concepts and generally makes for cleaner, more maintainable stylesheets.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../testing/" class="btn btn-neutral float-right" title="Testing">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../sass/" class="btn btn-neutral" title="Sass"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../sass/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../testing/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

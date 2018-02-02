@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../favicon.ico">
+  
+  <title>Testing - Particle Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Testing";
+    var mkdocs_page_input_path = "config/testing.md";
+    var mkdocs_page_url = "/config/testing/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Particle Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/system-requirements/">Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/commands/">Commands</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/architecture/">Architecture</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Config</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../general/">General</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../webpack/">Webpack</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../gulpfile/">Gulp</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../sass/">Sass</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../linting/">Linting</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Testing</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#accessibility-testing">Accessibility Testing</a></li>
+    
+
+    <li class="toctree-l3"><a href="#unit-testing">Unit Testing</a></li>
+    
+
+    <li class="toctree-l3"><a href="#visual-regression-testing">Visual Regression Testing</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Apps</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../apps/pl/">Pattern Lab</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apps/drupal/">Drupal</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apps/grav/">Grav</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apps/general/">Adding or Removing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../faq/">FAQ</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/">Appendix</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Particle Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Config &raquo;</li>
+        
+      
+    
+    <li>Testing</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Particle provides the starting point for various types of testing. Tests are located under the tools directory:</p>
+<pre><code># ./particle/
+.
+├── tools/
+│   ├── tasks/
+│   └── tests/
+│   │   └── accessibility/
+│   │   └── unit/
+│   │   └── vrt/
+│   └── ...
+└── ...
+</code></pre>
+<h1 id="accessibility-testing">Accessibility Testing</h1>
+<p>To run <a href="http://pa11y.org/">pa11y</a> accessibility testing on Pattern Lab rendered output, first you'll need to install the pa11y npm package:</p>
+<pre><code class="bash">npm install pa11y@5.0.0-beta.7 pa11y-reporter-cli
+</code></pre>
+
+<p>To save these devDependencies to your project <em>permanently</em>, run the following instead:</p>
+<pre><code class="bash">npm install --save-dev pa11y@5.0.0-beta.7 pa11y-reporter-cli
+</code></pre>
+
+<p>Then whenever you want to run your tests, simply start the local Pattern Lab dev server in one session:</p>
+<pre><code class="bash">npm run start
+</code></pre>
+
+<p>And the kick off the pa11y tests in another session:</p>
+<pre><code class="bash">npm run test:pa11y
+</code></pre>
+
+<p>See <code>./tools/pa11y.js</code> for configuration <a href="https://github.com/pa11y/pa11y/tree/5.x#configuration">options</a>. Note the ignore options are for example only, add your needed updates to the options object. Add additional pages to the test via the <code>testPaths</code> array.</p>
+<pre><code class="js">const options = {
+  standard: 'WCAG2AAA',
+  ignore: [
+    'WCAG2AAA.Principle3.Guideline3_1.3_1_1.H57.2',
+  ],
+  log: {
+    debug: console.log,
+    error: console.error,
+    info: console.log,
+  },
+};
+</code></pre>
+
+<p>If Docker is part of your stack, you may want to try <a href="https://github.com/phase2/docker-pa11y">docker-pa11y</a>, which simplifies a large chunk of the above, and keeps everything neatly containerized. Just saying.</p>
+<h1 id="unit-testing">Unit Testing</h1>
+<p>Particle provides unit testing as well using <a href="https://facebook.github.io/jest/docs/en/tutorial-jquery.html">Jest</a>.</p>
+<p>Simply run the following to run Jest tests against the design system:</p>
+<pre><code class="js">npm run test:unit
+</code></pre>
+
+<p>Note the <code>__tests__</code> folders within components for examples.</p>
+<h1 id="visual-regression-testing">Visual Regression Testing</h1>
+<p>Particle does not currently include any VRT tools by default, but we're big fans. Hopefully coming soon.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../apps/pl/" class="btn btn-neutral float-right" title="Pattern Lab">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../linting/" class="btn btn-neutral" title="Linting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../linting/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../apps/pl/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

@@ -2,142 +2,92 @@
     "docs": [
         {
             "location": "/", 
-            "text": "This is the start of our docs. Neat!", 
-            "title": "Home"
+            "text": "What is Particle?\n\n\nParticle\n is an opinionated toolkit for building application-agnostic design systems built with love by \nPhase2\n.\n\n\nProvides\n\n\n\n\nDrupal theme and Pattern Lab app\n\n\nStrict \nAtomic Design\n component structure\n\n\nWebpack bundling of all CSS, javascript, font, and static image assets for multiple targets (Drupal theme and Pattern Lab)\n\n\nWebpack Dev Server for local hosting and auto asset injection into Pattern Lab and Drupal\n\n\nTwig namespaced paths\n automatically added into Drupal theme and Pattern Lab config. Within any twig file, \n@atoms/thing.twig\n means the same thing to Drupal theme and Pattern Lab.\n\n\nBootstrap 4 integration, used for all starting example components\n\n\nIconfont auto-generation\n\n\nFontAwesome, if you don't need to generate your own icons\n\n\nAuto-linting against the \nAirBnB JavaScript Style Guide\n and sane Sass standards\n\n\nAll Webpack and Gulp files are fully configurable", 
+            "title": "Overview"
         }, 
         {
-            "location": "/getting-started/system-requirements/", 
-            "text": "Prerequisites\n\n\n\n\nNode\n v6 or v8. (v7 will explode)\n\n\nPHP 5.4, 5.5, 5.6, OR 7 (5.3 might work, no promises)\n\n\ncomposer", 
-            "title": "System Requirements"
+            "location": "/#what-is-particle", 
+            "text": "Particle  is an opinionated toolkit for building application-agnostic design systems built with love by  Phase2 .", 
+            "title": "What is Particle?"
         }, 
         {
-            "location": "/getting-started/system-requirements/#prerequisites", 
-            "text": "Node  v6 or v8. (v7 will explode)  PHP 5.4, 5.5, 5.6, OR 7 (5.3 might work, no promises)  composer", 
+            "location": "/#provides", 
+            "text": "Drupal theme and Pattern Lab app  Strict  Atomic Design  component structure  Webpack bundling of all CSS, javascript, font, and static image assets for multiple targets (Drupal theme and Pattern Lab)  Webpack Dev Server for local hosting and auto asset injection into Pattern Lab and Drupal  Twig namespaced paths  automatically added into Drupal theme and Pattern Lab config. Within any twig file,  @atoms/thing.twig  means the same thing to Drupal theme and Pattern Lab.  Bootstrap 4 integration, used for all starting example components  Iconfont auto-generation  FontAwesome, if you don't need to generate your own icons  Auto-linting against the  AirBnB JavaScript Style Guide  and sane Sass standards  All Webpack and Gulp files are fully configurable", 
+            "title": "Provides"
+        }, 
+        {
+            "location": "/appendix/system-requirements/", 
+            "text": "Prerequisites\n\n\n\n\nNode\n v6 or v8. (v7 will explode)\n\n\nPHP 5.4, 5.5, 5.6, OR 7 (5.3 might work, no promises)\n\n\ncomposer\n\n\n\n\nParticle can be run from anywhere to work with Pattern Lab. It also provides a theme to a Drupal website. You are free to add as many other apps as you wish.\n\n\nQuickstart anywhere\n\n\n\n\nDownload the latest release\n\n\nExtract anywhere (i.e. the readme should be at \nany/where/particle/README.md\n)\n\n\nWithin the extracted folder run:\n\n\n\n\nnpm install\nnpm run setup\nnpm start\n\n\n\n\nSimply wait until the webpack bundle output appears then visit \nhttp://0.0.0.0:8080/pl\n (or \nhttp://localhost:8080/pl\n) and start working.\n\n\nQuickstart with Drupal 8\n\n\nParticle provides a Drupal 8 theme, the starting steps are slightly different:\n\n\n\n\nDownload the latest release\n\n\nExtract to \nthemes/\n at the root of your Drupal 8 install. (i.e. this readme should be at \ndrupal-root/themes/particle/README.md\n)\n\n\nDownload and install the \nComponent Libraries module\n:\n\n\n\n\ndrush dl components\ndrush en components -y\n\n\n\n\n\n\nWithin \ndrupal-root/themes/particle/\n run:\n\n\n\n\nnpm install\nnpm run setup\nnpm run compile:drupal\n\n\n\n\nThis will compile all assets and provide all namespaced Twig paths to the Drupal theme. Make sure to choose this theme in Drupal Appearance settings and \ndrush cr\n to clear cache.\n\n\nFor subsequent recompile and Drupal cache clear, run:\n\n\nnpm run compile:drupal \n drush cr\n\n\n\n\nWorking rapidly in Pattern Lab is still available, simply run:\n\n\nnpm start\n\n\n\n\nJust like in the regular Quickstart, when Webpack output appears, visit \nhttp://0.0.0.0/pl\n (or \nhttp://localhost/pl\n) to immediately start building and previewing your design system in Pattern Lab.\n\n\nThat's it. For \nmuch\n greater detail on the frontend approach using this project, keep reading these docs.", 
+            "title": "Getting Started"
+        }, 
+        {
+            "location": "/appendix/system-requirements/#prerequisites", 
+            "text": "Node  v6 or v8. (v7 will explode)  PHP 5.4, 5.5, 5.6, OR 7 (5.3 might work, no promises)  composer   Particle can be run from anywhere to work with Pattern Lab. It also provides a theme to a Drupal website. You are free to add as many other apps as you wish.", 
             "title": "Prerequisites"
         }, 
         {
-            "location": "/getting-started/first-steps/", 
-            "text": "From a fresh install:\n\n\nnpm install\nnpm run setup\nnpm run start\n\n\n\n\nDay to day:\n\n\nnpm run start", 
-            "title": "First Steps"
+            "location": "/appendix/system-requirements/#quickstart-anywhere", 
+            "text": "Download the latest release  Extract anywhere (i.e. the readme should be at  any/where/particle/README.md )  Within the extracted folder run:   npm install\nnpm run setup\nnpm start  Simply wait until the webpack bundle output appears then visit  http://0.0.0.0:8080/pl  (or  http://localhost:8080/pl ) and start working.", 
+            "title": "Quickstart anywhere"
         }, 
         {
-            "location": "/getting-started/drupal-requirements/", 
-            "text": "Drupal 8\n\n\nGet the \nComponent Libraries module\n:\n\n\ndrush dl components\ndrush en components -y\n\n\n\n\nIntegration\n\n\nEnsure the \ntwig-namespaces gulp task\n is also writing to the theme file. This allows for shorthand pattern inclusion inside of Drupal templates, ie \n{% include '@molecules/card.twig %}\n\n\nFrom your Drupal Twig templates in templates/ you can \n{% include %}\n, \n{% extends %}\n, and \n{% embed %}\n your Pattern Lab Twig template files (found in \n/source/_patterns\n). Each of the top level folders has a Twig Namespace like @organisms and then you append the path down to the file like below.\n\n\n{% include \n@organisms/path/to/file.twig\n with {\n  title: label,\n  largeCTA: true\n} %}\n\n\n\n\nFor a demonstration in a sample codebase of how exactly to integrate templates, we will include examples in the default /templates/ folder eventually. :)\n\n\nNot using Drupal?\n\n\nThese files are only used for Drupal integration and can be safely ignored/removed:\n\n\n\n\ndrupal/\n\n\ntemplates/\n\n\npatternlab.info.yml\n\n\npatternlab.libraries.yml\n\n\npatternlab.theme\n\n\nwebpack.drupal.config.js\n\n\n\n\nMake sure the twig-namespaces task is not still attempting to write to the non-existent theme-file!", 
-            "title": "Drupal Requirements"
+            "location": "/appendix/system-requirements/#quickstart-with-drupal-8", 
+            "text": "Particle provides a Drupal 8 theme, the starting steps are slightly different:   Download the latest release  Extract to  themes/  at the root of your Drupal 8 install. (i.e. this readme should be at  drupal-root/themes/particle/README.md )  Download and install the  Component Libraries module :   drush dl components\ndrush en components -y   Within  drupal-root/themes/particle/  run:   npm install\nnpm run setup\nnpm run compile:drupal  This will compile all assets and provide all namespaced Twig paths to the Drupal theme. Make sure to choose this theme in Drupal Appearance settings and  drush cr  to clear cache.  For subsequent recompile and Drupal cache clear, run:  npm run compile:drupal   drush cr  Working rapidly in Pattern Lab is still available, simply run:  npm start  Just like in the regular Quickstart, when Webpack output appears, visit  http://0.0.0.0/pl  (or  http://localhost/pl ) to immediately start building and previewing your design system in Pattern Lab.  That's it. For  much  greater detail on the frontend approach using this project, keep reading these docs.", 
+            "title": "Quickstart with Drupal 8"
         }, 
         {
-            "location": "/getting-started/drupal-requirements/#drupal-8", 
-            "text": "Get the  Component Libraries module :  drush dl components\ndrush en components -y", 
-            "title": "Drupal 8"
+            "location": "/appendix/commands/", 
+            "text": "Commands\n\n\nQuickstart\n\n\nnpm install\nnpm run setup\nnpm start\n\n\n\n\nCompile all Pattern Lab assets\n\n\nnpm run compile:pl\n\n\n\n\nCompile all Drupal assets\n\n\nnpm run compile:drupal\n\n\n\n\nStart and watch local server\n\n\nnpm start\n\n\n\n\nRun all linters\n\n\nnpm run lint\n\n\n\n\nRun all tests\n\n\nnpm test\n\n\n\n\nInstall Pattern Lab dependencies\n\n\nnpm run setup\n\n\n\n\nUpdate dependencies\n\n\nWhen updating, \nmerge\n if offered the option\n\n\nnpm run update", 
+            "title": "Commands"
         }, 
         {
-            "location": "/getting-started/drupal-requirements/#integration", 
-            "text": "Ensure the  twig-namespaces gulp task  is also writing to the theme file. This allows for shorthand pattern inclusion inside of Drupal templates, ie  {% include '@molecules/card.twig %}  From your Drupal Twig templates in templates/ you can  {% include %} ,  {% extends %} , and  {% embed %}  your Pattern Lab Twig template files (found in  /source/_patterns ). Each of the top level folders has a Twig Namespace like @organisms and then you append the path down to the file like below.  {% include  @organisms/path/to/file.twig  with {\n  title: label,\n  largeCTA: true\n} %}  For a demonstration in a sample codebase of how exactly to integrate templates, we will include examples in the default /templates/ folder eventually. :)", 
-            "title": "Integration"
-        }, 
-        {
-            "location": "/getting-started/drupal-requirements/#not-using-drupal", 
-            "text": "These files are only used for Drupal integration and can be safely ignored/removed:   drupal/  templates/  patternlab.info.yml  patternlab.libraries.yml  patternlab.theme  webpack.drupal.config.js   Make sure the twig-namespaces task is not still attempting to write to the non-existent theme-file!", 
-            "title": "Not using Drupal?"
-        }, 
-        {
-            "location": "/pattern-lab/atomic/", 
-            "text": "Pattern Lab\n\n\nRefer to the \nPattern Lab Documentation\n for extensive info on how to use it. This toolset is built upon a custom Pattern Lab 2 \nEdition\n that is heavily influenced by the \nDrupal Edition of Pattern Lab\n and uses the Twig engine to bring it inline with Drupal 8's use of Twig.\n\n\nFolder Structure Differences\n\n\nOur folder structure makes some convenient alterations to the typical Pattern Lab folder setup. Basically we move \npattern-lab/source/\n up one level because it's the \"source\" for the entirety of the design system. Here's the difference between the typical and our structure. See \narchitecture\n for a more in-depth explanation of the structure.\n\n\nTypical Folder Structure\n\n\n\n\npattern-lab/\n\n\nconfig/\n\n\npublic/\n\n\nsource/\n\n\n_patterns/ (contains atoms, molecules, etc folders)\n\n\n\n\n\n\ncomposer.json\n\n\n\n\n\n\n\n\nOur Folder Structure\n\n\n\n\nsource/\n\n\n_patterns/ (contains atoms, molecules, etc folders)\n\n\n\n\n\n\ntools/\n\n\npattern-lab/\n\n\nconfig/\n\n\ncomposer.json\n\n\n\n\n\n\n\n\n\n\ndist/\n\n\npublic/ (compiled patternlab files)", 
-            "title": "Atomic design"
-        }, 
-        {
-            "location": "/pattern-lab/atomic/#pattern-lab", 
-            "text": "Refer to the  Pattern Lab Documentation  for extensive info on how to use it. This toolset is built upon a custom Pattern Lab 2  Edition  that is heavily influenced by the  Drupal Edition of Pattern Lab  and uses the Twig engine to bring it inline with Drupal 8's use of Twig.", 
-            "title": "Pattern Lab"
-        }, 
-        {
-            "location": "/pattern-lab/atomic/#folder-structure-differences", 
-            "text": "Our folder structure makes some convenient alterations to the typical Pattern Lab folder setup. Basically we move  pattern-lab/source/  up one level because it's the \"source\" for the entirety of the design system. Here's the difference between the typical and our structure. See  architecture  for a more in-depth explanation of the structure.", 
-            "title": "Folder Structure Differences"
-        }, 
-        {
-            "location": "/pattern-lab/atomic/#typical-folder-structure", 
-            "text": "pattern-lab/  config/  public/  source/  _patterns/ (contains atoms, molecules, etc folders)    composer.json", 
-            "title": "Typical Folder Structure"
-        }, 
-        {
-            "location": "/pattern-lab/atomic/#our-folder-structure", 
-            "text": "source/  _patterns/ (contains atoms, molecules, etc folders)    tools/  pattern-lab/  config/  composer.json      dist/  public/ (compiled patternlab files)", 
-            "title": "Our Folder Structure"
-        }, 
-        {
-            "location": "/gulp/gulpfile/", 
-            "text": "Configuration\n\n\nAll gulp tasks and associated configuration are declared inside \ngulpfile.js\n. \nYou can see a full list of available tasks by running \nnpm run gulp -- -T\n. The extra -- passes any flags to the gulp function. This method allows us to keep gulp as a local project dependency, instead of relying on global installs.\n\n\nTasks\n\n\nAll gulp task functions are exported from \n./tools/tasks/*.js\n, wrapped in a callback. The callback signals to gulp to move through the task list.\n\n\nExample\n\n\nconst { exec } = require('child_process');\n\n/**\n * Compile Pattern Lab\n * @param plPath Full path to PL\n * @returns {function(*)} A compile function that takes a callback\n */\nmodule.exports = function plCompile(plPath) {\n  // Note returns a function with the plPath in closure\n  return (done) =\n {\n    exec(`php ${plPath}/core/console --generate`, (err, stdout, stderr) =\n {\n      console.log(stdout);\n\n      if (err) {\n        console.log(stderr);\n        done();\n        return false;\n      }\n\n      done();\n      return true;\n    });\n  };\n};\n\n\n\n\nThis function is then included in our main gulpfile.js and wrapped in a task like so:\n\n\n/**\n * Pattern Lab raw compile function.\n */\n// Config: Path to Pattern Lab installation.\nconst plPath = path.resolve(__dirname, 'tools/pattern-lab');\n// PL compilation function, loaded up with the the PL path\nconst plCompile = require('./tools/tasks/pl-compile')(plPath);\n\n/**\n * Compile Pattern Lab completely.\n */\ngulp.task('compile:pl', plCompile);", 
-            "title": "Config"
-        }, 
-        {
-            "location": "/gulp/gulpfile/#configuration", 
-            "text": "All gulp tasks and associated configuration are declared inside  gulpfile.js . \nYou can see a full list of available tasks by running  npm run gulp -- -T . The extra -- passes any flags to the gulp function. This method allows us to keep gulp as a local project dependency, instead of relying on global installs.", 
-            "title": "Configuration"
-        }, 
-        {
-            "location": "/gulp/gulpfile/#tasks", 
-            "text": "All gulp task functions are exported from  ./tools/tasks/*.js , wrapped in a callback. The callback signals to gulp to move through the task list.", 
-            "title": "Tasks"
-        }, 
-        {
-            "location": "/gulp/gulpfile/#example", 
-            "text": "const { exec } = require('child_process');\n\n/**\n * Compile Pattern Lab\n * @param plPath Full path to PL\n * @returns {function(*)} A compile function that takes a callback\n */\nmodule.exports = function plCompile(plPath) {\n  // Note returns a function with the plPath in closure\n  return (done) =  {\n    exec(`php ${plPath}/core/console --generate`, (err, stdout, stderr) =  {\n      console.log(stdout);\n\n      if (err) {\n        console.log(stderr);\n        done();\n        return false;\n      }\n\n      done();\n      return true;\n    });\n  };\n};  This function is then included in our main gulpfile.js and wrapped in a task like so:  /**\n * Pattern Lab raw compile function.\n */\n// Config: Path to Pattern Lab installation.\nconst plPath = path.resolve(__dirname, 'tools/pattern-lab');\n// PL compilation function, loaded up with the the PL path\nconst plCompile = require('./tools/tasks/pl-compile')(plPath);\n\n/**\n * Compile Pattern Lab completely.\n */\ngulp.task('compile:pl', plCompile);", 
-            "title": "Example"
-        }, 
-        {
-            "location": "/gulp/tasks/pl-compile/", 
-            "text": "This is the compile function used by pattern lab to generate all the static assets from your twig files.", 
-            "title": "pl Compile"
-        }, 
-        {
-            "location": "/gulp/tasks/twig-namespaces/", 
-            "text": "This file is the sauce that lets us compile pattern lab error-free, without manually adding every new pattern folder \nto the pattern lab config file.\n\n\nAn additional option can be turned on to also write the namespaces to the drupal theme.info.yml. This lets you use the pattern shorthands when referencing twig.", 
-            "title": "twig namespaces"
-        }, 
-        {
-            "location": "/gulp/tasks/sass-to-json/", 
-            "text": "This gulp task watches our global configuration-related sass files, ie the ones that are setting variables, in order to generate sample data objects for our configuration-related patterns.\n\n\nBasically, it's looking for any variables prefixed with certain strings, as defined in the gulpfile configuration, to write those variables into an array of individual json objects that a few patterns are looking at.\n\n\nBy default, it checks for:\n\n\n\n\ncolors (\n$c-\n)\n\n\nfont families (\n$ff--\n)\n\n\nfont sizes (\n$fs--\n)\n\n\nbreakpoints (\n$bp--\n)\n\n\nspacing (\n$spacing--\n)", 
-            "title": "sass to json"
-        }, 
-        {
-            "location": "/gulp/tasks/wpds/", 
-            "text": "This is the gulp task that launches our webpack dev server, which does all of the other content watching and HMR goodness.", 
-            "title": "webpack dev server"
-        }, 
-        {
-            "location": "/webpack/config/", 
-            "text": "Webpack information here.", 
-            "title": "Config"
-        }, 
-        {
-            "location": "/faq/general/", 
-            "text": "what is pattern lab?\n\n\nthe future, man", 
-            "title": "General"
-        }, 
-        {
-            "location": "/faq/general/#what-is-pattern-lab", 
-            "text": "the future, man", 
-            "title": "what is pattern lab?"
-        }, 
-        {
-            "location": "/faq/troubleshooting/", 
-            "text": "npm rebuild node-sass", 
-            "title": "Troubleshooting"
-        }, 
-        {
-            "location": "/faq/how-to-contribute/", 
+            "location": "/appendix/commands/#commands", 
             "text": "", 
-            "title": "How to contribute"
+            "title": "Commands"
         }, 
         {
-            "location": "/appendix/glossary/", 
-            "text": "", 
-            "title": "Glossary"
+            "location": "/appendix/commands/#quickstart", 
+            "text": "npm install\nnpm run setup\nnpm start", 
+            "title": "Quickstart"
+        }, 
+        {
+            "location": "/appendix/commands/#compile-all-pattern-lab-assets", 
+            "text": "npm run compile:pl", 
+            "title": "Compile all Pattern Lab assets"
+        }, 
+        {
+            "location": "/appendix/commands/#compile-all-drupal-assets", 
+            "text": "npm run compile:drupal", 
+            "title": "Compile all Drupal assets"
+        }, 
+        {
+            "location": "/appendix/commands/#start-and-watch-local-server", 
+            "text": "npm start", 
+            "title": "Start and watch local server"
+        }, 
+        {
+            "location": "/appendix/commands/#run-all-linters", 
+            "text": "npm run lint", 
+            "title": "Run all linters"
+        }, 
+        {
+            "location": "/appendix/commands/#run-all-tests", 
+            "text": "npm test", 
+            "title": "Run all tests"
+        }, 
+        {
+            "location": "/appendix/commands/#install-pattern-lab-dependencies", 
+            "text": "npm run setup", 
+            "title": "Install Pattern Lab dependencies"
+        }, 
+        {
+            "location": "/appendix/commands/#update-dependencies", 
+            "text": "When updating,  merge  if offered the option  npm run update", 
+            "title": "Update dependencies"
         }, 
         {
             "location": "/appendix/architecture/", 
-            "text": "Project Architecture\n\n\nFolder Structure\n\n\n\n\nsource/\n\n\n_patterns/\n (contains atoms, molecules, etc.)\n\n\n_meta/\n (styleguide meta patterns)\n\n\n_data/\n (global data objects for prototyping patterns)\n\n\nfonts/\n \n\n\nscss/\n  (vendor sass (bootstrap, etc))\n\n\nicons/\n \n\n\ndesign-system.js\n \n\n\n\n\n\n\ntools/\n \n\n\npattern-lab/\n\n\nconfig/\n\n\ncomposer.json\n\n\n\n\n\n\n\n\n\n\ndist/\n (all compiled assets)\n\n\npublic/\n (compiled patternlab files)\n\n\n\n\n\n\ndrupal/\n (compiled assets specifically for drupal)\n\n\ntemplates/\n (drupal theme templates)", 
+            "text": "Project Architecture\n\n\nStructure\n\n\nThe following are significant items at the root level:\n\n\n# ./\n.\n\u251c\u2500\u2500 apps                           # Things that use the compiled design system. Drupal theme \n PL\n\u251c\u2500\u2500 dist                           # Bundled output: CSS, js, images, app artifacts (like PL html)\n\u251c\u2500\u2500 source                         # The design system. All assets compiled to dist/\n\u251c\u2500\u2500 tools                          # Gulp plugins and node tools\n\u251c\u2500\u2500 gulpfile.js                    # Defines the few tasks required in the workflow\n\u251c\u2500\u2500 webpack.drupal.config.js       # Entry point for the Drupal theme bundle\n\u251c\u2500\u2500 webpack.pl.config.js           # Entry point for the Pattern Lab bundle\n\u251c\u2500\u2500 webpack.shared.config.js       # Shared bundle configuration for all entry points\n\u2514\u2500\u2500 ...                            # Mostly just config\n\n\n\nsource/\n holds all assets for the design system and looks like this:\n\n\n# ./source/\n.\n\u251c\u2500\u2500 _patterns                      # All assets live within an Atomic \"pattern\"\n\u2502   \u251c\u2500\u2500 01-atoms                   # Twig namespace: @atoms, JS/Sass namespace: atoms\n\u2502   \u2502   \u251c\u2500\u2500 button                 # For instance, the button atom\n\u2502   \u2502   \u2502    \u251c\u2500\u2500 demo              # Patterns feature a demo folder to show implementation\n\u2502   \u2502   \u2502    \u2502   \u251c\u2500\u2500 buttons.twig  # Demonstrate with a plural name, visible to PL since no underscore\n\u2502   \u2502   \u2502    \u2502   \u2514\u2500\u2500 buttons.yml   # Data provided to the demo pattern\n\u2502   \u2502   \u2502    \u251c\u2500\u2500 _button.scss      # Most components require styles, underscore required\n\u2502   \u2502   \u2502    \u251c\u2500\u2500 _button.twig      # The pure component template, underscore required\n\u2502   \u2502   \u2502    \u2514\u2500\u2500 index.js          # Component entry point (See \"Anatomy of a Component below)\n\u2502   \u2502   \u2514\u2500\u2500 ...                    # Other @atoms\n\u2502   \u2514\u2500\u2500 ...                        # @protons, @atoms, @molecules, @organisms, @templates, @pages\n\u2514\u2500\u2500 design-system.js               # The ultimate importer/exporter of the design system pieces\n\n\n\n\n\nThe design system is \nconsumed by\n \"apps\". The two apps included are a Drupal theme and a Pattern Lab installation.\n\n\n\n\napp/pl/\n holds the \nentry point\n for all Pattern Lab assets, as well as the PHP engine:\n\n\n# ./app/pl/\n.\n\u251c\u2500\u2500 pattern-lab/                   # Holds the Pattern Lab installation\n\u2502   \u251c\u2500\u2500 ...                        # composer.json, config, console php, ...\n\u251c\u2500\u2500 scss                           # PL-only Sass; styles that shoudln't junk up the design system\n\u2502   \u251c\u2500\u2500 _scss2json.scss            # Output certain Sass variables into json for demo in PL\n\u2502   \u2514\u2500\u2500 _styleguide.scss           # Custom PL UI styles\n\u2514\u2500\u2500 index.js                       # Imports and applies the design system to a bundle for PL\n\n\n\napp/drupal/\n holds the \nentry point\n for all Drupal 8 theme assets, as well as templates, yml, etc:\n\n\n# ./app/drupal/\n.\n\u251c\u2500\u2500 scss/                          # Theme-only Sass, tweaks to Drupalisms that need not be in the DS\n\u2502   \u2514\u2500\u2500 _drupal-styles.scss        # Add more drupal styles here, like _views.scss, _field.scss etc\n\u251c\u2500\u2500 templates                      # Templates integrate Drupal data with design system patterns\n\u2502   \u251c\u2500\u2500 block.html.twig            # Example Drupal template integrating, say @molecules/_card.twig\n\u2502   \u2514\u2500\u2500 ...                        # There wil be many Drupal templates\n\u251c\u2500\u2500 index.js                       # Imports and applies the design system to a bundle for Drupal\n\u251c\u2500\u2500 particle.info.yml              # Theme information. DS namespaces are auto-injected!\n\u251c\u2500\u2500 particle.libraries.yml         # The output js and css bundles are included here\n\u251c\u2500\u2500 particle.theme                 # Drupal preprocess functions\n\u2514\u2500\u2500 index.js                       # Imports and applies the design system to a bundle for Drupal\n\n\n\nAnatomy of a Component\n\n\nAll components require a set of files:\n\n\n# ./source/_patterns/01-atoms/button/\n.\n\u251c\u2500\u2500 __tests__                      # Jest unit tests. Read automatically during `npm run test:unit`\n\u2502   \u2514\u2500\u2500 button.test.js             # Unit test JS functions. Limited DOM manipulation\n\u251c\u2500\u2500 demo                           # Demo implementations, can be removed on deploy to prod\n\u2502   \u251c\u2500\u2500 buttons.md                 # Markdown with extra notes, visible in PL UI\n\u2502   \u251c\u2500\u2500 buttons.twig               # Demonstrate with a plural name, visible to PL since no underscore\n\u2502   \u2514\u2500\u2500 buttons.yml                # Data provided to the demo pattern\n\u251c\u2500\u2500 _button.scss                   # Most components require styles, underscore required\n\u251c\u2500\u2500 _button.twig                   # The pure component template, \"_\" required to hide from PL UI\n\u2514\u2500\u2500 index.js                       # Component entry point\n\n\n\nWith the power of \nWebpack\n, all static assets a component needs are \nimport\ned right into the \nindex.js\n \nentry point\n alongside the javascript methods:\n\n\n// source/_patterns/01-atoms/button/index.js\n\n// Import *EVERY* NPM dependency.\nimport $ from 'jquery';\n// Import specific plugins this component may need\nimport 'bootstrap/js/src/button';\n\n// source/_patterns/01-atoms/00-protons/index.js\nimport 'protons';\n\n// Import local Sass (which in turn imports Bootstrap Sass)\nimport './_button.scss';\n\n// Requirement 1 of a component: name\nexport const name = 'button';\n\n// Requirement 2 of a component: disable function\nexport function disable() {}\n\n// Requirement 3 of a component: enable function. `$context` is `$(document)` in PL, and `context` in Drupal\nexport function enable($context) {\n\n// `.button()` is only available because of `import 'bootstrap/js/src/button';` above\n$('#blah', $context).button('toggle');\n}\n\n// Req. 4 of a component: default export is the enable function\nexport default enable;\n\n\n\n\nAtomic Design and Namespaces\n\n\n\"Namespaces\" are simply aliases to paths on a file system. The design system within \nsource/\n adheres strongly to \nAtomic Design\n, with \n@protons\n added on.\n\n\n\n\n\n\n\n\nPath\n\n\nTwig\n\n\nJavascript\n\n\nSass\n\n\n\n\n\n\n\n\n\n\nsource/_patterns/00-protons/\n\n\n@protons\n\n\nprotons\n\n\nTBD\n\n\n\n\n\n\nsource/_patterns/01-atoms/\n\n\n@atoms\n\n\natoms\n\n\nTBD\n\n\n\n\n\n\nsource/_patterns/02-molecules/\n\n\n@molecules\n\n\nmolcules\n\n\nTBD\n\n\n\n\n\n\nsource/_patterns/03-organisms/\n\n\n@organisms\n\n\norganisms\n\n\nTBD\n\n\n\n\n\n\nsource/_patterns/04-templates/\n\n\n@templates\n\n\ntemplates\n\n\nTBD\n\n\n\n\n\n\nsource/_patterns/05-pages/\n\n\n@pages\n\n\npages\n\n\nTBD\n\n\n\n\n\n\n\n\n\n\nNote: Namespaces within Sass are a work in progress!\n\n\n\n\nOur reasoning for categorization of components within each is pretty close to pure Atomic Design principals, but here's a quick explanation.\n\n\n\n\n\n\nProtons\n features Sass systems and non-consumable pattern markup. No Twig file will \n@include\n anything from @protons, but javascript and Sass will. This is a uniquely Particle convention. See \nSass\n.\n\n\n\n\n\n\nAtoms\n upward \nwill\n be included in other Twig files.\n\n\n\n\n\"Atoms of our interfaces serve as the foundational building blocks that comprise all our user interfaces. These atoms include basic HTML elements like form labels, inputs, buttons, and others that can\u2019t be broken down any further without ceasing to be functional. \nSource.\n\n\n\n\n\n\n\n\nMolecules\n are more complex widgets that at least include an atom and sometimes other molecules.\n\n\n\n\n\n\n\n\n\"In interfaces, molecules are relatively simple groups of UI elements functioning together as a unit. For example, a form label, search input, and button can join together to create a search form molecule.\" \nSource.\n\n\n\n\n\n\nOrganisms\n feature atoms, molecules, and even other organisms (sparingly). Think headers, footers, blog rolls.\n\n\n\n\n\n\n\"Organisms are relatively complex UI components composed of groups of molecules and/or atoms and/or other organisms.\" \nSource.\n\n\n\n\n\n\nTemplates\n are page layouts, giving us a view into how content can possibly be laid out.\n\n\n\n\n\n\n\"Templates are page-level objects that place components into a layout and articulate the design\u2019s underlying content structure.\" \nSource.\n\n\n\n\n\n\nPages\n can be considered full \"prototypes\" of a design systgem, with real content, images, etc.\n\n\n\n\n\n\n\"Pages are specific instances of templates that show what a UI looks like with real representative content in place.\" \nSource.", 
             "title": "Architecture"
         }, 
         {
@@ -146,39 +96,204 @@
             "title": "Project Architecture"
         }, 
         {
-            "location": "/appendix/architecture/#folder-structure", 
-            "text": "source/  _patterns/  (contains atoms, molecules, etc.)  _meta/  (styleguide meta patterns)  _data/  (global data objects for prototyping patterns)  fonts/    scss/   (vendor sass (bootstrap, etc))  icons/    design-system.js      tools/    pattern-lab/  config/  composer.json      dist/  (all compiled assets)  public/  (compiled patternlab files)    drupal/  (compiled assets specifically for drupal)  templates/  (drupal theme templates)", 
-            "title": "Folder Structure"
+            "location": "/appendix/architecture/#structure", 
+            "text": "The following are significant items at the root level:  # ./\n.\n\u251c\u2500\u2500 apps                           # Things that use the compiled design system. Drupal theme   PL\n\u251c\u2500\u2500 dist                           # Bundled output: CSS, js, images, app artifacts (like PL html)\n\u251c\u2500\u2500 source                         # The design system. All assets compiled to dist/\n\u251c\u2500\u2500 tools                          # Gulp plugins and node tools\n\u251c\u2500\u2500 gulpfile.js                    # Defines the few tasks required in the workflow\n\u251c\u2500\u2500 webpack.drupal.config.js       # Entry point for the Drupal theme bundle\n\u251c\u2500\u2500 webpack.pl.config.js           # Entry point for the Pattern Lab bundle\n\u251c\u2500\u2500 webpack.shared.config.js       # Shared bundle configuration for all entry points\n\u2514\u2500\u2500 ...                            # Mostly just config  source/  holds all assets for the design system and looks like this:  # ./source/\n.\n\u251c\u2500\u2500 _patterns                      # All assets live within an Atomic \"pattern\"\n\u2502   \u251c\u2500\u2500 01-atoms                   # Twig namespace: @atoms, JS/Sass namespace: atoms\n\u2502   \u2502   \u251c\u2500\u2500 button                 # For instance, the button atom\n\u2502   \u2502   \u2502    \u251c\u2500\u2500 demo              # Patterns feature a demo folder to show implementation\n\u2502   \u2502   \u2502    \u2502   \u251c\u2500\u2500 buttons.twig  # Demonstrate with a plural name, visible to PL since no underscore\n\u2502   \u2502   \u2502    \u2502   \u2514\u2500\u2500 buttons.yml   # Data provided to the demo pattern\n\u2502   \u2502   \u2502    \u251c\u2500\u2500 _button.scss      # Most components require styles, underscore required\n\u2502   \u2502   \u2502    \u251c\u2500\u2500 _button.twig      # The pure component template, underscore required\n\u2502   \u2502   \u2502    \u2514\u2500\u2500 index.js          # Component entry point (See \"Anatomy of a Component below)\n\u2502   \u2502   \u2514\u2500\u2500 ...                    # Other @atoms\n\u2502   \u2514\u2500\u2500 ...                        # @protons, @atoms, @molecules, @organisms, @templates, @pages\n\u2514\u2500\u2500 design-system.js               # The ultimate importer/exporter of the design system pieces   The design system is  consumed by  \"apps\". The two apps included are a Drupal theme and a Pattern Lab installation.   app/pl/  holds the  entry point  for all Pattern Lab assets, as well as the PHP engine:  # ./app/pl/\n.\n\u251c\u2500\u2500 pattern-lab/                   # Holds the Pattern Lab installation\n\u2502   \u251c\u2500\u2500 ...                        # composer.json, config, console php, ...\n\u251c\u2500\u2500 scss                           # PL-only Sass; styles that shoudln't junk up the design system\n\u2502   \u251c\u2500\u2500 _scss2json.scss            # Output certain Sass variables into json for demo in PL\n\u2502   \u2514\u2500\u2500 _styleguide.scss           # Custom PL UI styles\n\u2514\u2500\u2500 index.js                       # Imports and applies the design system to a bundle for PL  app/drupal/  holds the  entry point  for all Drupal 8 theme assets, as well as templates, yml, etc:  # ./app/drupal/\n.\n\u251c\u2500\u2500 scss/                          # Theme-only Sass, tweaks to Drupalisms that need not be in the DS\n\u2502   \u2514\u2500\u2500 _drupal-styles.scss        # Add more drupal styles here, like _views.scss, _field.scss etc\n\u251c\u2500\u2500 templates                      # Templates integrate Drupal data with design system patterns\n\u2502   \u251c\u2500\u2500 block.html.twig            # Example Drupal template integrating, say @molecules/_card.twig\n\u2502   \u2514\u2500\u2500 ...                        # There wil be many Drupal templates\n\u251c\u2500\u2500 index.js                       # Imports and applies the design system to a bundle for Drupal\n\u251c\u2500\u2500 particle.info.yml              # Theme information. DS namespaces are auto-injected!\n\u251c\u2500\u2500 particle.libraries.yml         # The output js and css bundles are included here\n\u251c\u2500\u2500 particle.theme                 # Drupal preprocess functions\n\u2514\u2500\u2500 index.js                       # Imports and applies the design system to a bundle for Drupal", 
+            "title": "Structure"
         }, 
         {
-            "location": "/appendix/background/", 
-            "text": "i've got a disease, and the only prescription is more documentation", 
-            "title": "Background"
+            "location": "/appendix/architecture/#anatomy-of-a-component", 
+            "text": "All components require a set of files:  # ./source/_patterns/01-atoms/button/\n.\n\u251c\u2500\u2500 __tests__                      # Jest unit tests. Read automatically during `npm run test:unit`\n\u2502   \u2514\u2500\u2500 button.test.js             # Unit test JS functions. Limited DOM manipulation\n\u251c\u2500\u2500 demo                           # Demo implementations, can be removed on deploy to prod\n\u2502   \u251c\u2500\u2500 buttons.md                 # Markdown with extra notes, visible in PL UI\n\u2502   \u251c\u2500\u2500 buttons.twig               # Demonstrate with a plural name, visible to PL since no underscore\n\u2502   \u2514\u2500\u2500 buttons.yml                # Data provided to the demo pattern\n\u251c\u2500\u2500 _button.scss                   # Most components require styles, underscore required\n\u251c\u2500\u2500 _button.twig                   # The pure component template, \"_\" required to hide from PL UI\n\u2514\u2500\u2500 index.js                       # Component entry point  With the power of  Webpack , all static assets a component needs are  import ed right into the  index.js   entry point  alongside the javascript methods:  // source/_patterns/01-atoms/button/index.js\n\n// Import *EVERY* NPM dependency.\nimport $ from 'jquery';\n// Import specific plugins this component may need\nimport 'bootstrap/js/src/button';\n\n// source/_patterns/01-atoms/00-protons/index.js\nimport 'protons';\n\n// Import local Sass (which in turn imports Bootstrap Sass)\nimport './_button.scss';\n\n// Requirement 1 of a component: name\nexport const name = 'button';\n\n// Requirement 2 of a component: disable function\nexport function disable() {}\n\n// Requirement 3 of a component: enable function. `$context` is `$(document)` in PL, and `context` in Drupal\nexport function enable($context) {\n\n// `.button()` is only available because of `import 'bootstrap/js/src/button';` above\n$('#blah', $context).button('toggle');\n}\n\n// Req. 4 of a component: default export is the enable function\nexport default enable;", 
+            "title": "Anatomy of a Component"
         }, 
         {
-            "location": "/appendix/library/", 
-            "text": "Pattern Lab\n\n\nRefer to the \nPattern Lab Documentation\n for extensive info on how to use it. This theme starter is a custom Pattern Lab 2 \nEdition\n that is heavily influenced by the \nDrupal Edition of Pattern Lab\n and uses the Twig engine to bring it inline with Drupal 8's use of Twig.\n\n\nFolder Structure Differences\n\n\nOur folder structure makes a slight but convenient alteration to the typical Pattern Lab folder setup. Basically we move \npattern-lab/source/\n up one level because we keep Sass in there too and it's the \"source\" for much of the theme. Here's the difference between the typical and our structure (few folders mentioned for brevity; please see Orientation above for a more thorough list).\n\n\nTypical Folder Structure\n\n\n\n\npattern-lab/\n\n\nconfig/\n\n\npublic/\n\n\nsource/\n\n\n_patterns/ (contains atoms, molecules, etc folders)\n\n\n\n\n\n\ncomposer.json\n\n\n\n\nOur Folder Structure\n\n\n\n\nsource/\n\n\n_patterns/ (contains atoms, molecules, etc folders)\n\n\npattern-lab/\n\n\nconfig/\n\n\npublic/\n\n\ncomposer.json", 
-            "title": "Library"
+            "location": "/appendix/architecture/#atomic-design-and-namespaces", 
+            "text": "\"Namespaces\" are simply aliases to paths on a file system. The design system within  source/  adheres strongly to  Atomic Design , with  @protons  added on.     Path  Twig  Javascript  Sass      source/_patterns/00-protons/  @protons  protons  TBD    source/_patterns/01-atoms/  @atoms  atoms  TBD    source/_patterns/02-molecules/  @molecules  molcules  TBD    source/_patterns/03-organisms/  @organisms  organisms  TBD    source/_patterns/04-templates/  @templates  templates  TBD    source/_patterns/05-pages/  @pages  pages  TBD      Note: Namespaces within Sass are a work in progress!   Our reasoning for categorization of components within each is pretty close to pure Atomic Design principals, but here's a quick explanation.    Protons  features Sass systems and non-consumable pattern markup. No Twig file will  @include  anything from @protons, but javascript and Sass will. This is a uniquely Particle convention. See  Sass .    Atoms  upward  will  be included in other Twig files.   \"Atoms of our interfaces serve as the foundational building blocks that comprise all our user interfaces. These atoms include basic HTML elements like form labels, inputs, buttons, and others that can\u2019t be broken down any further without ceasing to be functional.  Source.     Molecules  are more complex widgets that at least include an atom and sometimes other molecules.     \"In interfaces, molecules are relatively simple groups of UI elements functioning together as a unit. For example, a form label, search input, and button can join together to create a search form molecule.\"  Source.    Organisms  feature atoms, molecules, and even other organisms (sparingly). Think headers, footers, blog rolls.    \"Organisms are relatively complex UI components composed of groups of molecules and/or atoms and/or other organisms.\"  Source.    Templates  are page layouts, giving us a view into how content can possibly be laid out.    \"Templates are page-level objects that place components into a layout and articulate the design\u2019s underlying content structure.\"  Source.    Pages  can be considered full \"prototypes\" of a design systgem, with real content, images, etc.    \"Pages are specific instances of templates that show what a UI looks like with real representative content in place.\"  Source.", 
+            "title": "Atomic Design and Namespaces"
         }, 
         {
-            "location": "/appendix/library/#pattern-lab", 
-            "text": "Refer to the  Pattern Lab Documentation  for extensive info on how to use it. This theme starter is a custom Pattern Lab 2  Edition  that is heavily influenced by the  Drupal Edition of Pattern Lab  and uses the Twig engine to bring it inline with Drupal 8's use of Twig.", 
+            "location": "/config/general/", 
+            "text": "A small \nconfig.js\n file at the root of the project provides basic path settings. Developers are encouraged to edit the Gulp and Webpack files directly to suit their needs.\n\n\npackage.json\n contains all the usual things. It's worth familiarizing yourself with the different commands that can be run related to compiling different apps, linting, testing, and the like. There are gulp wrappers for some of them. \npackage.json\n also contains the browserslist config for the autoprefixr plugin defined and used in the \nwebpack.shared.config.js\n (I know, I know, it's just how life is sometimes). This can easily be adjusted to support an ancient iPad Air running Safari 7, if that's what the client orders.\n\n\n.babelrc\n contains the Babel settings used by Webpack. \n\n\njest.config.js\n contains settings for JS unit tests for components.\n\n\n.editorconfig\n contains Particle coding conventions. Install an \nEditorConfig\n plugin for Particle coding conventions.", 
+            "title": "General"
+        }, 
+        {
+            "location": "/config/webpack/", 
+            "text": "Webpack\n\n\nWebpack does the heavy lifting of assets compilation and transformation. Webpack allows importing of Sass, images, fonts, and other assets into javascript files, bundling output files like CSS and javascript. There are three webpack config files:\n\n\n\n\nwebpack.shared.config.js\n The majority of loader and plugin configuration related to source/\n\n\nwebpack.drupal.config.js\n Configuration specific to apps/drupal\n\n\nwebpack.pl.config.js\n Configuration specific to apps/pl\n\n\n\n\nThe \npl\n and \ndrupal\n configurations import the \nshared\n configuration, providing app-specific customizations. You are encouraged to read through all three files to understand how assets are parsed and prepared. New apps can be added in a similar manner.\n\n\nWebpack dev server\n\n\nRunning \nnpm start\n compiles Pattern Lab, compiles all asset bundles, then starts a hot reloading webpack dev server. \n\n\nAll static html files generated by Pattern Lab will be served at http://0.0.0.0/pl and all modifications to assets on the dependency chain will be automatically injected into the browser. \n\n\nThis means that you can work on Sass and javascript, the bundle will recompile, and the browser will reload rapidly. Pattern Lab html regeneration from Twig file changes triggers a hard-refresh of the Webpack dev server browser.\n\n\nThe Webpack dev server also features proxying css and javascript assets into a running local Drupal site. This means that these assets can avoid Drupal caching and provide hot reloading while working in Drupal. Write up coming soon.\n\n\n/**\n * Webpack config and setup.\n */\n// Import webpack config for PL\nconst wpconfig = require('./webpack.pl.config');\n// Webpack Dev Server config used for local development. See all available config options:\n// https://webpack.js.org/configuration/dev-server/#devserver\nconst serverconfig = {\n  host: '0.0.0.0',\n  port: '8080',\n  contentBase: path.resolve(__dirname, 'dist/'), // dev server starts from this folder.\n  hot: true, // Inject css/js into page without full refresh\n  historyApiFallback: true, // Finds default index.html files at folder root\n  inline: true, // Injects all the webpack dev server code right in the page\n  stats: {\n    colors: true, // Colored terminal output.\n    hash: true,\n    version: true,\n    timings: false,\n    assets: true,\n    chunks: false,\n    modules: false,\n    reasons: true,\n    children: false,\n    source: true,\n    errors: true,\n    errorDetails: true,\n    warnings: true,\n    publicPath: true,\n  },\n};\n// Hold a webpack dev server that we can start and reload\nconst devserver = require('./tools/tasks/webpack-dev-server');\n\n\n\n\nFeel free to change the stats as needed until webpack outputs what you want. This is a decent amount of information for both clean \n broken compiles, but you may want more or less.", 
+            "title": "Webpack"
+        }, 
+        {
+            "location": "/config/webpack/#webpack", 
+            "text": "Webpack does the heavy lifting of assets compilation and transformation. Webpack allows importing of Sass, images, fonts, and other assets into javascript files, bundling output files like CSS and javascript. There are three webpack config files:   webpack.shared.config.js  The majority of loader and plugin configuration related to source/  webpack.drupal.config.js  Configuration specific to apps/drupal  webpack.pl.config.js  Configuration specific to apps/pl   The  pl  and  drupal  configurations import the  shared  configuration, providing app-specific customizations. You are encouraged to read through all three files to understand how assets are parsed and prepared. New apps can be added in a similar manner.", 
+            "title": "Webpack"
+        }, 
+        {
+            "location": "/config/webpack/#webpack-dev-server", 
+            "text": "Running  npm start  compiles Pattern Lab, compiles all asset bundles, then starts a hot reloading webpack dev server.   All static html files generated by Pattern Lab will be served at http://0.0.0.0/pl and all modifications to assets on the dependency chain will be automatically injected into the browser.   This means that you can work on Sass and javascript, the bundle will recompile, and the browser will reload rapidly. Pattern Lab html regeneration from Twig file changes triggers a hard-refresh of the Webpack dev server browser.  The Webpack dev server also features proxying css and javascript assets into a running local Drupal site. This means that these assets can avoid Drupal caching and provide hot reloading while working in Drupal. Write up coming soon.  /**\n * Webpack config and setup.\n */\n// Import webpack config for PL\nconst wpconfig = require('./webpack.pl.config');\n// Webpack Dev Server config used for local development. See all available config options:\n// https://webpack.js.org/configuration/dev-server/#devserver\nconst serverconfig = {\n  host: '0.0.0.0',\n  port: '8080',\n  contentBase: path.resolve(__dirname, 'dist/'), // dev server starts from this folder.\n  hot: true, // Inject css/js into page without full refresh\n  historyApiFallback: true, // Finds default index.html files at folder root\n  inline: true, // Injects all the webpack dev server code right in the page\n  stats: {\n    colors: true, // Colored terminal output.\n    hash: true,\n    version: true,\n    timings: false,\n    assets: true,\n    chunks: false,\n    modules: false,\n    reasons: true,\n    children: false,\n    source: true,\n    errors: true,\n    errorDetails: true,\n    warnings: true,\n    publicPath: true,\n  },\n};\n// Hold a webpack dev server that we can start and reload\nconst devserver = require('./tools/tasks/webpack-dev-server');  Feel free to change the stats as needed until webpack outputs what you want. This is a decent amount of information for both clean   broken compiles, but you may want more or less.", 
+            "title": "Webpack dev server"
+        }, 
+        {
+            "location": "/config/gulpfile/", 
+            "text": "Gulp steps in to handle the gaps that Webpack misses. In two words, Twig support. In more words, Twig namespacing support for appropriate apps, some helper tasks for Pattern Lab, and the previously mentioned tasks for starting and refreshing the webpack dev server locally.\n\n\nConfiguration\n\n\nAll gulp tasks and associated configuration are declared inside \ngulpfile.js\n. \nYou can see a full list of available tasks by running \nnpm run gulp -- -T\n. The extra -- passes any flags to the gulp function. This method allows us to keep gulp as a local project dependency, instead of relying on global installs.\n\n\nTasks\n\n\nAll gulp task functions are exported from \n./tools/tasks/*.js\n, wrapped in a callback. The callback signals to gulp to move through the task list.\n\n\nFor example, this is the task that compiles Pattern Lab, found in \n./tools/tasks/pl-compile.js\n \n\n\nconst { exec } = require('child_process');\n\n/**\n * Compile Pattern Lab\n * @param plPath Full path to PL\n * @returns {function(*)} A compile function that takes a callback\n */\nmodule.exports = function plCompile(plPath) {\n  // Note returns a function with the plPath in closure\n  return (done) =\n {\n    exec(`php ${plPath}/core/console --generate`, (err, stdout, stderr) =\n {\n      console.log(stdout);\n\n      if (err) {\n        console.log(stderr);\n        done();\n        return false;\n      }\n\n      done();\n      return true;\n    });\n  };\n};\n\n\n\n\nThis function is then included in our main \ngulpfile.js\n and wrapped in a task like so:\n\n\n/**\n * Pattern Lab raw compile function.\n */\n// Config: Path to Pattern Lab installation.\nconst plPath = path.resolve(__dirname, 'tools/pattern-lab');\n// PL compilation function, loaded up with the the PL path\nconst plCompile = require('./tools/tasks/pl-compile')(plPath);\n\n/**\n * Compile Pattern Lab completely.\n */\ngulp.task('compile:pl', plCompile);\n\n\n\n\nEvery new task should be defined in a similar manner to this, to ensure gulp and webpack play nicely together.\n\n\ntwig-namespaces\n\n\nThis task is the sauce that lets us compile pattern lab error-free, without manually adding every new pattern folder \nto the pattern lab config file. Each app that needs to know about twig namespaces needs an object like so: \n\n\n      {\n        // Note: PL will NOT compile unless the namespaces are explicitly declared\n        configFile: path.join(PATH_PL, 'pattern-lab/config/config.yml'),\n        atKey: 'plugins.twigNamespaces.namespaces',\n        pathRelativeToDir: path.join(PATH_PL, 'pattern-lab/'),\n      },\n\n\n\n\nThis is all the info gulp needs to plop down the namespace paths at. \nThe namespaces themselves are defined right underneath those objects: \n\n\n// What are the top-level namespace paths, and which sub paths should we ignore?\n    sets: {\n      protons: {\n        root: 'source/_patterns/00-protons',\n        ignore: '/demo',\n      },\n\n\n\n\nIf you adjust the namespace sets, be sure to also adjust the accompanying namespace in \nwebpack.shared.config.js\n.", 
+            "title": "Gulp"
+        }, 
+        {
+            "location": "/config/gulpfile/#configuration", 
+            "text": "All gulp tasks and associated configuration are declared inside  gulpfile.js . \nYou can see a full list of available tasks by running  npm run gulp -- -T . The extra -- passes any flags to the gulp function. This method allows us to keep gulp as a local project dependency, instead of relying on global installs.", 
+            "title": "Configuration"
+        }, 
+        {
+            "location": "/config/gulpfile/#tasks", 
+            "text": "All gulp task functions are exported from  ./tools/tasks/*.js , wrapped in a callback. The callback signals to gulp to move through the task list.  For example, this is the task that compiles Pattern Lab, found in  ./tools/tasks/pl-compile.js    const { exec } = require('child_process');\n\n/**\n * Compile Pattern Lab\n * @param plPath Full path to PL\n * @returns {function(*)} A compile function that takes a callback\n */\nmodule.exports = function plCompile(plPath) {\n  // Note returns a function with the plPath in closure\n  return (done) =  {\n    exec(`php ${plPath}/core/console --generate`, (err, stdout, stderr) =  {\n      console.log(stdout);\n\n      if (err) {\n        console.log(stderr);\n        done();\n        return false;\n      }\n\n      done();\n      return true;\n    });\n  };\n};  This function is then included in our main  gulpfile.js  and wrapped in a task like so:  /**\n * Pattern Lab raw compile function.\n */\n// Config: Path to Pattern Lab installation.\nconst plPath = path.resolve(__dirname, 'tools/pattern-lab');\n// PL compilation function, loaded up with the the PL path\nconst plCompile = require('./tools/tasks/pl-compile')(plPath);\n\n/**\n * Compile Pattern Lab completely.\n */\ngulp.task('compile:pl', plCompile);  Every new task should be defined in a similar manner to this, to ensure gulp and webpack play nicely together.", 
+            "title": "Tasks"
+        }, 
+        {
+            "location": "/config/gulpfile/#twig-namespaces", 
+            "text": "This task is the sauce that lets us compile pattern lab error-free, without manually adding every new pattern folder \nto the pattern lab config file. Each app that needs to know about twig namespaces needs an object like so:         {\n        // Note: PL will NOT compile unless the namespaces are explicitly declared\n        configFile: path.join(PATH_PL, 'pattern-lab/config/config.yml'),\n        atKey: 'plugins.twigNamespaces.namespaces',\n        pathRelativeToDir: path.join(PATH_PL, 'pattern-lab/'),\n      },  This is all the info gulp needs to plop down the namespace paths at. \nThe namespaces themselves are defined right underneath those objects:   // What are the top-level namespace paths, and which sub paths should we ignore?\n    sets: {\n      protons: {\n        root: 'source/_patterns/00-protons',\n        ignore: '/demo',\n      },  If you adjust the namespace sets, be sure to also adjust the accompanying namespace in  webpack.shared.config.js .", 
+            "title": "twig-namespaces"
+        }, 
+        {
+            "location": "/config/sass/", 
+            "text": "Particle makes a very clear distinction between \nprinting\n and \nnon-printing\n Sass in components.\n\n\n\n\nPrinting Sass generates actual, rendered CSS output.\n\n\n\n\nThis results in rendered CSS:\n\n\n.thing {\n  background: blue;\n}\n\n\n\n\n\n\nNon-printing Sass results in no CSS\n\n\n\n\nThis won't output any CSS:\n\n\n$rando-var: 33px;\n@mixin doThing() {\n  background: blue;\n}\n\n\n\n\nThere is a very clear role for each in the component system of Particle. In the \nbutton\n component featured in \nAnatomy of a Component\n, note this import:\n\n\n// source/_patterns/01-atoms/button/_index.js\n...\nimport './_button.scss';\n...\n\n\n\n\n\nLooking into \nsource/_patterns/01-atoms/button/_button.scss\n reveals:\n\n\n@import '../../00-protons/config'; // DOES NOT OUTPUT CSS!\n\n$btn-border-radius: 0.25rem;\n@import \n~bootstrap/scss/buttons\n; // OUTPUTS CSS!\n\n.custom-class {\n  color: red;    // OUTPUTS CSS!\n}\n\n\n\n\nThis approach to component styes allows sharing non-printing Sass \nconfiguration\n, while also ensuring our component prints its custom CSS exactly once. We can now safely \n@import 'atoms/button;\n anywhere in our other javascript components as many times as needed and there will be no duplicate CSS output for buttons!", 
+            "title": "Sass"
+        }, 
+        {
+            "location": "/config/linting/", 
+            "text": "While particle does not care \nwhat\n application ultimately consumes your design system, out of the box, it does care about how that design system is written. Particularly when it comes to linting. \nThe linting should hurt your feelings\n.\n\n\nJavascript\n\n\nAll javascript should be written in ES6 (ES2015) according to the \nAirBnB JavaScript Style Guide\n. Webpack will use Babel to transpile all javascript back to ES5 in emitted bundles.\n\n\nTo adjust the default rules edit \n.eslintrc.js\n\n\nSass\n\n\nStylelint\n is included as part of our webpack buildchain. Our ruleset is an in-house blend that we've found makes for clean, readable, maintainable stylesheets. \n\n\nTo adjust the default rules edit \n.stylelintrc\n\n\nTwig\n\n\nA Twig linter is not currently included in Particle. We recommend following the official \nTwig standards\n.\n\n\nWe also heavily encourage using \nBEM syntax\n for your HTML and Sass. This is not enforced, but we find that BEM syntax plays very nicely with Atomic Design concepts and generally makes for cleaner, more maintainable stylesheets.", 
+            "title": "Linting"
+        }, 
+        {
+            "location": "/config/linting/#javascript", 
+            "text": "All javascript should be written in ES6 (ES2015) according to the  AirBnB JavaScript Style Guide . Webpack will use Babel to transpile all javascript back to ES5 in emitted bundles.  To adjust the default rules edit  .eslintrc.js", 
+            "title": "Javascript"
+        }, 
+        {
+            "location": "/config/linting/#sass", 
+            "text": "Stylelint  is included as part of our webpack buildchain. Our ruleset is an in-house blend that we've found makes for clean, readable, maintainable stylesheets.   To adjust the default rules edit  .stylelintrc", 
+            "title": "Sass"
+        }, 
+        {
+            "location": "/config/linting/#twig", 
+            "text": "A Twig linter is not currently included in Particle. We recommend following the official  Twig standards .  We also heavily encourage using  BEM syntax  for your HTML and Sass. This is not enforced, but we find that BEM syntax plays very nicely with Atomic Design concepts and generally makes for cleaner, more maintainable stylesheets.", 
+            "title": "Twig"
+        }, 
+        {
+            "location": "/config/testing/", 
+            "text": "Particle provides the starting point for various types of testing. Tests are located under the tools directory:\n\n\n# ./particle/\n.\n\u251c\u2500\u2500 tools/\n\u2502   \u251c\u2500\u2500 tasks/\n\u2502   \u2514\u2500\u2500 tests/\n\u2502   \u2502   \u2514\u2500\u2500 accessibility/\n\u2502   \u2502   \u2514\u2500\u2500 unit/\n\u2502   \u2502   \u2514\u2500\u2500 vrt/\n\u2502   \u2514\u2500\u2500 ...\n\u2514\u2500\u2500 ...\n\n\n\nAccessibility Testing\n\n\nTo run \npa11y\n accessibility testing on Pattern Lab rendered output, first you'll need to install the pa11y npm package:\n\n\nnpm install pa11y@5.0.0-beta.7 pa11y-reporter-cli\n\n\n\n\nTo save these devDependencies to your project \npermanently\n, run the following instead:\n\n\nnpm install --save-dev pa11y@5.0.0-beta.7 pa11y-reporter-cli\n\n\n\n\nThen whenever you want to run your tests, simply start the local Pattern Lab dev server in one session:\n\n\nnpm run start\n\n\n\n\nAnd the kick off the pa11y tests in another session:\n\n\nnpm run test:pa11y\n\n\n\n\nSee \n./tools/pa11y.js\n for configuration \noptions\n. Note the ignore options are for example only, add your needed updates to the options object. Add additional pages to the test via the \ntestPaths\n array.\n\n\nconst options = {\n  standard: 'WCAG2AAA',\n  ignore: [\n    'WCAG2AAA.Principle3.Guideline3_1.3_1_1.H57.2',\n  ],\n  log: {\n    debug: console.log,\n    error: console.error,\n    info: console.log,\n  },\n};\n\n\n\n\nIf Docker is part of your stack, you may want to try \ndocker-pa11y\n, which simplifies a large chunk of the above, and keeps everything neatly containerized. Just saying.\n\n\nUnit Testing\n\n\nParticle provides unit testing as well using \nJest\n.\n\n\nSimply run the following to run Jest tests against the design system:\n\n\nnpm run test:unit\n\n\n\n\nNote the \n__tests__\n folders within components for examples.\n\n\nVisual Regression Testing\n\n\nParticle does not currently include any VRT tools by default, but we're big fans. Hopefully coming soon.", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/config/testing/#accessibility-testing", 
+            "text": "To run  pa11y  accessibility testing on Pattern Lab rendered output, first you'll need to install the pa11y npm package:  npm install pa11y@5.0.0-beta.7 pa11y-reporter-cli  To save these devDependencies to your project  permanently , run the following instead:  npm install --save-dev pa11y@5.0.0-beta.7 pa11y-reporter-cli  Then whenever you want to run your tests, simply start the local Pattern Lab dev server in one session:  npm run start  And the kick off the pa11y tests in another session:  npm run test:pa11y  See  ./tools/pa11y.js  for configuration  options . Note the ignore options are for example only, add your needed updates to the options object. Add additional pages to the test via the  testPaths  array.  const options = {\n  standard: 'WCAG2AAA',\n  ignore: [\n    'WCAG2AAA.Principle3.Guideline3_1.3_1_1.H57.2',\n  ],\n  log: {\n    debug: console.log,\n    error: console.error,\n    info: console.log,\n  },\n};  If Docker is part of your stack, you may want to try  docker-pa11y , which simplifies a large chunk of the above, and keeps everything neatly containerized. Just saying.", 
+            "title": "Accessibility Testing"
+        }, 
+        {
+            "location": "/config/testing/#unit-testing", 
+            "text": "Particle provides unit testing as well using  Jest .  Simply run the following to run Jest tests against the design system:  npm run test:unit  Note the  __tests__  folders within components for examples.", 
+            "title": "Unit Testing"
+        }, 
+        {
+            "location": "/config/testing/#visual-regression-testing", 
+            "text": "Particle does not currently include any VRT tools by default, but we're big fans. Hopefully coming soon.", 
+            "title": "Visual Regression Testing"
+        }, 
+        {
+            "location": "/apps/pl/", 
+            "text": "Pattern Lab\n\n\nRefer to the \nPattern Lab Documentation\n for extensive info on how to use it. This toolset is built upon a custom Pattern Lab 2 \nEdition\n that is heavily influenced by the \nDrupal Edition of Pattern Lab\n and uses the Twig engine to bring it inline with Drupal 8's use of Twig. \n\n\nFolder Structure Differences\n\n\nOur folder structure makes some convenient alterations to the typical Pattern Lab folder setup. Basically we move \npattern-lab/source/\n up one level because it's the \"source\" for the entirety of the design system. Here's the difference between the typical and our structure. See \narchitecture\n\n\nTypical Folder Structure\n\n\n\n\npattern-lab/\n\n\nconfig/\n\n\npublic/ (compiled patternlab files)\n\n\nsource/\n\n\n_patterns/ (contains atoms, molecules, etc folders)\n\n\n\n\n\n\ncomposer.json\n\n\n\n\n\n\n\n\nOur Folder Structure\n\n\n\n\nsource/\n\n\n_patterns/ (contains atoms, molecules, etc folders)\n\n\n\n\n\n\napps/\n\n\npl/\n\n\nscss/ (pl-only styles that don't need to junk up full design system)\n\n\npattern-lab/\n\n\nconfig/\n\n\ncomposer.json\n\n\n\n\n\n\nindex.js (webpack entry point for pl)\n\n\n\n\n\n\n\n\n\n\ndist/\n\n\nassets/ (compiled design system files)\n\n\npl/ (compiled patternlab files)", 
             "title": "Pattern Lab"
         }, 
         {
-            "location": "/appendix/library/#folder-structure-differences", 
-            "text": "Our folder structure makes a slight but convenient alteration to the typical Pattern Lab folder setup. Basically we move  pattern-lab/source/  up one level because we keep Sass in there too and it's the \"source\" for much of the theme. Here's the difference between the typical and our structure (few folders mentioned for brevity; please see Orientation above for a more thorough list).", 
+            "location": "/apps/pl/#pattern-lab", 
+            "text": "Refer to the  Pattern Lab Documentation  for extensive info on how to use it. This toolset is built upon a custom Pattern Lab 2  Edition  that is heavily influenced by the  Drupal Edition of Pattern Lab  and uses the Twig engine to bring it inline with Drupal 8's use of Twig.", 
+            "title": "Pattern Lab"
+        }, 
+        {
+            "location": "/apps/pl/#folder-structure-differences", 
+            "text": "Our folder structure makes some convenient alterations to the typical Pattern Lab folder setup. Basically we move  pattern-lab/source/  up one level because it's the \"source\" for the entirety of the design system. Here's the difference between the typical and our structure. See  architecture", 
             "title": "Folder Structure Differences"
         }, 
         {
-            "location": "/appendix/library/#typical-folder-structure", 
-            "text": "pattern-lab/  config/  public/  source/  _patterns/ (contains atoms, molecules, etc folders)    composer.json", 
+            "location": "/apps/pl/#typical-folder-structure", 
+            "text": "pattern-lab/  config/  public/ (compiled patternlab files)  source/  _patterns/ (contains atoms, molecules, etc folders)    composer.json", 
             "title": "Typical Folder Structure"
         }, 
         {
-            "location": "/appendix/library/#our-folder-structure", 
-            "text": "source/  _patterns/ (contains atoms, molecules, etc folders)  pattern-lab/  config/  public/  composer.json", 
+            "location": "/apps/pl/#our-folder-structure", 
+            "text": "source/  _patterns/ (contains atoms, molecules, etc folders)    apps/  pl/  scss/ (pl-only styles that don't need to junk up full design system)  pattern-lab/  config/  composer.json    index.js (webpack entry point for pl)      dist/  assets/ (compiled design system files)  pl/ (compiled patternlab files)", 
             "title": "Our Folder Structure"
+        }, 
+        {
+            "location": "/apps/drupal/", 
+            "text": "Drupal 8\n\n\nGet the \nComponent Libraries module\n:\n\n\ndrush dl components\ndrush en components -y\n\n\n\n\nIntegration\n\n\nEnsure the \ntwig-namespaces gulp task\n is also writing to the theme file. This allows for shorthand pattern inclusion inside of Drupal templates, ie \n{% include '@molecules/card.twig %}\n. This should happen by default on a fresh install.\n\n\nFrom your Drupal Twig templates in \napps/drupal/templates/\n you can \n{% include %}\n, \n{% extends %}\n, and \n{% embed %}\n your Pattern Lab Twig template files (found in \n/source/_patterns\n). Each of the top level folders has a Twig Namespace like @organisms and then you append the path down to the file like below.\n\n\n{% include \n@organisms/path/to/file.twig\n with {\n  title: label,\n  largeCTA: true\n} %}\n\n\n\n\nFor an example of how exactly to integrate templates, please check the \napps/drupal/templates/\n folder.\n\n\nNot using Drupal?\n\n\nThese files are only used for Drupal integration and can be safely ignored/removed:\n\n\n\n\napps/drupal/\n\n\nwebpack.drupal.config.js\n\n\n\n\nMake sure the twig-namespaces task is not still attempting to write to the non-existent theme-file!", 
+            "title": "Drupal"
+        }, 
+        {
+            "location": "/apps/drupal/#drupal-8", 
+            "text": "Get the  Component Libraries module :  drush dl components\ndrush en components -y", 
+            "title": "Drupal 8"
+        }, 
+        {
+            "location": "/apps/drupal/#integration", 
+            "text": "Ensure the  twig-namespaces gulp task  is also writing to the theme file. This allows for shorthand pattern inclusion inside of Drupal templates, ie  {% include '@molecules/card.twig %} . This should happen by default on a fresh install.  From your Drupal Twig templates in  apps/drupal/templates/  you can  {% include %} ,  {% extends %} , and  {% embed %}  your Pattern Lab Twig template files (found in  /source/_patterns ). Each of the top level folders has a Twig Namespace like @organisms and then you append the path down to the file like below.  {% include  @organisms/path/to/file.twig  with {\n  title: label,\n  largeCTA: true\n} %}  For an example of how exactly to integrate templates, please check the  apps/drupal/templates/  folder.", 
+            "title": "Integration"
+        }, 
+        {
+            "location": "/apps/drupal/#not-using-drupal", 
+            "text": "These files are only used for Drupal integration and can be safely ignored/removed:   apps/drupal/  webpack.drupal.config.js   Make sure the twig-namespaces task is not still attempting to write to the non-existent theme-file!", 
+            "title": "Not using Drupal?"
+        }, 
+        {
+            "location": "/apps/grav/", 
+            "text": "Grav is a flat file CMS that uses Twig as a template engine. Learn more \nhere\n. \n\n\nGrav integration of design system Twig files\n\n\nWith the inclusion of the Grav plugin, \ntwig-namespaces\n, Grav Twig templates in \ntemplates/\n can \n{% include %}\n, \n{% extends %}\n, and \n{% embed %}\n the Twig patterns within \nsource/_patterns/\n. Similar to Drupal above, including these patterns is done as follows:\n\n\n{% include \n@organisms/path/to/file.twig\n with {\n  title: label,\n  imageUrl: field_name.raw.path,\n  largeCTA: true,\n} %}\n\n\n\n\nConfiguration for Grav and additional docs can found at \napps/grav/README.md\n.", 
+            "title": "Grav"
+        }, 
+        {
+            "location": "/apps/grav/#grav-integration-of-design-system-twig-files", 
+            "text": "With the inclusion of the Grav plugin,  twig-namespaces , Grav Twig templates in  templates/  can  {% include %} ,  {% extends %} , and  {% embed %}  the Twig patterns within  source/_patterns/ . Similar to Drupal above, including these patterns is done as follows:  {% include  @organisms/path/to/file.twig  with {\n  title: label,\n  imageUrl: field_name.raw.path,\n  largeCTA: true,\n} %}  Configuration for Grav and additional docs can found at  apps/grav/README.md .", 
+            "title": "Grav integration of design system Twig files"
+        }, 
+        {
+            "location": "/apps/general/", 
+            "text": "Particle makes adding or removing apps a snap! By default Particle has Pattern Lab, Drupal and Grav included. But these can be added to, removed or changed easily! If you'd like to make changes, see these pieces:\n\n\n\n\nmodule.exports\n in \nconfig.js\n\n\nimports in \ngulpfile.js\n\n\ntwigNamespaces\n in \ngulpfile.js\n\n\ncompile\n scripts in \npackage.json\n\n\nwebpack\n scripts in \npackage.json\n\n\nAdd or remove \nwebpack.APPNAME.config.js\n\n\nAdd or remove path in \nwebpack.shared.config.js\n\n\nSpecial: to remove Grav, delete \nparticle.yaml\n\n\nAdd or delete App folder under \n/apps", 
+            "title": "Adding or Removing"
+        }, 
+        {
+            "location": "/faq/", 
+            "text": "why doesn't Particle support ___?\n\n\nParticle is designed to be application-agnostic. If your application can use javascript and/or css, a Particle-built design system can be compiled for it.\n\n\nIf you want particle to include a specific app by default, pull requests welcome!\n\n\nwhat's with the goat?\n\n\nit's cute right?\n\n\ntroubleshooting\n\n\nit's usually \nnpm rebuild node-sass\n or a misplaced comma during a twig compile.\n\n\nsometimes it's linting rules, which can be disabled as needed. we recommend not doing that too often, though.\n\n\nwill fill this out more as more errors/pain points are found :(\n\n\ncontributing\n\n\npull requests welcome!", 
+            "title": "FAQ"
+        }, 
+        {
+            "location": "/faq/#why-doesnt-particle-support-___", 
+            "text": "Particle is designed to be application-agnostic. If your application can use javascript and/or css, a Particle-built design system can be compiled for it.  If you want particle to include a specific app by default, pull requests welcome!", 
+            "title": "why doesn't Particle support ___?"
+        }, 
+        {
+            "location": "/faq/#whats-with-the-goat", 
+            "text": "it's cute right?", 
+            "title": "what's with the goat?"
+        }, 
+        {
+            "location": "/faq/#troubleshooting", 
+            "text": "it's usually  npm rebuild node-sass  or a misplaced comma during a twig compile.  sometimes it's linting rules, which can be disabled as needed. we recommend not doing that too often, though.  will fill this out more as more errors/pain points are found :(", 
+            "title": "troubleshooting"
+        }, 
+        {
+            "location": "/faq/#contributing", 
+            "text": "pull requests welcome!", 
+            "title": "contributing"
+        }, 
+        {
+            "location": "/appendix/", 
+            "text": "all the external links in this readme\n\n\nfurther reading", 
+            "title": "Appendix"
+        }, 
+        {
+            "location": "/appendix/#all-the-external-links-in-this-readme", 
+            "text": "", 
+            "title": "all the external links in this readme"
+        }, 
+        {
+            "location": "/appendix/#further-reading", 
+            "text": "", 
+            "title": "further reading"
         }
     ]
 }

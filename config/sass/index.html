@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../favicon.ico">
+  
+  <title>Sass - Particle Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Sass";
+    var mkdocs_page_input_path = "config/sass.md";
+    var mkdocs_page_url = "/config/sass/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Particle Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/system-requirements/">Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/commands/">Commands</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/architecture/">Architecture</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Config</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../general/">General</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../webpack/">Webpack</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../gulpfile/">Gulp</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Sass</a>
+    <ul class="subnav">
+            
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../linting/">Linting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../testing/">Testing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Apps</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../apps/pl/">Pattern Lab</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apps/drupal/">Drupal</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apps/grav/">Grav</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apps/general/">Adding or Removing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../faq/">FAQ</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/">Appendix</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Particle Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Config &raquo;</li>
+        
+      
+    
+    <li>Sass</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Particle makes a very clear distinction between <em>printing</em> and <em>non-printing</em> Sass in components.</p>
+<blockquote>
+<p>Printing Sass generates actual, rendered CSS output.</p>
+</blockquote>
+<p>This results in rendered CSS:</p>
+<pre><code class="scss">.thing {
+  background: blue;
+}
+</code></pre>
+
+<blockquote>
+<p>Non-printing Sass results in no CSS</p>
+</blockquote>
+<p>This won't output any CSS:</p>
+<pre><code class="scss">$rando-var: 33px;
+@mixin doThing() {
+  background: blue;
+}
+</code></pre>
+
+<p>There is a very clear role for each in the component system of Particle. In the <code>button</code> component featured in <a href="../../appendix/architecture/#anatomy-of-a-component">Anatomy of a Component</a>, note this import:</p>
+<pre><code class="javascript">// source/_patterns/01-atoms/button/_index.js
+...
+import './_button.scss';
+...
+
+</code></pre>
+
+<p>Looking into <code>source/_patterns/01-atoms/button/_button.scss</code> reveals:</p>
+<pre><code class="scss">@import '../../00-protons/config'; // DOES NOT OUTPUT CSS!
+
+$btn-border-radius: 0.25rem;
+@import &quot;~bootstrap/scss/buttons&quot;; // OUTPUTS CSS!
+
+.custom-class {
+  color: red;    // OUTPUTS CSS!
+}
+</code></pre>
+
+<p>This approach to component styes allows sharing non-printing Sass <strong>configuration</strong>, while also ensuring our component prints its custom CSS exactly once. We can now safely <code>@import 'atoms/button;</code> anywhere in our other javascript components as many times as needed and there will be no duplicate CSS output for buttons!</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../linting/" class="btn btn-neutral float-right" title="Linting">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../gulpfile/" class="btn btn-neutral" title="Gulp"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../gulpfile/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../linting/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

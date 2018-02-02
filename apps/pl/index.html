@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../favicon.ico">
+  
+  <title>Pattern Lab - Particle Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Pattern Lab";
+    var mkdocs_page_input_path = "apps/pl.md";
+    var mkdocs_page_url = "/apps/pl/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Particle Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/system-requirements/">Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/commands/">Commands</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/architecture/">Architecture</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Config</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../config/general/">General</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../config/webpack/">Webpack</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../config/gulpfile/">Gulp</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../config/sass/">Sass</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../config/linting/">Linting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../config/testing/">Testing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Apps</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Pattern Lab</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#pattern-lab">Pattern Lab</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#folder-structure-differences">Folder Structure Differences</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../drupal/">Drupal</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../grav/">Grav</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../general/">Adding or Removing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../faq/">FAQ</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../appendix/">Appendix</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Particle Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Apps &raquo;</li>
+        
+      
+    
+    <li>Pattern Lab</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="pattern-lab">Pattern Lab</h1>
+<p>Refer to the <a href="http://patternlab.io/docs">Pattern Lab Documentation</a> for extensive info on how to use it. This toolset is built upon a custom Pattern Lab 2 <em>Edition</em> that is heavily influenced by the <a href="https://github.com/pattern-lab/edition-php-drupal-standard">Drupal Edition of Pattern Lab</a> and uses the Twig engine to bring it inline with Drupal 8's use of Twig. </p>
+<h2 id="folder-structure-differences">Folder Structure Differences</h2>
+<p>Our folder structure makes some convenient alterations to the typical Pattern Lab folder setup. Basically we move <code>pattern-lab/source/</code> up one level because it's the "source" for the entirety of the design system. Here's the difference between the typical and our structure. See <a href="../../appendix/architecture/">architecture</a></p>
+<h3 id="typical-folder-structure">Typical Folder Structure</h3>
+<ul>
+<li>pattern-lab/<ul>
+<li>config/</li>
+<li>public/ (compiled patternlab files)</li>
+<li>source/<ul>
+<li>_patterns/ (contains atoms, molecules, etc folders)</li>
+</ul>
+</li>
+<li>composer.json</li>
+</ul>
+</li>
+</ul>
+<h3 id="our-folder-structure">Our Folder Structure</h3>
+<ul>
+<li>source/<ul>
+<li>_patterns/ (contains atoms, molecules, etc folders)</li>
+</ul>
+</li>
+<li>apps/<ul>
+<li>pl/<ul>
+<li>scss/ (pl-only styles that don't need to junk up full design system)</li>
+<li>pattern-lab/<ul>
+<li>config/</li>
+<li>composer.json</li>
+</ul>
+</li>
+<li>index.js (webpack entry point for pl)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>dist/<ul>
+<li>assets/ (compiled design system files)</li>
+<li>pl/ (compiled patternlab files)</li>
+</ul>
+</li>
+</ul>
+<h2 id="_1"></h2>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../drupal/" class="btn btn-neutral float-right" title="Drupal">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../config/testing/" class="btn btn-neutral" title="Testing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../config/testing/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../drupal/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

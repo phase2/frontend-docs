@@ -5,23 +5,19 @@ pages:
   - Overview: 'index.md'
   - Getting Started: 'getting-started/system-requirements.md'
   - Commands: 'getting-started/commands.md'
+  - Architecture: 'getting-started/architecture.md'
+  - Config:
+    - Webpack: 'config/webpack.md'
+    - Gulp: 'config/gulpfile.md'
+    - Linting: 'config/linting.md'
   - Apps:
-    - Pattern Lab: 'apps/atomic.md'
+    - Pattern Lab: 'apps/pl.md'
     - Drupal: 'apps/drupal-requirements.md'
-  - Gulp:
-    - Config: 'gulp/gulpfile.md'
-    - pl Compile: 'gulp/tasks/pl-compile.md'
-    - twig namespaces: 'gulp/tasks/twig-namespaces.md'
-    - sass to json: 'gulp/tasks/sass-to-json.md'
-    - webpack dev server: 'gulp/tasks/wpds.md'
-  - Webpack:
-    - Config: 'webpack/config.md'
   - FAQ:
     - General: 'faq/general.md'
     - Troubleshooting: 'faq/troubleshooting.md'
     - How to contribute: 'faq/how-to-contribute.md'
   - Appendix:
     - Glossary: 'appendix/glossary.md'
-    - Architecture: 'appendix/architecture.md'
     - Background: 'appendix/background.md'
     - Library: 'appendix/library.md'

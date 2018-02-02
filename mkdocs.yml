@@ -1,14 +1,13 @@
-site_name: Phase2 Front End Tools Documentation
+site_name: Particle Docs
 site_favicon: favicon.ico
 theme: readthedocs
 pages:
-  - Home: 'index.md'
-  - Getting Started:
-    - System Requirements: 'getting-started/system-requirements.md'
-    - First Steps: 'getting-started/first-steps.md'
-    - Drupal Requirements: 'getting-started/drupal-requirements.md'
-  - Pattern Lab:
-    - Atomic design: 'pattern-lab/atomic.md'
+  - Overview: 'index.md'
+  - Getting Started: 'getting-started/system-requirements.md'
+  - Commands: 'getting-started/commands.md'
+  - Apps:
+    - Pattern Lab: 'apps/atomic.md'
+    - Drupal: 'apps/drupal-requirements.md'
   - Gulp:
     - Config: 'gulp/gulpfile.md'
     - pl Compile: 'gulp/tasks/pl-compile.md'

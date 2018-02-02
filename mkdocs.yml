@@ -1,28 +1,22 @@
-site_name: Phase2 Front End Tools Documentation
+site_name: Particle Docs
 site_favicon: favicon.ico
 theme: readthedocs
 pages:
-  - Home: 'index.md'
-  - Getting Started:
-    - System Requirements: 'getting-started/system-requirements.md'
-    - First Steps: 'getting-started/first-steps.md'
-    - Drupal Requirements: 'getting-started/drupal-requirements.md'
-  - Pattern Lab:
-    - Atomic design: 'pattern-lab/atomic.md'
-  - Gulp:
-    - Config: 'gulp/gulpfile.md'
-    - pl Compile: 'gulp/tasks/pl-compile.md'
-    - twig namespaces: 'gulp/tasks/twig-namespaces.md'
-    - sass to json: 'gulp/tasks/sass-to-json.md'
-    - webpack dev server: 'gulp/tasks/wpds.md'
-  - Webpack:
-    - Config: 'webpack/config.md'
-  - FAQ:
-    - General: 'faq/general.md'
-    - Troubleshooting: 'faq/troubleshooting.md'
-    - How to contribute: 'faq/how-to-contribute.md'
-  - Appendix:
-    - Glossary: 'appendix/glossary.md'
-    - Architecture: 'appendix/architecture.md'
-    - Background: 'appendix/background.md'
-    - Library: 'appendix/library.md'
+  - Overview: 'index.md'
+  - Getting Started: 'appendix/system-requirements.md'
+  - Commands: 'appendix/commands.md'
+  - Architecture: 'appendix/architecture.md'
+  - Config:
+    - General: 'config/general.md'
+    - Webpack: 'config/webpack.md'
+    - Gulp: 'config/gulpfile.md'
+    - Sass: 'config/sass.md'
+    - Linting: 'config/linting.md'
+    - Testing: 'config/testing.md'
+  - Apps:
+    - Pattern Lab: 'apps/pl.md'
+    - Drupal: 'apps/drupal.md'
+    - Grav: 'apps/grav.md'
+    - Adding or Removing: 'apps/general.md'
+  - FAQ: 'faq/index.md'
+  - Appendix: 'appendix/index.md'

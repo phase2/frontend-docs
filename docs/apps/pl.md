@@ -4,7 +4,7 @@ Refer to the [Pattern Lab Documentation](http://patternlab.io/docs) for extensiv
 
 ### Folder Structure Differences
 
-Our folder structure makes some convenient alterations to the typical Pattern Lab folder setup. Basically we move `pattern-lab/source/` up one level because it's the "source" for the entirety of the design system. Here's the difference between the typical and our structure. See [architecture](../appendix/architecture.md) for a more in-depth explanation of the structure.
+Our folder structure makes some convenient alterations to the typical Pattern Lab folder setup. Basically we move `pattern-lab/source/` up one level because it's the "source" for the entirety of the design system. Here's the difference between the typical and our structure. See [architecture](../getting-started/architecture.md) for a more in-depth explanation of the structure.
 
 #### Typical Folder Structure
 

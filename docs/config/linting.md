@@ -1,13 +1,17 @@
+While particle does not care *what* application ultimately consumes your design system, out of the box it does care about how that design system is written. Particularly when it comes to linting. **The linting should hurt your feelings**.
 
-# Opinionated?
+## Javascript
+All javascript should be written in ES6 (ES2015) according to the [AirBnB JavaScript Style Guide](https://github.com/airbnb/javascript). Webpack will use Babel to transpile all javascript back to ES5 in emitted bundles.
 
-While particle does not care *what* application ultimately consumes your design system, it does care about how that design system is written. Particularly when it comes to linting. **The linting will hurt your feelings**.
+To adjust the default rules edit `.eslintrc.js`
 
- ESLint and Stylelint are baked into our webpack buildchain, and they look for:
+## Sass
+[Stylelint](https://stylelint.io/user-guide) is included as part of our webpack buildchain. 
  
- + Modern ES6 javascript, linted based on Airbnb's [mostly reasonable standards](https://github.com/airbnb/javascript), 
- + An in-house blend of CSS/Sass rules designed to keep Sass stylesheets sane and easy to manage.
+To adjust the default rules edit `.stylelintrc`
  
- Both of these linters' rulesets can be overridden or tweaked to a project's needs in their respective .rc files.
- 
- We also heavily encourage using [BEM syntax](http://getbem.com/introduction/) for your HTML/Sass. This is not enforced by anything, but we find that BEM syntax plays very nicely with Atomic Design concepts, and generally makes for clean Sass stylesheets. In the original spirit of [Pattern Lab](http://patternlab.io/), Particle is app and language agnostic-- feel free to use it in whatever manner makes sense for your project.
+## Twig 
+A Twig linter is not currently included in the Particle toolchain, but we recommend following the official [Twig standards](https://twig.symfony.com/doc/2.x/coding_standards.html).
+
+## Other
+We also heavily encourage using [BEM syntax](http://getbem.com/introduction/) for your HTML/Sass. This is not enforced, but we find that BEM syntax plays very nicely with Atomic Design concepts and generally makes for cleaner, more maintainable stylesheets. 

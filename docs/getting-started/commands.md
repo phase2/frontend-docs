@@ -1,41 +1,44 @@
 ## Commands
 
-Quick compile Pattern Lab:
+### Quickstart
+```bash
+npm install
+npm run setup
+npm start
+```
 
+### Compile all Pattern Lab assets
 ```bash
 npm run compile:pl
 ```
 
-Quick compile Drupal:
-
+### Compile all Drupal assets
 ```bash
 npm run compile:drupal
 ```
 
-Start up watches and local server:
-
+### Start and watch local server
 ```bash
 npm start
 ```
 
-Run all linters:
-
+### Run all linters
 ```bash
 npm run lint
 ```
 
-Run all tests:
-
+### Run all tests
 ```bash
 npm test
 ```
 
-To initially install Pattern Lab dependencies and run the twig-namespaces task:
+### Install Pattern Lab dependencies
 ```bash
 npm run setup
 ```
 
-To update node and composer dependencies (**merge** if offered the option):
+### Update dependencies 
+When updating, **merge** if offered the option
 
 ```bash
 npm run update

@@ -7,12 +7,14 @@ pages:
   - Commands: 'getting-started/commands.md'
   - Architecture: 'getting-started/architecture.md'
   - Config:
+    - General: 'config/general.md'
     - Webpack: 'config/webpack.md'
     - Gulp: 'config/gulpfile.md'
+    - Sass: 'config/sass.md'
     - Linting: 'config/linting.md'
   - Apps:
     - Pattern Lab: 'apps/pl.md'
-    - Drupal: 'apps/drupal-requirements.md'
+    - Drupal: 'apps/drupal.md'
   - FAQ:
     - General: 'faq/general.md'
     - Troubleshooting: 'faq/troubleshooting.md'

@@ -77,6 +77,39 @@ All components require a set of files:
     ├── _button.twig                   # The pure component template, "_" required to hide from PL UI
     └── index.js                       # Component entry point
     
+With the power of [Webpack](https://webpack.js.org/), all static assets a component needs are `import`ed right into the `index.js` **entry point** alongside the javascript methods:
+
+```javascript
+// source/_patterns/01-atoms/button/index.js
+
+// Import *EVERY* NPM dependency.
+import $ from 'jquery';
+// Import specific plugins this component may need
+import 'bootstrap/js/src/button';
+
+// source/_patterns/01-atoms/00-protons/index.js
+import 'protons';
+
+// Import local Sass (which in turn imports Bootstrap Sass)
+import './_button.scss';
+
+// Requirement 1 of a component: name
+export const name = 'button';
+
+// Requirement 2 of a component: disable function
+export function disable() {}
+
+// Requirement 3 of a component: enable function. `$context` is `$(document)` in PL, and `context` in Drupal
+export function enable($context) {
+
+// `.button()` is only available because of `import 'bootstrap/js/src/button';` above
+$('#blah', $context).button('toggle');
+}
+
+// Req. 4 of a component: default export is the enable function
+export default enable;
+```
+    
 ## Atomic Design and Namespaces
 
 "Namespaces" are simply aliases to paths on a file system. The design system within `source/` adheres strongly to [Atomic Design](http://atomicdesign.bradfrost.com/), with `@protons` added on.
@@ -94,12 +127,14 @@ All components require a set of files:
 
 Our reasoning for categorization of components within each is pretty close to pure Atomic Design principals, but here's a quick explanation.
 
-- **Protons** features Sass systems and non-consumable pattern markup. No Twig file will `@include` anything from @protons, but javascript and Sass will. This is a uniquely Particle convention.
+- **Protons** features Sass systems and non-consumable pattern markup. No Twig file will `@include` anything from @protons, but javascript and Sass will. This is a uniquely Particle convention. See [Sass](../config/sass.md).
+
+
 - **Atoms** upward **will** be included in other Twig files.
 
     > "Atoms of our interfaces serve as the foundational building blocks that comprise all our user interfaces. These atoms include basic HTML elements like form labels, inputs, buttons, and others that can’t be broken down any further without ceasing to be functional. [Source.](http://atomicdesign.bradfrost.com/chapter-2/#atoms)
     
-- **Molecules** are more complex widgets that must at least include an atom and sometimes other molecules.
+- **Molecules** are more complex widgets that at least include an atom and sometimes other molecules.
 
   > "In interfaces, molecules are relatively simple groups of UI elements functioning together as a unit. For example, a form label, search input, and button can join together to create a search form molecule." [Source.](http://atomicdesign.bradfrost.com/chapter-2/#molecules)
   

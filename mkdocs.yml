@@ -3,23 +3,20 @@ site_favicon: favicon.ico
 theme: readthedocs
 pages:
   - Overview: 'index.md'
-  - Getting Started: 'getting-started/system-requirements.md'
-  - Commands: 'getting-started/commands.md'
-  - Architecture: 'getting-started/architecture.md'
+  - Getting Started: 'appendix/system-requirements.md'
+  - Commands: 'appendix/commands.md'
+  - Architecture: 'appendix/architecture.md'
   - Config:
     - General: 'config/general.md'
     - Webpack: 'config/webpack.md'
     - Gulp: 'config/gulpfile.md'
     - Sass: 'config/sass.md'
     - Linting: 'config/linting.md'
+    - Testing: 'config/testing.md'
   - Apps:
     - Pattern Lab: 'apps/pl.md'
     - Drupal: 'apps/drupal.md'
-  - FAQ:
-    - General: 'faq/general.md'
-    - Troubleshooting: 'faq/troubleshooting.md'
-    - How to contribute: 'faq/how-to-contribute.md'
-  - Appendix:
-    - Glossary: 'appendix/glossary.md'
-    - Background: 'appendix/background.md'
-    - Library: 'appendix/library.md'
+    - Grav: 'apps/grav.md'
+    - Adding or Removing: 'apps/general.md'
+  - FAQ: 'faq/index.md'
+  - Appendix: 'appendix/index.md'

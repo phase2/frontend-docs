@@ -1,5 +1,8 @@
 # What is Particle?
-[Particle](https://github.com/phase2/particle/tree/epic/v10) is an opinionated toolkit for building application-agnostic design systems built with love by [Phase2](https://www.phase2technology.com/).
+[Particle](https://github.com/phase2/particle/) is an opinionated toolkit for building application-agnostic design systems built with love by [Phase2](https://www.phase2technology.com/).
+
+![Particle Logo Astrogoat](img/astrogoat.png)
+
 
 ## Provides
 - Drupal theme and Pattern Lab app

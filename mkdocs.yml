@@ -1,5 +1,4 @@
 site_name: Particle Docs
-site_favicon: favicon.ico
 theme: readthedocs
 pages:
   - Overview: 'index.md'

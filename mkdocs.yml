@@ -2,7 +2,7 @@ site_name: Particle Docs
 theme: readthedocs
 pages:
   - Overview: 'index.md'
-  - Getting Started: 'appendix/system-requirements.md'
+  - Getting Started: 'appendix/getting-started.md'
   - Commands: 'appendix/commands.md'
   - Architecture: 'appendix/architecture.md'
   - Config:

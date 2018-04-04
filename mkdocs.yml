@@ -1,21 +1,34 @@
 site_name: Particle Docs
 theme: readthedocs
 pages:
-  - Overview: 'index.md'
-  - Getting Started: 'appendix/getting-started.md'
-  - Commands: 'appendix/commands.md'
-  - Architecture: 'appendix/architecture.md'
-  - Config:
-    - General: 'config/general.md'
-    - Webpack: 'config/webpack.md'
-    - Gulp: 'config/gulpfile.md'
-    - Sass: 'config/sass.md'
-    - Linting: 'config/linting.md'
-    - Testing: 'config/testing.md'
+ - Home: 'index.md'
+  - Getting Started:
+    - System Requirements: 'getting-started/system-requirements.md'
+    - Quickstart: 'getting-started/first-steps.md'
+    - Commands: 'getting-started/commands.md'
+  - Architecture:
+    - Folder Structure: 'architecture/folders.md'
+    - Component Structure: 'architecture/components.md'
+    - Config Structure: 'architecture/config.md'
+  - Development:
+    - Coding: 'dev/coding.md'
+    - Bundling: 'dev/bundling.md'
+    - Task Running: 'dev/task-running.md'
+    - Linting: 'dev/linting.md'
+    - Testing: 'dev/testing.md'
   - Apps:
-    - Pattern Lab: 'apps/pl.md'
     - Drupal: 'apps/drupal.md'
+    - Pattern Lab: 'apps/patternlab.md'
     - Grav: 'apps/grav.md'
-    - Adding or Removing: 'apps/general.md'
-  - FAQ: 'faq/index.md'
-  - Appendix: 'appendix/index.md'
+    - Adding or removing: 'apps/general.md'
+  - Approach:
+    - Sass/CSS: 'approach/styles.md'
+    - Javascript: 'approach/js.md'
+    - Twig: 'approach/twig.md'
+  - FAQ:
+    - General: 'faq/general.md'
+    - Troubleshooting: 'faq/troubleshooting.md'
+    - How to contribute: 'faq/how-to-contribute.md'
+  - Appendix:
+    - Glossary: 'appendix/glossary.md'
+    - Library: 'appendix/library.md'

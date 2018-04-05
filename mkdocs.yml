@@ -17,14 +17,15 @@ pages:
     - Linting: 'dev/linting.md'
     - Testing: 'dev/testing.md'
   - Apps:
+    - General: 'apps/general.md'
     - Drupal: 'apps/drupal.md'
     - Pattern Lab: 'apps/pl.md'
     - Grav: 'apps/grav.md'
-    - Adding or removing: 'apps/general.md'
   - Approach:
     - Sass/CSS: 'approach/styles.md'
     - Javascript: 'approach/js.md'
     - Twig: 'approach/twig.md'
+    - Assets: 'approach/assets.md'
   - FAQ:
     - General: 'faq/general.md'
     - Troubleshooting: 'faq/troubleshooting.md'

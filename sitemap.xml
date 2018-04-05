@@ -4,31 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-02-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/appendix/system-requirements/</loc>
-     <lastmod>2018-02-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/appendix/commands/</loc>
-     <lastmod>2018-02-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/appendix/architecture/</loc>
-     <lastmod>2018-02-01</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,38 +12,20 @@
     
         
     <url>
-     <loc>/config/general/</loc>
-     <lastmod>2018-02-01</lastmod>
+     <loc>/getting-started/system-requirements/</loc>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/config/webpack/</loc>
-     <lastmod>2018-02-01</lastmod>
+     <loc>/getting-started/quickstart/</loc>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/config/gulpfile/</loc>
-     <lastmod>2018-02-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/config/sass/</loc>
-     <lastmod>2018-02-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/config/linting/</loc>
-     <lastmod>2018-02-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/config/testing/</loc>
-     <lastmod>2018-02-01</lastmod>
+     <loc>/getting-started/commands/</loc>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -76,45 +34,151 @@
     
         
     <url>
-     <loc>/apps/pl/</loc>
-     <lastmod>2018-02-01</lastmod>
+     <loc>/architecture/folders/</loc>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/architecture/components/</loc>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/architecture/config/</loc>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/dev/coding/</loc>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/dev/bundling/</loc>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/dev/task-running/</loc>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/dev/linting/</loc>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/dev/testing/</loc>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/apps/general/</loc>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/apps/drupal/</loc>
-     <lastmod>2018-02-01</lastmod>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/apps/pl/</loc>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/apps/grav/</loc>
-     <lastmod>2018-02-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/apps/general/</loc>
-     <lastmod>2018-02-01</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     
 
     
+        
     <url>
-     <loc>/faq/</loc>
-     <lastmod>2018-02-01</lastmod>
+     <loc>/approach/styles/</loc>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>/approach/js/</loc>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/approach/twig/</loc>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/approach/assets/</loc>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
+        
     <url>
-     <loc>/appendix/</loc>
-     <lastmod>2018-02-01</lastmod>
+     <loc>/faq/general/</loc>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>/faq/troubleshooting/</loc>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/faq/how-to-contribute/</loc>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/appendix/glossary/</loc>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/appendix/library/</loc>
+     <lastmod>2018-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>

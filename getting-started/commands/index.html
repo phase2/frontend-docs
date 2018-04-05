@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Drupal - Particle Docs</title>
+  <title>Commands - Particle Docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Drupal";
-    var mkdocs_page_input_path = "apps/drupal.md";
-    var mkdocs_page_url = "/apps/drupal/";
+    var mkdocs_page_name = "Commands";
+    var mkdocs_page_input_path = "getting-started/commands.md";
+    var mkdocs_page_url = "/getting-started/commands/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -58,15 +58,18 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../getting-started/system-requirements/">System Requirements</a>
+    <a class="" href="../system-requirements/">System Requirements</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../getting-started/quickstart/">Quickstart</a>
+    <a class="" href="../quickstart/">Quickstart</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../getting-started/commands/">Commands</a>
+    <a class="current" href="./">Commands</a>
+    <ul class="subnav">
+            
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -123,25 +126,19 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../general/">General</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Drupal</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#drupal-integration-of-design-system-twig-files">Drupal integration of design system Twig files</a></li>
-    
-
-    </ul>
+    <a class="" href="../../apps/general/">General</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../pl/">Pattern Lab</a>
+    <a class="" href="../../apps/drupal/">Drupal</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../grav/">Grav</a>
+    <a class="" href="../../apps/pl/">Pattern Lab</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apps/grav/">Grav</a>
                 </li>
     </ul>
 	    </li>
@@ -225,11 +222,11 @@
     
       
         
-          <li>Apps &raquo;</li>
+          <li>Getting Started &raquo;</li>
         
       
     
-    <li>Drupal</li>
+    <li>Commands</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -239,18 +236,64 @@
           <div role="main">
             <div class="section">
               
-                <p><code>apps/drupal/</code></p>
-<p>(REVAMP) - templates/ - Drupal twig templates. These often will <code>include</code>, <code>embed</code>, or <code>extend</code> the Twig templates found in Pattern Lab like this: <code>{% include "@molecules/branding/branding.twig" with { url: path('&lt;front&gt;') } %}</code>. We keep the components in Pattern Lab "pure" and ignorant of Drupal's data model and use these templates to map the data between the two. Think of these as the Presenter templates in the <a href="https://en.wikipedia.org/wiki/Model–view–presenter">Model View Presenter</a> approach. Also, Drupal Twig templates that have nothing to do with Pattern Lab go here.</p>
-<h2 id="drupal-integration-of-design-system-twig-files">Drupal integration of design system Twig files</h2>
-<p>Drupal Twig templates in <code>templates/</code> can <code>{% include %}</code>, <code>{% extends %}</code>, and <code>{% embed %}</code> the Twig patterns within <code>source/_patterns/</code>. See the <a href="#atomic-design-and-namespaces">Atomic Design and Namespaces</a> section above for details, but implementing, say, an organism is pretty straightforward:</p>
-<pre><code class="twig">{% include &quot;@organisms/path/to/file.twig&quot; with {
-  title: label,
-  imageUrl: field_name.raw.path,
-  largeCTA: true,
-} %}
+                <p>Start up watches and a local server for Pattern Lab in dev mode. All assets will be served very fast from memory:</p>
+<pre><code class="bash">npm start # An alias for npm run dev:pl
 </code></pre>
 
-<p>(Note: update this) For a demonstration in a sample codebase of how exactly to integrate templates, see the <a href="https://github.com/phase2/drupal-lab"><code>drupal-lab</code></a> repo; in particular note how both a <a href="https://github.com/phase2/drupal-lab/blob/master/web/themes/dashing/templates/content/node--article--teaser.html.twig">node teaser template</a> and a <a href="https://github.com/phase2/drupal-lab/blob/master/web/themes/dashing/templates/views/views-view-fields--newspage--page.html.twig">views field template</a> in the Drupal <code>templates/</code> folder can embed the <a href="https://github.com/phase2/drupal-lab/blob/master/web/themes/dashing/pattern-lab/source/_patterns/02-molecules/cards/card.twig">card template</a> from Pattern Lab while formatting the data.</p>
+<p>Start up watches and compile assets to disk for Drupal on changes (see above for enabling Drupal cache clears as part of this):</p>
+<pre><code class="bash">npm run dev:drupal
+</code></pre>
+
+<p>Compile production assets for Pattern Lab (e.g. for a static file host):</p>
+<pre><code class="bash">npm run build:pl
+</code></pre>
+
+<p>Compile production assets for Drupal</p>
+<pre><code class="bash">npm run build:drupal
+</code></pre>
+
+<p>Compile production assets for Grav</p>
+<pre><code class="bash">npm run build:grav
+</code></pre>
+
+<p>Reinstall and setup Pattern Lab</p>
+<pre><code class="bash">npm run setup
+</code></pre>
+
+<p>Run all linters:</p>
+<pre><code class="bash">npm run lint
+</code></pre>
+
+<p>Run only Javascript linters:</p>
+<pre><code class="bash">npm run lint:js
+</code></pre>
+
+<p>Run only Sass linters:</p>
+<pre><code class="bash">npm run lint:scss
+</code></pre>
+
+<p>Run all tests:</p>
+<pre><code class="bash">npm test
+</code></pre>
+
+<p>Run only unit test:</p>
+<pre><code class="bash">npm run test:unit
+</code></pre>
+
+<p>Run only pa11y accessibility tests:</p>
+<pre><code class="bash">npm run test:pa11y
+</code></pre>
+
+<p>Run Yeoman generator to make new component:</p>
+<pre><code class="bash">npm run new
+</code></pre>
+
+<p>Run any Gulp task:</p>
+<pre><code class="bash"># See gulpfile.js for gulp tasks
+npm run gulp -- gulpTaskName
+# For instance, running a full Pattern Lab compile
+npm run gulp -- compile
+</code></pre>
               
             </div>
           </div>
@@ -258,10 +301,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../pl/" class="btn btn-neutral float-right" title="Pattern Lab">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../architecture/folders/" class="btn btn-neutral float-right" title="Folder Structure">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../general/" class="btn btn-neutral" title="General"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../quickstart/" class="btn btn-neutral" title="Quickstart"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -287,10 +330,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../general/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../quickstart/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../pl/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../architecture/folders/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

@@ -1,10 +1,10 @@
 site_name: Particle Docs
 theme: readthedocs
 pages:
- - Home: 'index.md'
+  - Home: 'index.md'
   - Getting Started:
     - System Requirements: 'getting-started/system-requirements.md'
-    - Quickstart: 'getting-started/first-steps.md'
+    - Quickstart: 'getting-started/quickstart.md'
     - Commands: 'getting-started/commands.md'
   - Architecture:
     - Folder Structure: 'architecture/folders.md'
@@ -18,7 +18,7 @@ pages:
     - Testing: 'dev/testing.md'
   - Apps:
     - Drupal: 'apps/drupal.md'
-    - Pattern Lab: 'apps/patternlab.md'
+    - Pattern Lab: 'apps/pl.md'
     - Grav: 'apps/grav.md'
     - Adding or removing: 'apps/general.md'
   - Approach:

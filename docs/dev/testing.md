@@ -10,19 +10,35 @@ Particle provides the starting point for various types of testing. Tests are loc
     │   │   └── vrt/
     │   └── ...
     └── ...
+    
+    
 
-# Accessibility Testing
+### Unit Testing
+
+Particle provides unit testing using [Jest](https://facebook.github.io/jest/docs/en/tutorial-jquery.html).
+
+Simply run the following to run Jest tests against the design system:
+
+```js
+npm run test:unit
+```
+
+Note the `__tests__` folders within components for examples.
+
+When using the new component generator (`npm run new`), a basic test will be generated for you. This initial test checks that it is correctly registered in the design system.
+
+### Accessibility Testing
 
 To run [pa11y](http://pa11y.org/) accessibility testing on Pattern Lab rendered output, first you'll need to install the pa11y npm package:
 
 ```bash
-npm install pa11y@5.0.0-beta.7 pa11y-reporter-cli
+npm install pa11y
 ```
 
 To save these devDependencies to your project *permanently*, run the following instead:
 
 ```bash
-npm install --save-dev pa11y@5.0.0-beta.7 pa11y-reporter-cli
+npm install pa11y --save-dev
 ```
 
 Then whenever you want to run your tests, simply start the local Pattern Lab dev server in one session:
@@ -53,20 +69,13 @@ const options = {
 };
 ```
 
-If Docker is part of your stack, you may want to try [docker-pa11y](https://github.com/phase2/docker-pa11y), which simplifies a large chunk of the above, and keeps everything neatly containerized. Just saying.
+### Visual Regression Testing
 
-# Unit Testing
+Particle does not include VRT out of the box, but there are plenty of great options out there depending on your needs. 
+Here are some of our favorites, in alphabetical order:
 
-Particle provides unit testing as well using [Jest](https://facebook.github.io/jest/docs/en/tutorial-jquery.html).
-
-Simply run the following to run Jest tests against the design system:
-
-```js
-npm run test:unit
-```
-
-Note the `__tests__` folders within components for examples.
-
-# Visual Regression Testing
-
-Particle does not currently include any VRT tools by default, but we're big fans. Hopefully coming soon.
++ [BackstopJS](https://github.com/garris/BackstopJS)
++ [PhantomJS](https://github.com/ariya/phantomjs)
++ [Puppeteer](https://github.com/GoogleChrome/puppeteer)
++ [SlimerJS](https://github.com/laurentj/slimerjs)
++ [WebdriverIO](http://webdriver.io/)

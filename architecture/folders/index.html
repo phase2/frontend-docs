@@ -88,6 +88,12 @@
 
     <li class="toctree-l3"><a href="#app-structure">App structure</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l4" href="#atomic-design-and-namespaces">Atomic Design and Namespaces</a></li>
+        
+        </ul>
+    
 
     </ul>
                 </li>
@@ -313,6 +319,95 @@
 ├── webpack.drupal.prod.js         # Webpack config unique to prod, or that overrides shared
 └── index.js                       # Imports and applies the design system to a bundle for Drupal
 </code></pre>
+<h2 id="atomic-design-and-namespaces">Atomic Design and Namespaces</h2>
+<p>"Namespaces" are simply aliases to paths on a file system. The design system within <code>source/</code> adheres strongly to <a href="http://atomicdesign.bradfrost.com/">Atomic Design</a>, with <code>@protons</code> added on.</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Twig</th>
+<th>Javascript</th>
+<th>Sass</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source/_patterns/00-protons/</code></td>
+<td><code>@protons</code></td>
+<td><code>protons</code></td>
+<td>TBD</td>
+</tr>
+<tr>
+<td><code>source/_patterns/01-atoms/</code></td>
+<td><code>@atoms</code></td>
+<td><code>atoms</code></td>
+<td>TBD</td>
+</tr>
+<tr>
+<td><code>source/_patterns/02-molecules/</code></td>
+<td><code>@molecules</code></td>
+<td><code>molcules</code></td>
+<td>TBD</td>
+</tr>
+<tr>
+<td><code>source/_patterns/03-organisms/</code></td>
+<td><code>@organisms</code></td>
+<td><code>organisms</code></td>
+<td>TBD</td>
+</tr>
+<tr>
+<td><code>source/_patterns/04-templates/</code></td>
+<td><code>@templates</code></td>
+<td><code>templates</code></td>
+<td>TBD</td>
+</tr>
+<tr>
+<td><code>source/_patterns/05-pages/</code></td>
+<td><code>@pages</code></td>
+<td><code>pages</code></td>
+<td>TBD</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Note: Namespaces within Sass are a work in progress!</p>
+</blockquote>
+<p>Our reasoning for categorization of components within each is pretty close to pure Atomic Design principals, but here's a quick explanation.</p>
+<ul>
+<li>
+<p><strong>Protons</strong> features Sass systems and non-consumable pattern markup. No Twig file will <code>@include</code> anything from <code>@protons</code>, but javascript and Sass will. This is a uniquely Particle convention.</p>
+</li>
+<li>
+<p><strong>Atoms</strong> upward <strong>will</strong> be included in other Twig files.</p>
+<blockquote>
+<p>"Atoms of our interfaces serve as the foundational building blocks that comprise all our user interfaces. These atoms include basic HTML elements like form labels, inputs, buttons, and others that can’t be broken down any further without ceasing to be functional. <a href="http://atomicdesign.bradfrost.com/chapter-2/#atoms">Source.</a></p>
+</blockquote>
+</li>
+<li>
+<p><strong>Molecules</strong> are more complex widgets that must at least include an atom and sometimes other molecules.</p>
+<blockquote>
+<p>"In interfaces, molecules are relatively simple groups of UI elements functioning together as a unit. For example, a form label, search input, and button can join together to create a search form molecule." <a href="http://atomicdesign.bradfrost.com/chapter-2/#molecules">Source.</a></p>
+</blockquote>
+</li>
+<li>
+<p><strong>Organisms</strong> feature atoms, molecules, and even other organisms (sparingly). Think headers, footers, blog rolls.</p>
+<blockquote>
+<p>"Organisms are relatively complex UI components composed of groups of molecules and/or atoms and/or other organisms." <a href="http://atomicdesign.bradfrost.com/chapter-2/#organisms">Source.</a></p>
+</blockquote>
+</li>
+<li>
+<p><strong>Templates</strong> are page layouts, giving us a view into how content can possibly be laid out.</p>
+<blockquote>
+<p>"Templates are page-level objects that place components into a layout and articulate the design’s underlying content structure." <a href="http://atomicdesign.bradfrost.com/chapter-2/#templates">Source.</a></p>
+</blockquote>
+</li>
+<li>
+<p><strong>Pages</strong> can be considered full "prototypes" of a design systgem, with real content, images, etc.</p>
+<blockquote>
+<p>"Pages are specific instances of templates that show what a UI looks like with real representative content in place." <a href="http://atomicdesign.bradfrost.com/chapter-2/#pages">Source.</a></p>
+</blockquote>
+</li>
+</ul>
               
             </div>
           </div>

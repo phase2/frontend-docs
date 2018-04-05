@@ -1,3 +1,7 @@
+## Configuration
+
+A small `config.js` file at the root of the project provides basic path settings. Developers are encouraged to edit the Gulp and Webpack files directly to suit their needs.
+
 ## Webpack
 
 [Webpack](https://webpack.js.org/) does the heavy lifting of assets compilation and transformation. Webpack allows importing of Sass, images, fonts, and other assets into javascript files, bundling output files like CSS and javascript. Note the two webpack files at the root of the project:

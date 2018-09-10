@@ -1,4 +1,6 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Particle](README.md)
+* [Intro](intro.md)
+* [Particle FAQ](particle-faq.md)
 

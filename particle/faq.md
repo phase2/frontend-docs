@@ -4,7 +4,7 @@ description: >-
   within documentation.
 ---
 
-# Particle FAQ
+# FAQ
 
 ## Can I change the Pattern Lab app to not open a new tab on every start?
 

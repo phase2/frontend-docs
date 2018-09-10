@@ -1,6 +1,7 @@
 # Table of contents
 
-* [Particle](README.md)
+* [Phase2 Frontend Docs](README.md)
 * [Intro](intro.md)
-* [Particle FAQ](particle-faq.md)
+* [Particle](particle/README.md)
+  * [Particle FAQ](particle/particle-faq.md)
 

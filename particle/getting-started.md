@@ -16,6 +16,8 @@ description: Everything needed to get Particle installed and running.
 1. Skip steps if you already have the tools listed
 2. Run `source ~/.bashrc` or `source ~/.zshrc` after each step to ensure command is registered
 
+### OS-specific Instructions
+
 {% tabs %}
 {% tab title="OSX" %}
 ### Install [Homebrew](https://brew.sh/)​

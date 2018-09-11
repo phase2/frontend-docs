@@ -11,7 +11,7 @@ description: >-
 Adjust **wepback-dev-server** _development_ mode behavior for Pattern Lab within `apps/pl/webpack.pl.js` by setting `open` to `false`:
 
 {% code-tabs %}
-{% code-tabs-item title="webpack.pl.js" %}
+{% code-tabs-item title="apps/pl/webpack.pl.js" %}
 ```javascript
 const dev = {
   // ...

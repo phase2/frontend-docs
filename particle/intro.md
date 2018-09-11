@@ -12,7 +12,7 @@ description: >-
 
 Particle is an opinionated set of tools and examples to:
 
-1. Build an application-agnostic **design system** like Twig, Sass, JavaScript, images, and fonts.
+1. Build an application-agnostic **design system** made of assets like Twig, Sass, JavaScript, images, etc
 2. Apply that **design system** to a locally-served Pattern Lab for rapid prototyping
 3. Apply that **design system** to other consuming apps like, Drupal, Grav, or \(soon\) Wordpress
 

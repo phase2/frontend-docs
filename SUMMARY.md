@@ -5,7 +5,7 @@
 
 ## Particle
 
-* [Particle: What is it?](particle/intro.md)
+* [What is it?](particle/intro.md)
 * [Getting Started](particle/getting-started.md)
 * [FAQ](particle/faq.md)
 

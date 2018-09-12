@@ -4,7 +4,7 @@ description: >-
   systems built with love by Phase2.
 ---
 
-# Particle: What is it?
+# What is it?
 
 ![Astrogoat is the official logo of Particle, by Lisa Jansen](../.gitbook/assets/astrogoat.png)
 

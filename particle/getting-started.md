@@ -13,8 +13,11 @@ description: Everything needed to get Particle installed and running.
 
 ## Install System Dependencies
 
-1. Skip steps if you already have the tools listed
-2. Run `source ~/.bashrc` or `source ~/.zshrc` after each step to ensure command is registered
+{% hint style="success" %}
+Skip to installing Particle if you already have Node, NPM, PHP, and Composer installed.
+{% endhint %}
+
+Run `source ~/.bashrc` or `source ~/.zshrc` after each step to ensure command is registered
 
 ### OS-specific Instructions
 
@@ -78,16 +81,20 @@ nvm install v10 && nvm alias default v10
 npm install -g npm@latest
 ```
 
-### Install Particle
+## Install Particle
 
 {% tabs %}
 {% tab title="Via script" %}
+{% hint style="info" %}
+`npx` is [a tool installed alongside NPM 5.2+](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b).
+{% endhint %}
+
 ```bash
 npx phase2/create-particle particle && cd particle
 ```
 {% endtab %}
 
-{% tab title="Via clone" %}
+{% tab title="Via git" %}
 ```bash
 git clone git@github.com:phase2/particle.git && cd particle
 ```
@@ -109,4 +116,10 @@ npm install && npm run setup
 ```bash
 npm start
 ```
+
+### Open Particle
+
+Simply visit [http://0.0.0.0:8080/pl](http://0.0.0.0:8080/pl) or [http://localhost:8080/pl](http://localhost:8080/pl) and start editing files!
+
+
 

@@ -6,6 +6,7 @@
 
 * [What is it?](particle/intro.md)
 * [Getting Started](particle/getting-started.md)
+* [Commands](particle/commands.md)
 * [FAQ](particle/faq.md)
 
 ## Frontend

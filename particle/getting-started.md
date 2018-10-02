@@ -1,7 +1,3 @@
----
-description: Everything needed to get Particle installed and running.
----
-
 # Getting Started
 
 ## System Requirements

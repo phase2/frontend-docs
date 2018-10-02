@@ -1,9 +1,3 @@
----
-description: >-
-  Common questions about Particle. Questions here should link to solutions
-  within documentation.
----
-
 # FAQ
 
 ## Can I change the Pattern Lab app to not open a new tab on every start?

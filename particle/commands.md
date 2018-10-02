@@ -1,9 +1,3 @@
----
-description: >-
-  Particle features a lot of commands to help all aspects of frontend
-  development.
----
-
 # Commands
 
 Start the local webpack-dev-server for Pattern Lab, hot-reload all frontend assets, automatically recompile all assets and Pattern Lab on file change.

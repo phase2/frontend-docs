@@ -3,7 +3,7 @@
 
 ![Particle Logo Astrogoat](img/astrogoat.png)
 
-Particle is an opinionated set of tools and examples to:
+Particle is an opinionated set of tools and examples to blerp:
 
 1. Build an application-agnostic **design system** of asset files like Twig, Sass, javascript, and images
 1. Apply that design system to a locally-served **Pattern Lab** for rapid prototyping

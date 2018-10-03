@@ -40,5 +40,7 @@ npx browserslist
 
 See FA project config here.
 
+## What's with the goat?
 
+It's cute, right?
 

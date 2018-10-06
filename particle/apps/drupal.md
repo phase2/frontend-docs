@@ -1,7 +1,3 @@
----
-description: A powerful open-source CMS
----
-
 # Drupal
 
 `apps/drupal/`

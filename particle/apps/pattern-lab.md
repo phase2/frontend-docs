@@ -1,7 +1,3 @@
----
-description: An atomic design tool for prototyping decoupled frontend designs.
----
-
 # Pattern Lab
 
 `apps/pl/`

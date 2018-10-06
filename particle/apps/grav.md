@@ -1,7 +1,3 @@
----
-description: Grav is a flat file CMS that uses Twig as a template engine.
----
-
 # Grav
 
 `apps/grav/`

@@ -81,12 +81,8 @@ npm install -g npm@latest
 
 {% tabs %}
 {% tab title="Via script" %}
-{% hint style="info" %}
-`npx` is [a tool installed alongside NPM 5.2+](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b).
-{% endhint %}
-
 ```bash
-npx phase2/create-particle particle && cd particle
+npm create @phase2/particle particle && cd particle
 ```
 {% endtab %}
 

@@ -1,9 +1,3 @@
----
-description: >-
-  Prior to beginning development, learning the various Particle-specific
-  approaches is key.
----
-
 # Approach
 
 

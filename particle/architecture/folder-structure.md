@@ -1,9 +1,3 @@
----
-description: >-
-  Much of Particle's general functionality is determined by the location and
-  nesting of specific folders, and the specific files located therein.
----
-
 # Folder Structure
 
 ## General Structure {#structure}

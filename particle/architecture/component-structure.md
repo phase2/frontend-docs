@@ -1,10 +1,3 @@
----
-description: >-
-  Each individual pattern in the atomic design system is a specific component.
-  Particle (and Pattern Lab)'s ability to generate, organize, and easily manage
-  these is the cornerstone of the system.
----
-
 # Component Structure
 
 ## Generating a Component

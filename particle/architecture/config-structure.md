@@ -1,9 +1,3 @@
----
-description: >-
-  Apps that Particle helps create all require different configurations, as well
-  as the various subsystems that Particle uses.
----
-
 # Config Structure
 
 ## Configuration

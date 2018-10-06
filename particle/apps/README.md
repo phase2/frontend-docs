@@ -1,9 +1,3 @@
----
-description: >-
-  Particle features "apps" which simply consume the design system in source/ and
-  then present it according to their needs.
----
-
 # Apps
 
 ## Adding or Removing Apps

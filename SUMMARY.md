@@ -17,6 +17,7 @@
   * [Bundling](particle/development/bundling.md)
   * [Task Running](particle/development/task-running.md)
   * [Testing](particle/development/testing.md)
+* [Webpack](particle/webpack.md)
 * [Apps](particle/apps/README.md)
   * [Drupal](particle/apps/drupal.md)
   * [Pattern Lab](particle/apps/pattern-lab.md)

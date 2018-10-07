@@ -12,8 +12,8 @@ The following are significant items at the root level:
 ├── source                         # The design system. All assets compiled to dist/
 ├── tools                          # Gulp plugins and node tools
 ├── gulpfile.js                    # Defines the few tasks required in the workflow
-├── webpack.particle.dev.js        # Shared bundle configuration for all dev entry points
-├── webpack.particle.prod.js       # Shared bundle configuration for all prod entry points
+├── particle.js                    # Merges app and root config
+├── webpack.particle.js            # Root config for all entry points
 └── ...                            # Mostly just config
 ```
 
@@ -40,7 +40,7 @@ The following are significant items at the root level:
 └── design-system.js               # The ultimate importer/exporter of the design system pieces
 ```
 
-> The design system is consumed by "apps". The three apps included are a Drupal theme, Grav theme, and a Pattern Lab installation.
+The design system is consumed by "apps". The three apps included are a Drupal theme, Grav theme, and a Pattern Lab installation.
 
 ## App structure {#app-structure}
 

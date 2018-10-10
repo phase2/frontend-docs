@@ -5,7 +5,8 @@
 ## Particle
 
 * [What is it?](particle/intro.md)
-* [Getting Started](particle/getting-started.md)
+* [Getting Started](particle/getting-started/README.md)
+  * [Drupal 8](particle/getting-started/drupal-8.md)
 * [Commands](particle/commands.md)
 * [Architecture](particle/architecture/README.md)
   * [Folder Structure](particle/architecture/folder-structure.md)

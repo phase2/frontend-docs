@@ -2,6 +2,8 @@
 
 `apps/drupal/`
 
+_For information on getting Drupal theming started in Particle, check the_ [_Drupal 8 Quickstart Guide_](../getting-started/drupal-8.md)_._
+
 \(REVAMP\) - templates/ - Drupal twig templates. These often will `include`, `embed`, or `extend` the Twig templates found in Pattern Lab like this: `{% include "@molecules/branding/branding.twig" with { url: path('<front>') } %}`. We keep the components in Pattern Lab "pure" and ignorant of Drupal's data model and use these templates to map the data between the two. Think of these as the Presenter templates in the [Model View Presenter](https://en.wikipedia.org/wiki/Model–view–presenter) approach. Also, Drupal Twig templates that have nothing to do with Pattern Lab go here.
 
 ## Drupal integration of design system Twig files

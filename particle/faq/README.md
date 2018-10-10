@@ -40,6 +40,10 @@ npx browserslist
 
 See FA project config here.
 
+## Drupal is complaining about @ templates not being defined! What did I do?
+
+This most likely means you missed installing the Drupal 8 `Components` module. Glance back over the [Quickstart guide](../getting-started/drupal-8.md) to make sure you didn't miss anything else common, like building the Drupal components.
+
 ## What's with the goat?
 
 It's cute, right?

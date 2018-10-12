@@ -6,7 +6,7 @@ A small `config.js` file at the root of the project provides basic path settings
 
 ## Webpack
 
-[Webpack](https://webpack.js.org/) does the heavy lifting of assets compilation and transformation. Webpack allows importing of Sass, images, fonts, and other assets into javascript files, bundling output files like CSS and javascript. Note the two webpack files at the root of the project:
+Webpack does the heavy lifting of assets compilation and transformation. Webpack allows importing of Sass, images, fonts, and other assets into JavaScript files, bundling output files like CSS and JavaScript. Note the two webpack files at the root of the project:
 
 * `webpack.particle.dev.js`: Development settings shared amongst all consuming apps.
 * `webpack.particle.prod.js`: Production settings shared amongst all the consuming app.

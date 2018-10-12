@@ -2,7 +2,7 @@
 
 ## Generating a Component
 
-Components have a specific file structure. Instead of making a developer create all required files by hand, we use a [Yeoman](http://yeoman.io/) generator to easily create new component folders. Simply run:
+Components have a specific file structure. Instead of making a developer create all required files by hand, we use a [Yeoman](http://yeoman.io/) generator to easily create new component folders by running the following command in Bash:
 
 ```text
 npm run new
@@ -17,21 +17,29 @@ All components require a set of files:
 ```text
 # ./source/_patterns/01-atoms/button/
 .
-├── __tests__                      # Jest unit tests. Read automatically during `npm run test:unit`
-│   └── button.test.js             # Unit test JS functions. Limited DOM manipulation
-├── demo                           # Demo implementations, can be removed on deploy to prod
-│   ├── index.js                   # Pulls in twig, yaml, md inside demo/ so webpack is aware
-│   ├── buttons.md                 # Markdown with extra notes, visible in PL UI
-│   ├── buttons.twig               # Demonstrate with a plural name, visible to PL since no underscore
-│   └── buttons.yml                # Data provided to the demo pattern
-├── _button.scss                   # Most components require styles, underscore required
-├── _button.twig                   # The pure component template, "_" required to hide from PL UI
-└── index.js                       # Component entry point
+├── demo                            # Demo implementations; can be removed on deploy to prod
+│   ├── index.js                    # Pulls in Twig, YAML, MD inside demo/ so Webpack is aware
+│   ├── buttons.md                  # Markdown with extra notes, visible in PL UI
+│   ├── buttons.twig                # Demonstrate with a plural name, visible to PL since no underscore
+│   └── buttons.yml                 # Data provided to the demo pattern
+├── _button.scss                    # Most components require styles, underscore required
+├── _button.twig                    # The pure component template, underscore required to hide from PL UI
+└── index.js                        # Component entry point
 ```
 
-With the power of [Webpack](https://webpack.js.org/), all static assets a component needs are `import`ed right into the `index.js` **entry point** alongside the javascript methods:
+Optionally, you can add a `__test__` folder to your components base directory (note the two underscores before and after) for Jest unit testing like so:
 
 ```text
+# ./source/_patterns/01-atoms/button/
+.
+├── __test__                        # Jest unit tests. Read automatically during "npm run test:unit"
+│   └── button.test.js              # Unit test JS functions. Limited DOM manipulation
+├── ...
+```
+
+With the power of Webpack, all static assets a component needs are `import`ed right into the `index.js` **entry point** alongside the JavaScript methods:
+
+```javascript
 // source/_patterns/01-atoms/button/index.js
 
 // Import *EVERY* NPM dependency.
@@ -64,4 +72,3 @@ export function enable($context) {
 // Req. 4 of a component: default export is the enable function
 export default enable;
 ```
-

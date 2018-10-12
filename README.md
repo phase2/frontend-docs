@@ -1,8 +1,4 @@
-# What is it?
-
-![Astrogoat is the official logo of Particle, by Lisa Jansen](../.gitbook/assets/astrogoat.png)
-
-## What is Particle?
+# What is Particle?
 
 Particle is an opinionated set of tools and examples to:
 

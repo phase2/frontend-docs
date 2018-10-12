@@ -2,7 +2,7 @@
 
 **App Root:**
 
-`/apps/grav/`
+`apps/grav/`
 
 Learn more [here](https://learn.getgrav.org/).
 

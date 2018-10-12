@@ -1,22 +1,26 @@
 # Commands
 
-Start the local webpack-dev-server for Pattern Lab, hot-reload all frontend assets, automatically recompile all assets and Pattern Lab on file change.
+## Start a Server
+
+Start the local Webpack dev server for Pattern Lab, hot-reload all frontend assets, and automatically recompile all assets and Pattern Lab on file change
 
 ```bash
 npm start
 ```
 
-Start file watchers and compile assets to disk for Drupal on changes.
+Start file watchers and compile assets to disk for Drupal on changes
 
 ```bash
 npm run dev:drupal
 ```
 
-Compile production assets for Pattern Lab \(e.g. for a static file host\):
+Start file watchers and compile assets to disk for Grav on changes
 
 ```bash
-npm run build:pl
+npm run dev:grav
 ```
+
+## Compile Assets
 
 Compile production assets for Drupal
 
@@ -24,11 +28,39 @@ Compile production assets for Drupal
 npm run build:drupal
 ```
 
-Reinstall and setup Pattern Lab
+Compile production assets for Grav
 
 ```bash
-npm run setup
+npm run build:grav
 ```
+
+Compile production assets for Pattern Lab \(e.g. for a static file host\)
+
+```bash
+npm run build:pl
+```
+
+## Code Formatting
+
+Lint and Prettier both JavaScript and Sass
+
+```bash
+npm run fmt
+```
+
+Lint and Prettier only JavaScript
+
+```bash
+npm run fmt:js
+```
+
+Lint and Prettier only Sass
+
+```bash
+npm run fmt:scss
+```
+
+## Code Linting
 
 Run all linters:
 
@@ -36,17 +68,43 @@ Run all linters:
 npm run lint
 ```
 
-Run only Javascript linters:
+Run only Javascript linters
 
 ```bash
 npm run lint:js
 ```
 
-Run only Sass linters:
+Run only Sass linters
 
 ```bash
 npm run lint:scss
 ```
+
+Run only Twig linters
+
+```bash
+npm run lint:twig
+```
+
+Run only Twig linters for Drupal
+
+```bash
+npm run lint:twig:drupal
+```
+
+Run only Twig linters for Grav
+
+```bash
+npm run lint:twig:grav
+```
+
+Run only Twig linters for Pattern Lab
+
+```bash
+npm run lint:twig:source
+```
+
+## Automated Testing
 
 Run all tests:
 
@@ -54,23 +112,18 @@ Run all tests:
 npm test
 ```
 
-Run only unit test:
-
-```bash
-npm run test:unit
-```
-
-Run only pa11y accessibility tests:
+Run only Pa11y accessibility tests
 
 ```bash
 npm run test:pa11y
 ```
 
-Run Yeoman generator to make new component:
-
+Run only unit tests
 ```bash
-npm run new
+npm run test:unit
 ```
+
+## Additional Commands
 
 Run any Gulp task:
 
@@ -81,3 +134,14 @@ npx gulp gulpTaskName
 npx gulp compile:pl
 ```
 
+Run Yeoman generator to make new component
+
+```bash
+npm run new
+```
+
+Reinstall and setup Pattern Lab
+
+```bash
+npm run setup
+```

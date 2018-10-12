@@ -1,6 +1,7 @@
 # Pattern Lab
 
 **App Root:**
+
 `/apps/pl/`
 
 Refer to the [Pattern Lab Documentation](http://patternlab.io/docs) for extensive info on how to use it. Particle implements a custom Pattern Lab 2 _Edition_ that is heavily influenced by the [Drupal Edition of Pattern Lab](https://github.com/pattern-lab/edition-php-drupal-standard) and uses the Twig engine to bring it inline with Drupal 8's use of Twig.

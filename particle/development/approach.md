@@ -30,27 +30,20 @@ $rando-var: 33px;
 There is a distinct role for each in the component system of Particle. In the `button` component featured above in [Anatomy of a Component](https://phase2.github.io/frontend-docs/architecture/components/#anatomy-of-a-component), note this import:
 
 ```text
-// source/_patterns/01-atoms/button/_index.js
+// /source/_patterns/01-atoms/button/_index.js
 ...
 import './_button.scss';
 ...
 
 ```
 
-Looking into `source/_patterns/01-atoms/button/_button.scss` reveals:
-
-```text
-@import '../../00-protons/config'; // DOES NOT OUTPUT CSS!
-
-$btn-border-radius: 0.25rem;
-@import "~bootstrap/scss/buttons"; // OUTPUTS CSS!
-
-.custom-class {
-  color: red;    // OUTPUTS CSS!
-}
-```
-
-This approach to component styes allows sharing non-printing Sass **configuration**, while also ensuring our component prints its custom CSS exactly once. We can now safely `@import 'atoms/button;` anywhere in our other javascript components as many times as needed and there will be no duplicate CSS output for buttons!
+When `_button.scss` is loaded in, the Sass loader brings the
+`/source/_patterns/00-protons/_variables.scss` file with it, ensuring that the
+required functions and variables are already available. This approach to
+component styes allows sharing non-printing Sass **configuration**, while also
+ensuring our component prints its custom CSS exactly once. We can now safely
+`@import 'atoms/button;` anywhere in our other JavaScript components as many
+times as needed and there will be no duplicate CSS output for buttons!
 
 ### BEM
 

@@ -2,19 +2,19 @@
 
 **App Root:**
 
-`/apps/pl/`
+`apps/pl/`
 
 Refer to the [Pattern Lab Documentation](http://patternlab.io/docs) for extensive info on how to use it. Particle implements a custom Pattern Lab 2 _Edition_ that is heavily influenced by the [Drupal Edition of Pattern Lab](https://github.com/pattern-lab/edition-php-drupal-standard) and uses the Twig engine to bring it inline with Drupal 8's use of Twig.
 
-The `/app/pl` folder simply imports the design system from `/source/` and provides its own custom Sass for UI and JSON generation. Any Twig files that change in `/source/` cause a full Pattern Lab rebuild. The Pattern Lab engine and configuration lives within `/apps/pl/pattern-lab`.
+The `app/pl` folder simply imports the design system from `source/` and provides its own custom Sass for UI and JSON generation. Any Twig files that change in `source/` cause a full Pattern Lab rebuild. The Pattern Lab engine and configuration lives within `apps/pl/pattern-lab`.
 
 ## Faker data in Pattern Lab
 
 [`Faker`](https://github.com/fzaninotto/Faker) generates fake data and the [Faker plugin for Pattern Lab](https://github.com/pattern-lab/plugin-php-faker) is used here. This generates _different_ fake content for each compile, and allows [translated content](https://github.com/pattern-lab/plugin-php-faker#locales) as well.
 
-**Faker only works in the global data files** found in `/source/_data/` currently until [this bug](https://github.com/pattern-lab/plugin-php-faker/issues/2) is fixed.
+**Faker only works in the global data files** found in `source/_data/` currently until [this bug](https://github.com/pattern-lab/plugin-php-faker/issues/2) is fixed.
 
-Use it like this in `/source/_data/data.json`:
+Use it like this in `source/_data/data.json`:
 
 ```json
 {

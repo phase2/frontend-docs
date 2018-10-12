@@ -23,11 +23,17 @@ The following are significant items at the root level:
 ├── _data/                          # Generated files used by PL for displaying data
 ├── _meta/                          # Twig files for displaying live demo
 ├── _patterns/                      # Atomic assets used by the design system
+│   ├── 00-protons                  #
+│   ├── 00-atoms                    #
+│   ├── 00-molecules                #
+│   ├── 00-organisms                #
+│   ├── 00-templates                #
+│   └── 05-pages                    #
 ├── _twig-components/               # Various Twig PHP components
 └── design-system.js                # The ultimate importer/exporter of the design system pieces
 ```
 
-The design system is consumed by "apps". The three apps included are a Drupal theme, Grav theme, and a Pattern Lab installation.
+The design system is consumed by "apps". The three apps included are a Drupal theme, Grav theme, and a Pattern Lab installation. For more information on the structure of a component in the `~_patterns/` folder, see [Component Structure](./component-structure.md)
 
 ## App structure {#app-structure}
 

@@ -47,7 +47,7 @@ Then whenever you want to run your tests, simply start the local Pattern Lab dev
 npm run start
 ```
 
-And the kick off the pa11y tests in another session:
+And the kick off the Pa11y tests in another session:
 
 ```bash
 npm run test:pa11y

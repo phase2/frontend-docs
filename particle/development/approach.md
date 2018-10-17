@@ -13,7 +13,9 @@ Useful for small, frequently used icons that are a single color which is changea
    * HTML class: `icon--filename`
    * Sass Mixin: `@include icon(filename)`
 
-> IMPORTANT: Font icons are only compiled at the start of a webpack build. The Webpack dev server will have to be restarted to see new icons appear in the font.
+{% hint style="info" %}
+Font icons are only compiled at the start of a webpack build. The Webpack dev server will have to be restarted to see new icons appear in the font.
+{% endhint %}
 
 ### Inline SVG
 

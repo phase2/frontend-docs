@@ -7,4 +7,5 @@ If you haven't already, be sure to check out the [Development Approach](../devel
 ## Available Guides
 
 * [Overview](./])
+* [Colors](./colors.md)
 * [Fonts and Typefaces](./fonts.md)

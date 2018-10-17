@@ -71,7 +71,7 @@ $headings-font-weight-custom: 700;
 $headings-font-weight: $headings-font-weight-custom;
 ```
 
-All of the default Bootstrap variables and their values can be found in the `node_modules/bootstrap/scss/_variables.scss` in the section labeled *Fonts*.
+All of the default Bootstrap variables and their values can be found in the `node_modules/bootstrap/scss/_variables.scss`.
 
 {% hint style="info" %}
 If you're missing the `node_modules` root folder, run the install and/or setup commands in the [Commands](../commands.md) guide.

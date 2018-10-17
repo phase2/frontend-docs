@@ -2,6 +2,18 @@
 
 ## Start a Server
 
+Install dependencies
+
+```bash
+npm install
+```
+
+Setup and/or reinstall Pattern Lab
+
+```bash
+npm run setup
+```
+
 Start the local Webpack dev server for Pattern Lab, hot-reload all frontend assets, and automatically recompile all assets and Pattern Lab on file change
 
 ```bash
@@ -138,10 +150,4 @@ Run Yeoman generator to make new component
 
 ```bash
 npm run new
-```
-
-Reinstall and setup Pattern Lab
-
-```bash
-npm run setup
 ```

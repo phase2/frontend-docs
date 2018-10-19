@@ -19,6 +19,7 @@ Particle comes by default with many different patterns based on [Bootstrap 4](ht
 
 * Don't Remove Protons: these "patterns" contain largely config. Simply put, they contain a bit of the magic that makes Particle great. Once you know more about how these are working you can override them.
 * Don't Remove Atoms/Images or Atoms/SvgIcon right away: while these patterns are replaceable, they're used in a few places that may result in angry console output.
+* Organisms/Carousel: This default pattern implements Bootstrap 4's Carousel, but also stands as a method for the Drupal app to have settings overridden. Remove Carousel as well as the settings overrides in the [Drupal app's](https://github.com/phase2/particle/blob/master/apps/drupal/index.js) `index.js` file.
 
 ## Now You're Linting with Power. AirBnB Power
 
@@ -30,6 +31,10 @@ No but seriously, your linter might get mad at you. For full instruction, see co
 * ESLint: [.eslintrc.js](https://eslint.org/) [AirBnb JS Style Guide](https://github.com/airbnb/javascript)
 * Prettier: [.prettierrc.js](https://prettier.io/)
 * Stylelint: [.stylelintrc](https://stylelint.io/user-guide/)
+
+## Removing Bootstrap
+
+WIP - Help Requested
 
 ## Renaming Drupal Theme
 

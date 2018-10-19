@@ -2,7 +2,7 @@
 
 ## Configuration
 
-A small `config.js` file at the root of the project provides basic path settings. Developers are encouraged to edit the Gulp and Webpack files directly to suit their needs.
+A small `config.js` file at the root of the project provides basic path settings, while the configuration files for a number of other technologies also sit there. Developers are encouraged to edit the Gulp and Webpack files directly to suit their needs, while tech leads and project managers should edit all others.
 
 ## Webpack
 
@@ -26,4 +26,38 @@ The Drupal theme config is located at `apps/drupal`. Look for the usual `.info.y
 ## Pattern Lab config
 
 The Pattern Lab config file is located at `apps/pl/pattern-lab/config/config.yml`.
+
+## Others
+
+### Babel
+
+Fill this out
+
+### Browserslist
+
+Fill more out [using docs](https://www.npmjs.com/package/browserslist)
+
+### editorconfig
+
+Fill this out
+
+### Eslint
+
+Fill this out
+
+### Husky
+
+Fill this out
+
+### Prettier
+
+Fill this out.
+
+### StyleLint
+
+Fill this out.
+
+### Jest
+
+Fill this out.
 

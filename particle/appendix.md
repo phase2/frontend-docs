@@ -12,6 +12,7 @@
 * [Bootstrap](https://getbootstrap.com/)
 * [ESLint](https://eslint.org/)
 * [Stylelint](https://stylelint.io/)
+* [Browserslist](https://www.npmjs.com/package/browserslist)
 
 ## Further Reading {#further-reading}
 

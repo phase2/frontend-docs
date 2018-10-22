@@ -1,6 +1,6 @@
 # Appendix
 
-## Technologies included {#technologies-included}
+## Technologies included <a id="technologies-included"></a>
 
 * [Webpack](https://webpack.js.org/)
 * [Gulp](https://gulpjs.com/)
@@ -14,7 +14,7 @@
 * [Stylelint](https://stylelint.io/)
 * [Browserslist](https://www.npmjs.com/package/browserslist)
 
-## Further Reading {#further-reading}
+## Further Reading <a id="further-reading"></a>
 
 * [Pattern Lab](http://patternlab.io/)
 * [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/)

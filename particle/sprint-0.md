@@ -42,6 +42,6 @@ While not entirely necessary, you may make the decision at some point to rename 
 
 * Update `particle.info.yml` to `kittens.info.yml`
 * Update Particle theme functions file from `particle.theme` to `kittens.theme`
- * * Update your theme function names in from `particle_` to `kittens_`.
+ * * Update your theme function names from `particle_` to `kittens_`.
 * Update `particle.libraries.yml` to `kittens.libraries.yml`
 * Note that Particle bypasses Drupal's default jQuery library.

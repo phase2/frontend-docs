@@ -1,3 +1,10 @@
+---
+description: >-
+  So you've just started a project and you're using Particle? Awesome! This
+  Sprint 0 Guidebook is here to help get your files and project in order to
+  start Sprint 1 with a bang.
+---
+
 # Sprint 0
 
 ## Removing Apps
@@ -32,7 +39,13 @@ No but seriously, your linter might get mad at you. For full instruction, see co
 
 ## Removing Bootstrap
 
-WIP - Help Requested
+@todo: More info on how to remove Bootstrap JS is needed.
+
+### SCSS
+
+By default a large number of Bootstrap micro libraries are included with the base Particle components. This allows Pattern Lab to look good and usable from the jump, while also giving themers an easy ability to cut out styles and libraries they don't need.
+
+Bootstrap styles are located in `_patterns/00-protons/_bootstrap-printing.scss` As you can guess by looking at the file, you can remove any individual Bootstrap pattern by removing the line. Since Bootstrap is mostly class-based, removing any given line won't cause compile errors \(although it may make certain pages look less pretty\)
 
 ## Renaming Drupal Theme
 

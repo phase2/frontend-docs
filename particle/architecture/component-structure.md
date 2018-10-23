@@ -2,7 +2,7 @@
 
 ## Generating a Component
 
-Components have a specific file structure. Instead of making a developer create all required files by hand, we use a [Yeoman](http://yeoman.io/) generator to easily create new component folders by running the following command in Bash:
+Components have a specific file structure. Instead of making a developer create all required files by hand, we use a [Yeoman](http://yeoman.io/) generator to easily create new component folders by running the following command:
 
 ```text
 npm run new

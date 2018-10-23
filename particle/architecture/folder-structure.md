@@ -1,6 +1,6 @@
 # Folder Structure
 
-## General Structure {#structure}
+## General Structure <a id="structure"></a>
 
 The following are significant items at the root level:
 
@@ -13,7 +13,7 @@ The following are significant items at the root level:
 └── tools/                          # Gulp plugins and Node tools
 ```
 
-## Source structure {#source-structure}
+## Source structure <a id="source-structure"></a>
 
 `source/` holds all assets for the design system and looks like this:
 
@@ -35,7 +35,7 @@ The following are significant items at the root level:
 
 The design system is consumed by "apps". The three apps included are a Drupal theme, Grav theme, and a Pattern Lab installation. For more information on the structure of a component in the `~_patterns/` folder, see [Component Structure](./component-structure.md)
 
-## App structure {#app-structure}
+## App structure <a id="app-structure"></a>
 
 ### Pattern Lab
 

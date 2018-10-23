@@ -31,7 +31,7 @@ Run `source ~/.bashrc` or `source ~/.zshrc` after each step to ensure command is
 brew update && brew upgrade
 ```
 
-### Install PHP 7.2 {#install-php-7-2}
+### Install PHP 7.2 <a id="install-php-7-2"></a>
 
 ```bash
 brew install php72

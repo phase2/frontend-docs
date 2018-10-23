@@ -2,15 +2,9 @@
 
 Particle is an opinionated set of tools and examples to:
 
-<<<<<<< HEAD
 1. Build an application-agnostic **design system** made of assets like Twig, Sass, JavaScript, images, etc
 2. Apply that **design system** to a locally-served Pattern Lab for rapid prototyping
 3. Apply that **design system** to other consuming apps like, Drupal, Grav, or \(soon\) Wordpress
-=======
-## Intro
-
-hey im editing this with important info
->>>>>>> 14706b40219839bf34d42cb9bcf14d101f43bfb2
 
 ## Particle Features
 

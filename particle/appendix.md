@@ -7,6 +7,7 @@
 * [ESLint](https://eslint.org/)
 * [Gulp](https://gulpjs.com/)
 * [Jest](https://facebook.github.io/jest/)
+* [Pa11y](http://pa11y.org/)
 * [Sass](https://sass-lang.com/)
 * [Stylelint](https://stylelint.io/)
 * [Twig](https://twig.symfony.com/)

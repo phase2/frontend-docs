@@ -12,7 +12,7 @@ Particle is an opinionated set of tools and examples to:
 * Strict [Atomic Design](http://atomicdesign.bradfrost.com/) component structure
 * Robust Webpack bundling of all CSS, JavaScript, font, and static assets for multiple targets
 * [Webpack Dev Server](https://github.com/webpack/webpack-dev-server) for local hosting and hot reloading of assets into Pattern Lab
-* [Twig namespaced paths](https://symfony.com/doc/current/templating/namespaced_paths.html) automatically added into Drupal theme and Pattern Lab config. Within any twig file, `@atoms/thing.twig` means the same thing to Drupal theme and Pattern Lab.
+* [Twig namespaced paths](https://symfony.com/doc/current/templating/namespaced_paths.html) automatically added into Drupal theme and Pattern Lab config; within any Twig file, `@atoms/thing.twig` means the same thing to Drupal theme and Pattern Lab
 * Iconfont auto-generation
 * Bootstrap 4 integration, used for all starting example components
 * Auto-linting against the [AirBnB JavaScript Style Guide](https://github.com/airbnb/javascript) and sane Sass standards
@@ -20,12 +20,12 @@ Particle is an opinionated set of tools and examples to:
 
 ## Documentation To-Do List
 
-* Folder & config structure need updated to current webpack structure
-* Explain particle.js and how the particle\(\) function smashes various webpack configs together
-* Explain webpack structure \(css modes, etc\)
-* Troubleshooting cleanup \("nothing to see here", datetime error?, etc\)
-* Testing notes \(jest, pa11y, cypress?\)
+* Folder & config structure need updated to current Webpack structure
+* Explain Particle.js and how the `Particle()` function smashes various Webpack configs together
+* Explain Webpack structure \(CSS modes, etc.\)
+* Troubleshooting cleanup \("nothing to see here", datetime error?, etc.\)
+* Testing notes \(Jest, Pa11y, Cypress?\)
 * Vue-related notes
-* Example workflow
+* Example workflows
 * Flesh out the "thinking" sections
-* Update the Drupal apps section \(what goes here vs Drupal under Frontend?\)
+* Update the Drupal apps section \(what goes here vs. Drupal under Frontend?\)

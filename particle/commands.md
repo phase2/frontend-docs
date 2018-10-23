@@ -124,6 +124,10 @@ Run all tests:
 npm test
 ```
 
+{% hint style="info" %}
+ You'll need to install Pa11y yourself before you can run it
+{% endhint %}
+
 Run only Pa11y accessibility tests
 
 ```bash

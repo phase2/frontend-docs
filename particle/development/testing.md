@@ -31,10 +31,10 @@ When using the new component generator \(`npm run new`\), a basic test will be g
 
 ## Accessibility Testing
 
-To run [pa11y](http://pa11y.org/) accessibility testing on Pattern Lab rendered output, first you'll need to install the pa11y npm package:
+To run [pa11y](http://pa11y.org/) accessibility testing on Pattern Lab rendered output, first you'll need to install the pa11y CI npm package:
 
 ```text
-npm install pa11y
+npm install pa11y-ci
 ```
 
 To save these devDependencies to your project _permanently_, run the following instead:

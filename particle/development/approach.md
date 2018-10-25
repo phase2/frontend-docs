@@ -63,6 +63,13 @@ Our in-house code style rules are designed for readability and avoiding [specifi
 
 {% tab title="Javascript" %}
 All javascript should be written in ES6 \(ES2015\) according to the [AirBnB JavaScript Style Guide](https://github.com/airbnb/javascript). Webpack will use Babel to transpile all javascript back to ES5 in emitted bundles.
+
+@todo: add tips on how to code in PL and others.
+
+### Enquire.JS
+
+Particle includes the Enquire.JS library for Javascript-enabled breakpoint matching. Read more about this here: http://wicky.nillia.ms/enquire.js/
+
 {% endtab %}
 
 {% tab title="Twig" %}

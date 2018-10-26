@@ -8,7 +8,7 @@ Refer to the [Pattern Lab Documentation](http://patternlab.io/docs) for extensiv
 
 The `app/pl` folder simply imports the design system from `source/` and provides its own custom Sass for UI and JSON generation. Any Twig files that change in `source/` cause a full Pattern Lab rebuild. The Pattern Lab engine and configuration lives within `apps/pl/pattern-lab`.
 
-## Faker data in Pattern Lab
+## Faker Data in Pattern Lab
 
 [`Faker`](https://github.com/fzaninotto/Faker) generates fake data and the [Faker plugin for Pattern Lab](https://github.com/pattern-lab/plugin-php-faker) is used here. This generates _different_ fake content for each compile, and allows [translated content](https://github.com/pattern-lab/plugin-php-faker#locales) as well.
 

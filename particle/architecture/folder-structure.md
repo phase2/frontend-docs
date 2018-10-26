@@ -13,29 +13,33 @@ The following are significant items at the root level:
 └── tools/                          # Gulp plugins and Node tools
 ```
 
-## Source structure <a id="source-structure"></a>
+## Source Structure <a id="source-structure"></a>
 
-`source/` holds all assets for the design system and looks like this:
+`source/` holds all assets for the design system(s) and looks like this:
 
 ```text
 # ./source/
 .
-├── _data/                          # Generated files used by PL for displaying data
-├── _meta/                          # Twig files for displaying live demo
-├── _patterns/                      # Atomic assets used by the design system
-│   ├── 00-protons                  #
-│   ├── 00-atoms                    #
-│   ├── 00-molecules                #
-│   ├── 00-organisms                #
-│   ├── 00-templates                #
-│   └── 05-pages                    #
-├── _twig-components/               # Various Twig PHP components
-└── design-system.js                # The ultimate importer/exporter of the design system pieces
+├── {design-system}/                   # The design system in question, such as "default"
+│  ├── _data/                          # Generated files used by PL for displaying data
+│  ├── _meta/                          # Twig files for displaying live demo
+│  ├── _patterns/                      # Atomic assets used by the design system
+│  │   ├── 00-protons                  #
+│  │   ├── 00-atoms                    #
+│  │   ├── 00-molecules                #
+│  │   ├── 00-organisms                #
+│  │   ├── 00-templates                #
+│  │   └── 05-pages                    #
+│  ├── _twig-components/               # Various Twig PHP components
+│  └── design-system.js                # The ultimate importer/exporter of the design system pieces
+├── {design-system}/                   # Secondary design system
+│  ├── _data/
+│  ├── ...
 ```
 
 The design system is consumed by "apps". The three apps included are a Drupal theme, Grav theme, and a Pattern Lab installation. For more information on the structure of a component in the `~_patterns/` folder, see [Component Structure](./component-structure.md)
 
-## App structure <a id="app-structure"></a>
+## App Structure <a id="app-structure"></a>
 
 ### Pattern Lab
 

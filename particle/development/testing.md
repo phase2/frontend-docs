@@ -29,16 +29,10 @@ When using the new component generator \(`npm run new`\), a basic test will be g
 
 ## Accessibility Testing
 
-To run [Pa11y](http://pa11y.org/) accessibility testing on Pattern Lab rendered output, first you'll need to install the pa11y npm package:
+To run [pa11y](http://pa11y.org/) accessibility testing on Pattern Lab rendered output, first you'll need to install the pa11y CI npm package:
 
-```bash
-npm install pa11y
-```
-
-To save these dev dependencies to your project _permanently_, add the `save-dev` flag as follows:
-
-```bash
-npm install pa11y --save-dev
+```text
+npm install pa11y-ci --save-dev
 ```
 
 Then whenever you want to run your tests, simply start the local Pattern Lab dev server in one session:

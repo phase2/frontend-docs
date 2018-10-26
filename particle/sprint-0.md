@@ -28,7 +28,7 @@ Particle comes by default with many different patterns based on [Bootstrap 4](ht
 
 ## Now You're Linting with Power. AirBnB Power
 
-No but seriously, your linter might get mad at you. For full instruction, see config\_structure.md. However just be aware by default there are several config files at the root of Particle that govern our code structure. See below for the file and associated docs:
+No but seriously, your linter might get mad at you. For full instruction, see the [Config Structure](architecture/component-structure.md) reference. However just be aware by default there are several config files at the root of Particle that govern our code structure. See below for the file and associated docs:
 
 * Babel Config File: [.babelrc](https://babeljs.io/docs/en/)
 * Browserlist: [.browserslistrc](https://github.com/browserslist/browserslist)
@@ -45,7 +45,7 @@ No but seriously, your linter might get mad at you. For full instruction, see co
 
 By default a large number of Bootstrap micro libraries are included with the base Particle components. This allows Pattern Lab to look good and usable from the jump, while also giving themers an easy ability to cut out styles and libraries they don't need.
 
-Bootstrap styles are located in `_patterns/00-protons/_bootstrap-printing.scss` As you can guess by looking at the file, you can remove any individual Bootstrap pattern by removing the line. Since Bootstrap is mostly class-based, removing any given line won't cause compile errors \(although it may make certain pages look less pretty\)
+Bootstrap styles are located in `source/{design-system}/_patterns/00-protons/_bootstrap-printing.scss` As you can guess by looking at the file, you can remove any individual Bootstrap pattern by removing the line. Since Bootstrap is mostly class-based, removing any given line won't cause compile errors \(although it may make certain pages look less pretty\)
 
 ## Renaming Drupal Theme
 

@@ -10,7 +10,7 @@ npm run new
 
 Follow the onscreen prompts for the location, included files, and name of the new component.
 
-### For versions prior to v10.1.0:
+### Versions Prior to v10.1.0
 
 **Then make sure you edit `source/design-system.js` and add your new component.** Versions after this should update next time you build.
 

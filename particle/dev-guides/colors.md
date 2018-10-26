@@ -4,7 +4,7 @@ Adding colors to a Particle project is quick and painless.
 
 # Adding a New Color
 
-1. Navigate to `source/_patterns/00-protons` and open the `non-printing` folder.
+1. Navigate to `source/{design-system}/_patterns/00-protons` and open the `non-printing` folder.
 
 1. Open the `_colors.scss` file and assign a variable to the hex code of the color you're adding.
 

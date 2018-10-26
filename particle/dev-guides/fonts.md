@@ -4,7 +4,7 @@ Custom typefaces can be added to Particle and can even override the system defau
 
 ## Adding a New Font
 
-1. Navigate to `source/_patterns/00-protons` and open the `printing` folder.
+1. Navigate to `source/{design-system}/_patterns/00-protons` and open the `printing` folder.
 
 1. Open the `_type.scss` file and add your `@import` rules for remote fonts and/or `@font-face` for locally hosted fonts.
 
@@ -64,10 +64,10 @@ Because Particle uses Sass, using your new font is as simple as adding the varia
 You can also override the default font settings from Bootstrap in a similar fashion. As above in *Overriding a Global Font*'s second step, assign a variable in `non-printing/_types.scss` with the updated value, and then assign that new variable to the global default variable you're overriding in `non-printing/_bootstrap-overrides.scss`. For example, if you wanted to change the weight of all headings you would add the following code to these files:
 
 ```scss
-// source/_patterns/00-protons/non-printing/_types.scss
+// source/{design-system}/_patterns/00-protons/non-printing/_types.scss
 $headings-font-weight-custom: 700;
 
-// source/_patterns/00-protons/non-printing/_bootstrap-overrides.scss
+// source/{design-system}/_patterns/00-protons/non-printing/_bootstrap-overrides.scss
 $headings-font-weight: $headings-font-weight-custom;
 ```
 

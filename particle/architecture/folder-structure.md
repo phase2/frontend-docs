@@ -7,14 +7,10 @@ The following are significant items at the root level:
 ```text
 # ./
 .
-├── apps                           # Things that use the compiled design system. Drupal theme & PL
-├── dist                           # Bundled output: CSS, js, images, app artifacts (like PL html)
-├── source                         # The design system. All assets compiled to dist/
-├── tools                          # Gulp plugins and node tools
-├── gulpfile.js                    # Defines the few tasks required in the workflow
-├── particle.js                    # Merges app and root config
-├── webpack.particle.js            # Root config for all entry points
-└── ...                            # Mostly just config
+├── apps/                           # Things that use the compiled design system (e.x. Drupal)
+├── dist/                           # Bundled output: CSS, JS, images, app artifacts (like PL HTML)
+├── source/                         # The design system. All assets compiled to dist/
+└── tools/                          # Gulp plugins and Node tools
 ```
 
 ## Source structure <a id="source-structure"></a>
@@ -24,62 +20,87 @@ The following are significant items at the root level:
 ```text
 # ./source/
 .
-├── _patterns                      # All assets live within an Atomic "pattern"
-│   ├── 01-atoms                   # Twig namespace: @atoms, JS/Sass namespace: atoms
-│   │   ├── button                 # For instance, the button atom
-│   │   │    ├── __tests__         # Jest javascript unit tests
-│   │   │    ├── demo              # Patterns feature a demo folder to show implementation
-│   │   │    │   ├── index.js      # Pulls in twig, yaml, md inside demo/ so webpack is aware
-│   │   │    │   ├── buttons.twig  # Demonstrate with a plural name, visible to PL since no underscore
-│   │   │    │   └── buttons.yml   # Data provided to the demo pattern
-│   │   │    ├── _button.scss      # Most components require styles, underscore required
-│   │   │    ├── _button.twig      # The pure component template, underscore required
-│   │   │    └── index.js          # Component entry point (See "Anatomy of a Component below)
-│   │   └── ...                    # Other @atoms
-│   └── ...                        # @protons, @atoms, @molecules, @organisms, @templates, @pages
-└── design-system.js               # The ultimate importer/exporter of the design system pieces
+├── _data/                          # Generated files used by PL for displaying data
+├── _meta/                          # Twig files for displaying live demo
+├── _patterns/                      # Atomic assets used by the design system
+│   ├── 00-protons                  #
+│   ├── 00-atoms                    #
+│   ├── 00-molecules                #
+│   ├── 00-organisms                #
+│   ├── 00-templates                #
+│   └── 05-pages                    #
+├── _twig-components/               # Various Twig PHP components
+└── design-system.js                # The ultimate importer/exporter of the design system pieces
 ```
 
-The design system is consumed by "apps". The three apps included are a Drupal theme, Grav theme, and a Pattern Lab installation.
+The design system is consumed by "apps". The three apps included are a Drupal theme, Grav theme, and a Pattern Lab installation. For more information on the structure of a component in the `~_patterns/` folder, see [Component Structure](./component-structure.md)
 
 ## App structure <a id="app-structure"></a>
+
+### Pattern Lab
 
 `apps/pl/` holds the _entry point_ for all Pattern Lab assets, as well as the PHP engine:
 
 ```text
-# ./app/pl/
+# ./apps/pl/
 .
-├── pattern-lab/                   # Holds the Pattern Lab installation
-│   ├── ...                        # composer.json, config, console php, ...
-├── scss                           # PL-only Sass; styles that shoudln't junk up the design system
-│   ├── _scss2json.scss            # Output certain Sass variables into json for demo in PL
-│   └── _styleguide.scss           # Custom PL UI styles
-├── demo                           # Holds things related to just "demos" for the design system
-│   └── demos.glob                 # Special file used by webpack to "glob" all demos within source/
-├── webpack.pl.shared.js           # Webpack config shared between PL dev and PL prod
-├── webpack.pl.dev.js              # Webpack config unique to dev, or that overrides shared
-├── webpack.pl.prod.js             # Webpack config unique to prod, or that overrides shared
-└── index.js                       # Imports and applies the design system to a bundle for PL
+├── demo/                           # Holds things related to just "demos" for the design system
+│   └── demos.glob                  # Special file used by Webpack to "glob" all demos within source/
+├── pattern-lab/                    # Holds the Pattern Lab installation
+│   └── ...                         # composer.json, config, console PHP, ...
+├── scss/                           # PL-only Sass; styles that shoudln't junk up the design system
+│   ├── _scss2json.scss             # Output certain Sass variables into JSON for demo in PL
+│   └── _styleguide.scss            # Custom PL UI styles
+├── index.js                        # Imports and applies the design system to a bundle for PL
+├── webpack.pl.dev.js               # Webpack config unique to dev, or that overrides shared
+├── webpack.pl.prod.js              # Webpack config unique to prod, or that overrides shared
+└── webpack.pl.shared.js            # Webpack config shared between PL dev and PL prod
 ```
 
-`apps/drupal/` holds the _entry point_ for all Drupal 8 theme assets, as well as templates, yml, etc:
+### Drupal
+
+`apps/drupal/` holds the _entry point_ for all Drupal 8 theme assets, as well as templates, YAML, etc:
 
 ```text
 # ./app/drupal/
 .
-├── scss/                          # Theme-only Sass, tweaks to Drupalisms that need not be in the DS
-│   └── _drupal-styles.scss        # Add more drupal styles here, like _views.scss, _field.scss etc
-├── templates                      # Templates integrate Drupal data with design system patterns
-│   ├── block.html.twig            # Example Drupal template integrating, say @molecules/_card.twig
-│   └── ...                        # There wil be many Drupal templates
-├── index.js                       # Imports and applies the design system to a bundle for Drupal
-├── particle.info.yml              # Theme information. DS namespaces are auto-injected!
-├── particle.libraries.yml         # The output js and css bundles are included here
-├── particle.theme                 # Drupal preprocess functions
-├── webpack.drupal.shared.js       # Webpack config shared between drupal dev and drupal prod
-├── webpack.drupal.dev.js          # Webpack config unique to dev, or that overrides shared
-├── webpack.drupal.prod.js         # Webpack config unique to prod, or that overrides shared
-└── index.js                       # Imports and applies the design system to a bundle for Drupal
+├── scss/                           # Theme-only Sass, tweaks to Drupalisms that need not be in the design system
+│   └── _drupal-styles.scss         # Add more Drupal styles here, like _views.scss, _field.scss, etc.
+├── templates/                      # Templates integrate Drupal data with design system patterns
+│   ├── block.html.twig             # Example Drupal template integrating, say @molecules/_card.twig
+│   └── ...                         # There can be many Drupal templates
+├── index.js                        # Imports and applies the design system to a bundle for Drupal
+├── particle.info.yml               # Theme information. Design system namespaces are auto-injected!
+├── particle.libraries.yml          # The output JS and CSS bundles are included here
+├── particle.theme                  # Drupal preprocess functions
+├── index.js                        # Imports and applies the design system to a bundle for Drupal
+├── webpack.drupal.dev.js           # Webpack config unique to dev, or that overrides shared
+├── webpack.drupal.prod.js          # Webpack config unique to prod, or that overrides shared
+└── webpack.drupal.shared.js        # Webpack config shared between Drupal dev and Drupal prod
+```
+
+### Grav
+
+`apps/grav/` holds the _entry point_ for all Grav theme assets, as well as templates, YAML, etc:
+
+```text
+# ./app/grav/
+.
+├── scss/                           # Theme-only Sass, tweaks to Grav that need not be in the design system
+│   └── _grav-styles.scss           # Add more Grav styles here, like _views.scss, _field.scss, etc.
+├── templates/                      # Templates integrate Drupal data with design system patterns
+│   ├── partials/                   # Smaller template snippets for use later
+│   │   └── ...                     # Headers, footers, navigation, etc.
+│   ├── default.html.twig           # Example grav template integrating, say @molecules/_card.twig
+│   └── ...                         # There can be many Grav templates
+├── blueprints.yaml                 # Grav theme information
+├── index.js                        # Imports and applies the design system to a bundle for Grav
+├── particle.php                    # Used by Grav for theme and plugin events
+├── particle.yaml                   # Theme configuration
+├── twig-namespaces.yaml            # Namespace definition
+├── webpack.grav.dev.js             # Webpack config unique to dev, or that overrides shared
+├── webpack.grav.prod.js            # Webpack config unique to prod, or that overrides shared
+└── webpack.grav.shared.js          # Webpack config shared between Grav dev and Grav prod
 ```
 
 ## Atomic Design and Namespaces

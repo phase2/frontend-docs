@@ -18,7 +18,7 @@ Run `source ~/.bashrc` or `source ~/.zshrc` after each step to ensure command is
 ### OS-specific Instructions
 
 {% tabs %}
-{% tab title="OSX" %}
+{% tab title="macOS" %}
 ### Install [Homebrew](https://brew.sh/)​
 
 ```bash
@@ -80,13 +80,13 @@ npm install -g npm@latest
 ## Install Particle
 
 {% tabs %}
-{% tab title="Via script" %}
+{% tab title="Via NPM" %}
 ```bash
 npm create @phase2/particle particle && cd particle
 ```
 {% endtab %}
 
-{% tab title="Via git" %}
+{% tab title="Via Git" %}
 ```bash
 git clone git@github.com:phase2/particle.git && cd particle
 ```

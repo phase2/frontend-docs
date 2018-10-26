@@ -1,8 +1,7 @@
 # Troubleshooting
 
-it's usually npm rebuild node-sass or a misplaced comma during a twig compile.
+The console output from Particle and the Webpack dev server should give you
+output of any errors, including linting, unexpected or missing characters, etc.
 
-sometimes it's linting rules, which can be disabled as needed. we recommend not doing that too often, though. they're enabled to help you!
-
-will fill this out more as more errors/pain points are found :\(
-
+If changes you've made aren't appearing on the page, try shutting down the dev
+server with `Ctrl + C` in Bash and restarting it with `npm start`.

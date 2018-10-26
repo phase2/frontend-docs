@@ -109,16 +109,16 @@ The design system is consumed by "apps". The three apps included are a Drupal th
 
 ## Atomic Design and Namespaces
 
-"Namespaces" are simply aliases to paths on a file system. The design system within `source/` adheres strongly to [Atomic Design](http://atomicdesign.bradfrost.com/), with `@protons` added on.
+"Namespaces" are simply aliases to paths on a file system. Each app can define its own design system inside their `config.js`, thus allowing the namespacing to remain consistent between all apps. The design system within `source/` adheres strongly to [Atomic Design](http://atomicdesign.bradfrost.com/), with `@protons` added on.
 
 | Path | Twig | Javascript | Sass |
 | :--- | :--- | :--- | :--- |
-| `source/_patterns/00-protons/` | `@protons` | `protons` | TBD |
-| `source/_patterns/01-atoms/` | `@atoms` | `atoms` | TBD |
-| `source/_patterns/02-molecules/` | `@molecules` | `molcules` | TBD |
-| `source/_patterns/03-organisms/` | `@organisms` | `organisms` | TBD |
-| `source/_patterns/04-templates/` | `@templates` | `templates` | TBD |
-| `source/_patterns/05-pages/` | `@pages` | `pages` | TBD |
+| `source/{design-system}/_patterns/00-protons/` | `@protons` | `protons` | TBD |
+| `source/{design-system}/_patterns/01-atoms/` | `@atoms` | `atoms` | TBD |
+| `source/{design-system}/_patterns/02-molecules/` | `@molecules` | `molcules` | TBD |
+| `source/{design-system}/_patterns/03-organisms/` | `@organisms` | `organisms` | TBD |
+| `source/{design-system}/_patterns/04-templates/` | `@templates` | `templates` | TBD |
+| `source/{design-system}/_patterns/05-pages/` | `@pages` | `pages` | TBD |
 
 > Note: Namespaces within Sass are a work in progress!
 

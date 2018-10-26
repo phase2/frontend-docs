@@ -19,13 +19,25 @@ Each app features three webpack files. Take for example, the `pl` app:
 
 You are encouraged to read through all three files to understand how assets are parsed and prepared.
 
-## Drupal theme config
+## Drupal
+
+### App
+
+The Drupal app config is located at `apps/drupal/config.js` and can be customized for use with multiple design systems. See the [CADS](../dev-guides/cads.md) document for information on setting up additional design systems.
+
+### Theme
 
 The Drupal theme config is located at `apps/drupal`. Look for the usual `.info.yml`, `.libraries.yml`, and `.theme` files.
 
-## Pattern Lab config
+## Pattern Lab
 
-The Pattern Lab config file is located at `apps/pl/pattern-lab/config/config.yml`.
+### App
+
+The Pattern Lab app config is located at `apps/pl/config.js` and can be customized for use with multiple design systems. See the [CADS](../dev-guides/cads.md) document for information on setting up additional design systems.
+
+### Core
+
+The core Pattern Lab config file is located at `apps/pl/pattern-lab/config/config.yml`.
 
 ## Others
 

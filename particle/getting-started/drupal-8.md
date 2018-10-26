@@ -14,9 +14,11 @@ Particle provides a Drupal 8 theme, although the starting steps are slightly dif
 
 4. Within `{drupal-root}/themes/particle/` run:
 
-`bash npm install   
-npm run setup  
-npm run build:drupal`
+```bash
+npm install
+npm run setup
+npm run build:drupal
+```
 
 This will compile all assets and provide all namespaced Twig paths to the Drupal theme. Make sure to choose this theme in Drupal Appearance settings and `drush cr` or `drupal cr all` to clear cache.
 

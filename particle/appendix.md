@@ -2,20 +2,20 @@
 
 ## Technologies included <a id="technologies-included"></a>
 
-* [Webpack](https://webpack.js.org/)
-* [Gulp](https://gulpjs.com/)
 * [Babel](https://babeljs.io/)
-* [Jest](https://facebook.github.io/jest/)
-* [Twig](https://twig.symfony.com/)
-* [Sass](https://sass-lang.com/)
-* [yo](https://github.com/yeoman/yo)
 * [Bootstrap](https://getbootstrap.com/)
-* [ESLint](https://eslint.org/)
-* [Stylelint](https://stylelint.io/)
 * [Browserslist](https://www.npmjs.com/package/browserslist)
+* [ESLint](https://eslint.org/)
+* [Gulp](https://gulpjs.com/)
+* [Jest](https://facebook.github.io/jest/)
+* [Pa11y](http://pa11y.org/)
+* [Sass](https://sass-lang.com/)
+* [Stylelint](https://stylelint.io/)
+* [Twig](https://twig.symfony.com/)
+* [Webpack](https://webpack.js.org/)
+* [yo](https://github.com/yeoman/yo)
 
 ## Further Reading <a id="further-reading"></a>
 
-* [Pattern Lab](http://patternlab.io/)
 * [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/)
-
+* [Pattern Lab](http://patternlab.io/)

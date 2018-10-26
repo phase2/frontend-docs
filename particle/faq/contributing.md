@@ -8,4 +8,4 @@ Please install an [EditorConfig plugin](http://editorconfig.org/) to match codin
 
 ## These docs <a id="these-docs"></a>
 
-Pull requests to the [Front End docs repo](https://github.com/phase2/frontend-docs) are welcomed and encouraged. If you are part of phase2, request to be added as an editor to the gitbook, and you can edit directly from here!
+Pull requests to the [Front End docs repo](https://github.com/phase2/frontend-docs) are welcomed and encouraged. If you are part of Phase2, request to be added as an editor to the gitbook, and you can edit directly from here!

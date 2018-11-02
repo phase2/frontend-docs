@@ -4,7 +4,7 @@
 
 As of 10.3, TypeScript is available as a development option instead of JavaScript. TypeScript brings static typing to JavaScript for more robust code and the ability to identify type errors at compile time rather than runtime. It is completely opt-in and can be used with both `.js` files as well as `.vue` files.
 
-To convert a JavaScript file to TypeScript change the file extension from `.js` to `.ts`. This will tell the Typescript compiler to parse the file and identify any type errors. Typescript file extensions are auto-resolved by Webpack and can be omitted in the import path, similar to a JavaScript module. Example: `import Component from ‘../typescript-component’;`
+To convert a JavaScript file to TypeScript change the file extension from `.js` to `.ts`. This will tell the Typescript compiler to parse the file and identify any type errors. Typescript file extensions are auto-resolved by Webpack and the `.ts` extension can be omitted in the import path, similar to a JavaScript module. Example: `import Component from ‘../typescript-component’;`
 
 Note: if you are using TypeScript with React you must use the `.tsx` extension.
 
@@ -17,6 +17,16 @@ In order to use Typescript in a Vue component three things must be converted:
 1. Add `lang="ts”` to the script tag of your component.
 2. Import Vue at the top of your script block. `import Vue from ‘vue’;`
 3. Wrap your Vue export in `Vue.extend()`
+
+```typescript
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({...})
+</script>
+```
+
+An example Vue component using TypeScript can be found at `source/default/_patterns/02-molecules/vue-widget/src/vue-clock/vue-clock.vue`
 
 There are some unique behaviors with regard to linting and type checking Vue SFCs. Since the file extension does not terminate in `.ts` they will not be picked up by the TypeScript specific scripts in the package.json. They are linted through an extension of ESLint due to their unique structure containing templates and styles. In order to check the types within a SFC, the dev server must be running and will print errors to the console.
 
@@ -34,7 +44,7 @@ Several new scripts were created to aid development when working with TypeScript
 
 Typescript relies on understanding how to parse each imported module it receives. This includes images which are handled by Webpack. To tell Typescript that these imports are modules without a specific type structure we declare them once in `tools/typings/images.d.ts`. A base level of files has already been provided but may need to be tweaked or added to on a per project basis.
 
-The Typescript compiler will let you know if it does not understand how to parse a module. If the module is a third party library look at Definitely Typed. If it is a media file, you will likely need to add it to the images definition file. The format for these declarations is `declare module '*.svg’` where ‘svg’ is the associated file extension.
+The Typescript compiler will let you know if it does not understand how to parse a module. If the module is a third party library look at [Definitely Typed](http://definitelytyped.org/). If it is a media file, you will likely need to add it to the images definition file. The format for these declarations is `declare module '*.svg’` where ‘svg’ is the associated file extension.
 
 ## How to Type Entry Files
 

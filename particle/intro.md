@@ -1,4 +1,14 @@
-# Intro
+---
+description: >-
+  Particle is an opinionated toolkit for building application-agnostic design
+  systems built with love by Phase2.
+---
+
+# What is it?
+
+![Astrogoat is the official logo of Particle, by Lisa Jansen](../.gitbook/assets/astrogoat.png)
+
+## What is Particle?
 
 Particle is an opinionated set of tools and examples to:
 
@@ -9,24 +19,12 @@ Particle is an opinionated set of tools and examples to:
 ## Particle Features
 
 * Drupal theme, Grav theme, Pattern Lab instance
-* Strict [Atomic Design](http://atomicdesign.bradfrost.com/) component structure
+* Strict [Atomic Design](http://atomicdesign.bradfrost.com/) component structure 
 * Robust Webpack bundling of all CSS, JavaScript, font, and static assets for multiple targets
 * [Webpack Dev Server](https://github.com/webpack/webpack-dev-server) for local hosting and hot reloading of assets into Pattern Lab
-* [Twig namespaced paths](https://symfony.com/doc/current/templating/namespaced_paths.html) automatically added into Drupal theme and Pattern Lab config; within any Twig file, `@atoms/thing.twig` means the same thing to Drupal theme and Pattern Lab
+* [Twig namespaced paths](https://symfony.com/doc/current/templating/namespaced_paths.html) automatically added into Drupal theme and Pattern Lab config. Within any twig file, `@atoms/thing.twig` means the same thing to Drupal theme and Pattern Lab.
 * Iconfont auto-generation
 * Bootstrap 4 integration, used for all starting example components
 * Auto-linting against the [AirBnB JavaScript Style Guide](https://github.com/airbnb/javascript) and sane Sass standards
 * All Webpack and Gulp files are fully configurable
-
-## Documentation To-Do List
-
-* Folder & config structure need updated to current Webpack structure
-* Explain Particle.js and how the `Particle()` function smashes various Webpack configs together
-* Explain Webpack structure \(CSS modes, etc.\)
-* Troubleshooting cleanup \("nothing to see here", datetime error?, etc.\)
-* Testing notes \(Jest, Pa11y, Cypress?\)
-* Vue-related notes
-* Example workflows
-* Flesh out the "thinking" sections
-* Update the Drupal apps section \(what goes here vs. Drupal under Frontend?\)
 

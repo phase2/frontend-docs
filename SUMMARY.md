@@ -1,6 +1,3 @@
-[//]: # (GitBook Structure Definition)
-[//]: # (https://toolchain.gitbook.com/pages.html)
-
 # Table of contents
 
 * [Intro](README.md)
@@ -37,3 +34,4 @@
 * [Thinking](frontend/thinking.md)
 * [Atomic Design](frontend/atomic-design.md)
 * [Drupal](frontend/drupal.md)
+

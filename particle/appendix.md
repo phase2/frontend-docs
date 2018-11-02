@@ -1,6 +1,6 @@
 # Appendix
 
-## Technologies included <a id="technologies-included"></a>
+## Technologies included  <a id="technologies-included"></a>
 
 * [Babel](https://babeljs.io/)
 * [Bootstrap](https://getbootstrap.com/)
@@ -15,7 +15,8 @@
 * [Webpack](https://webpack.js.org/)
 * [yo](https://github.com/yeoman/yo)
 
-## Further Reading <a id="further-reading"></a>
+## Further Reading  <a id="further-reading"></a>
 
 * [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/)
 * [Pattern Lab](http://patternlab.io/)
+

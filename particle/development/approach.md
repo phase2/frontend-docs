@@ -45,7 +45,7 @@ Particle makes a very clear distinction between _printing_ and _non-printing_ Sa
 
 This results in rendered CSS:
 
-```scss
+```css
 .thing {
   background: blue;
 }
@@ -55,7 +55,7 @@ This results in rendered CSS:
 
 This won't output any CSS:
 
-```scss
+```css
 $rando-var: 33px;
 @mixin doThing() {
   background: blue;
@@ -69,16 +69,9 @@ There is a distinct role for each in the component system of Particle. In the `b
 ...
 import './_button.scss';
 ...
-
 ```
 
-When `_button.scss` is loaded in, the Sass loader brings the
-`/source/_patterns/00-protons/_variables.scss` file with it, ensuring that the
-required functions and variables are already available. This approach to
-component styes allows sharing non-printing Sass **configuration**, while also
-ensuring our component prints its custom CSS exactly once. We can now safely
-`@import 'atoms/button;` anywhere in our other JavaScript components as many
-times as needed and there will be no duplicate CSS output for buttons!
+When `_button.scss` is loaded in, the Sass loader brings the `/source/_patterns/00-protons/_variables.scss` file with it, ensuring that the required functions and variables are already available. This approach to component styes allows sharing non-printing Sass **configuration**, while also ensuring our component prints its custom CSS exactly once. We can now safely `@import 'atoms/button;` anywhere in our other JavaScript components as many times as needed and there will be no duplicate CSS output for buttons!
 
 ### BEM
 
@@ -103,3 +96,4 @@ Pages are treated purely as _demo_ patterns. They are used _solely_ by Pattern L
 This is one reason that the static Pattern Lab bundle is so much larger than other production app bundles -- it explicitly includes the full `demoPages` item, as part of the demo glob inside of `apps/pl/index.js`.
 
 This split is the reason there are no demo folders inside of individual template components. Pages is a conglomeration of all template demos.
+

@@ -1,4 +1,4 @@
-# What is Particle?
+# Intro
 
 Particle is an opinionated set of tools and examples to:
 
@@ -29,3 +29,4 @@ Particle is an opinionated set of tools and examples to:
 * Example workflows
 * Flesh out the "thinking" sections
 * Update the Drupal apps section \(what goes here vs. Drupal under Frontend?\)
+

@@ -1,10 +1,3 @@
----
-description: >-
-  So you've just started a project and you're using Particle? Awesome! This
-  Sprint 0 Guidebook is here to help get your files and project in order to
-  start Sprint 1 with a bang.
----
-
 # Sprint 0
 
 ## Removing Apps

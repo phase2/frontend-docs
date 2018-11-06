@@ -66,8 +66,8 @@ const options = {
 
 Particle does not include VRT out of the box, but there are plenty of great options out there depending on your needs. Here are some of our favorites, in alphabetical order:
 
-* [BackstopJS](https://github.com/garris/BackstopJS)
-* [PhantomJS](https://github.com/ariya/phantomjs)
-* [Puppeteer](https://github.com/GoogleChrome/puppeteer)
-* [SlimerJS](https://github.com/laurentj/slimerjs)
-* [WebdriverIO](http://webdriver.io/)
+- [BackstopJS](https://github.com/garris/BackstopJS)
+- [PhantomJS](https://github.com/ariya/phantomjs)
+- [Puppeteer](https://github.com/GoogleChrome/puppeteer)
+- [SlimerJS](https://github.com/laurentj/slimerjs)
+- [WebdriverIO](http://webdriver.io/)

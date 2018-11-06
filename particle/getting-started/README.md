@@ -2,10 +2,10 @@
 
 ## System Requirements
 
-* [Node `^6 || ^8 || ^10`](https://nodejs.org/)
-* [NPM `^5.2 || ^6`](https://www.npmjs.com/)
-* [PHP `5.6 || ^7`](https://php.net/)
-* [Composer `^1`](https://getcomposer.org/)
+- [Node `^6 || ^8 || ^10`](https://nodejs.org/)
+- [NPM `^5.2 || ^6`](https://www.npmjs.com/)
+- [PHP `5.6 || ^7`](https://php.net/)
+- [Composer `^1`](https://getcomposer.org/)
 
 ## Install System Dependencies
 

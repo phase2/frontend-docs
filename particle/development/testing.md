@@ -16,8 +16,7 @@ Particle provides the starting point for various types of testing. Tests are loc
 
 ## Unit Testing
 
-Particle provides unit testing using [Jest](https://facebook.github.io/jest/docs/en/tutorial-jquery.html).
-Simply run the following to run Jest tests against the design system:
+Particle provides unit testing using [Jest](https://facebook.github.io/jest/docs/en/tutorial-jquery.html). Simply run the following to run Jest tests against the design system:
 
 ```bash
 npm run test:unit

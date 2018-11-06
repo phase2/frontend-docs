@@ -44,10 +44,6 @@ brew install composer
 ```
 {% endtab %}
 
-{% tab title="Debian" %}
-
-{% endtab %}
-
 {% tab title="Windows" %}
 {% hint style="success" %}
 All Windows instructions are for WSL \("Bash on Ubuntu on Windows"\).
@@ -112,6 +108,3 @@ npm start
 ### Open Particle
 
 Simply visit [http://0.0.0.0:8080/pl](http://0.0.0.0:8080/pl) or [http://localhost:8080/pl](http://localhost:8080/pl) and start editing files!
-
-
-

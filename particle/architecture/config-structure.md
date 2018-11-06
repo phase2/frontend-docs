@@ -8,14 +8,14 @@ A small `config.js` file at the root of the project provides basic path settings
 
 Webpack does the heavy lifting of assets compilation and transformation. Webpack allows importing of Sass, images, fonts, and other assets into JavaScript files, bundling output files like CSS and JavaScript. Note the two webpack files at the root of the project:
 
-* `webpack.particle.dev.js`: Development settings shared amongst all consuming apps.
-* `webpack.particle.prod.js`: Production settings shared amongst all the consuming app.
+- `webpack.particle.dev.js`: Development settings shared amongst all consuming apps.
+- `webpack.particle.prod.js`: Production settings shared amongst all the consuming app.
 
 Each app features three webpack files. Take for example, the `pl` app:
 
-* `webpack.pl.shared.js`: Config shared by prod and dev
-* `webpack.pl.prod.js`: Production-only config merged over the top of `webpack.pl.shared.js` and `webpack.particle.prod.js` \(from root\)
-* `webpack.pl.dev.js`: Development-only config merged over the top of `webpack.pl.shared.js` and `webpack.particle.dev.js` \(from root\)
+- `webpack.pl.shared.js`: Config shared by prod and dev
+- `webpack.pl.prod.js`: Production-only config merged over the top of `webpack.pl.shared.js` and `webpack.particle.prod.js` \(from root\)
+- `webpack.pl.dev.js`: Development-only config merged over the top of `webpack.pl.shared.js` and `webpack.particle.dev.js` \(from root\)
 
 You are encouraged to read through all three files to understand how assets are parsed and prepared.
 
@@ -72,4 +72,3 @@ Fill this out.
 ### Jest
 
 Fill this out.
-

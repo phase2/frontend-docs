@@ -35,6 +35,42 @@ This is also how demo patterns consumed by Pattern Lab get any local static imag
 
 All JavaScript should be written in ES6 \(ES2015\) according to the [AirBnB JavaScript Style Guide](https://github.com/airbnb/javascript). Webpack will use Babel to transpile all JavaScript back to ES5 in emitted bundles.
 
+@todo: add tips on how to code in PL and others.
+
+### Breakpoints and Enquire.JS
+
+Particle includes the Enquire.JS library for Javascript-enabled breakpoint matching. Read more about how Enquire works [here](http://wicky.nillia.ms/enquire.js/), but the basics are as follows:
+
+* JS breakpoints are _automatically pulled in_ from the `$grid-breakpoints` variable, which you can define in `/00-protons/non-printing/_bootstrap-overrides.scss`.
+* By Bootstrap default, breakpoints are created to match the following:
+  ```
+  xs: 0,
+  sm: 600px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+  ```
+* Before breakpoints in JS can be used, you must import the following into your JS script:
+  ```
+  import { mediaBreakpoint, breakpoints } from 'breakpoints';
+  ```
+  * `mediaBreakpoint.up(width)` returns a media query that matches all screens _above_ a certain width, such that `mediabrekpoint.up(1200px)` would return a media query for all screens over 1200px wide.
+  * `mediabreakpoint.down(width)` returns a media query that matches all screens _below_ a certain width.
+  * `breakpoints` houses all of the breakpoints as defined in `_bootstrap-overrides.scss`, assigned by key. so `breakpoints.sm` would return `600px`.
+* Now simply register .match or .unmatch properties to a certain breakpoint!
+  ```
+  enquire.register(mediaBreakpoint.down(breakpoints.lg), {
+    match: () => {
+      console.log('Screen is below Large sized.');
+    },
+    unmatch: () => {
+      console.log('Screen is above Large sized.');
+    },
+  });
+  ```
+  By assigning a "down" breakpoint, we can create behaviors that occur when that down behavior is matched, and then undo those behaviors when it's unmatched.
+* You can see this example in `protons/utilities/breakdown/__tests__/breakpoints.test.js`.
+
 ## Sass
 
 ### Printing vs Non-printing

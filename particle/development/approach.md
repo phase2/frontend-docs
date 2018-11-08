@@ -35,6 +35,42 @@ This is also how demo patterns consumed by Pattern Lab get any local static imag
 
 All JavaScript should be written in ES6 \(ES2015\) according to the [AirBnB JavaScript Style Guide](https://github.com/airbnb/javascript). Webpack will use Babel to transpile all JavaScript back to ES5 in emitted bundles.
 
+@todo: add tips on how to code in PL and others.
+
+### Breakpoints and Enquire.JS
+
+Particle includes the Enquire.JS library for Javascript-enabled breakpoint matching. Read more about how Enquire works [here](http://wicky.nillia.ms/enquire.js/), but the basics are as follows:
+
+* JS breakpoints are _automatically pulled in_ from the `$grid-breakpoints` variable, which you can define in `/00-protons/non-printing/_bootstrap-overrides.scss`.
+* By Bootstrap default, breakpoints are created to match the following:
+  ```
+  xs: 0,
+  sm: 600px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+  ```
+* Before breakpoints in JS can be used, you must import the following into your JS script:
+  ```
+  import { mediaBreakpoint, breakpoints } from 'breakpoints';
+  ```
+  * `mediaBreakpoint.up(width)` returns a media query that matches all screens _above_ a certain width, such that `mediabrekpoint.up(1200px)` would return a media query for all screens over 1200px wide.
+  * `mediabreakpoint.down(width)` returns a media query that matches all screens _below_ a certain width.
+  * `breakpoints` houses all of the breakpoints as defined in `_bootstrap-overrides.scss`, assigned by key. so `breakpoints.sm` would return `600px`.
+* Now simply register .match or .unmatch properties to a certain breakpoint!
+  ```
+  enquire.register(mediaBreakpoint.down(breakpoints.lg), {
+    match: () => {
+      console.log('Screen is below Large sized.');
+    },
+    unmatch: () => {
+      console.log('Screen is above Large sized.');
+    },
+  });
+  ```
+  By assigning a "down" breakpoint, we can create behaviors that occur when that down behavior is matched, and then undo those behaviors when it's unmatched.
+* You can see this example in `protons/utilities/breakdown/__tests__/breakpoints.test.js`.
+
 ## Sass
 
 ### Printing vs Non-printing
@@ -45,7 +81,7 @@ Particle makes a very clear distinction between _printing_ and _non-printing_ Sa
 
 This results in rendered CSS:
 
-```scss
+```css
 .thing {
   background: blue;
 }
@@ -55,7 +91,7 @@ This results in rendered CSS:
 
 This won't output any CSS:
 
-```scss
+```css
 $rando-var: 33px;
 @mixin doThing() {
   background: blue;
@@ -69,16 +105,9 @@ There is a distinct role for each in the component system of Particle. In the `b
 ...
 import './_button.scss';
 ...
-
 ```
 
-When `_button.scss` is loaded in, the Sass loader brings the
-`/source/_patterns/00-protons/_variables.scss` file with it, ensuring that the
-required functions and variables are already available. This approach to
-component styes allows sharing non-printing Sass **configuration**, while also
-ensuring our component prints its custom CSS exactly once. We can now safely
-`@import 'atoms/button;` anywhere in our other JavaScript components as many
-times as needed and there will be no duplicate CSS output for buttons!
+When `_button.scss` is loaded in, the Sass loader brings the `/source/_patterns/00-protons/_variables.scss` file with it, ensuring that the required functions and variables are already available. This approach to component styes allows sharing non-printing Sass **configuration**, while also ensuring our component prints its custom CSS exactly once. We can now safely `@import 'atoms/button;` anywhere in our other JavaScript components as many times as needed and there will be no duplicate CSS output for buttons!
 
 ### BEM
 

@@ -12,7 +12,7 @@ Follow the onscreen prompts for the location, included files, and name of the ne
 
 ### For versions prior to v10.1.0:
 
-**Then make sure you edit `source/design-system.js` and add your new component.** Versions after this should update next time you build.
+**Then make sure you edit** `source/design-system.js` **and add your new component.** Versions after this should update next time you build.
 
 ## Anatomy of a Component
 
@@ -31,7 +31,7 @@ All components require a set of files:
 └── index.js                        # Component entry point
 ```
 
-Optionally, you can add a `__test__` folder to your components base directory (note the two underscores before and after) for Jest unit testing like so:
+Optionally, you can add a `__test__` folder to your components base directory \(note the two underscores before and after\) for Jest unit testing like so:
 
 ```text
 # ./source/_patterns/01-atoms/button/

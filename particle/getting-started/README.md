@@ -31,7 +31,7 @@ Run `source ~/.bashrc` or `source ~/.zshrc` after each step to ensure command is
 brew update && brew upgrade
 ```
 
-### Install PHP 7.2 <a id="install-php-7-2"></a>
+### Install PHP 7.2  <a id="install-php-7-2"></a>
 
 ```bash
 brew install php72
@@ -42,10 +42,6 @@ brew install php72
 ```bash
 brew install composer
 ```
-{% endtab %}
-
-{% tab title="Debian" %}
-
 {% endtab %}
 
 {% tab title="Windows" %}
@@ -112,6 +108,4 @@ npm start
 ### Open Particle
 
 Simply visit [http://0.0.0.0:8080/pl](http://0.0.0.0:8080/pl) or [http://localhost:8080/pl](http://localhost:8080/pl) and start editing files!
-
-
 

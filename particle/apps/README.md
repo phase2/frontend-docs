@@ -12,5 +12,4 @@ Particle makes adding or removing apps a snap! By default Particle has a Pattern
 
 ## Removing Grav
 
-To remove Grav from your project, delete the `particle.yaml` file in the root
-folder.
+To remove Grav from your project, delete the `particle.yaml` file in the root folder.

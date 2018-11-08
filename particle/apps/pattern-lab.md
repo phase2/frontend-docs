@@ -16,7 +16,7 @@ The `app/pl` folder simply imports the design system from `source/` and provides
 
 Use it like this in `source/_data/data.json`:
 
-```json
+```javascript
 {
   "description": "Faker.paragraph",
   "text": "Faker.words(3, true)",

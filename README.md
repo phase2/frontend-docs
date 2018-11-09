@@ -17,12 +17,14 @@ Particle is an opinionated set of tools and examples to:
 * Bootstrap 4 integration, used for all starting example components
 * Auto-linting against the [AirBnB JavaScript Style Guide](https://github.com/airbnb/javascript) and sane Sass standards
 * All Webpack and Gulp files are fully configurable
+* [PostCSS](https://github.com/postcss/postcss/blob/master/README.md) automation and expansion, with [Autoprefixer](https://github.com/postcss/autoprefixer/blob/master/README.md).
 
 ## Documentation To-Do List
 
 * Folder & config structure need updated to current Webpack structure
 * Explain Particle.js and how the `Particle()` function smashes various Webpack configs together
 * Explain Webpack structure \(CSS modes, etc.\)
+* Expand on technologies Particle automatically includes to make Sass/JS faster.
 * Troubleshooting cleanup \("nothing to see here", datetime error?, etc.\)
 * Testing notes \(Jest, Pa11y, Cypress?\)
 * Vue-related notes

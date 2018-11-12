@@ -21,6 +21,7 @@ Particle is an opinionated set of tools and examples to:
 
 ## Documentation To-Do List
 
+* Go over basics of Pattern Lab, the specific way Particle has Pattern Lab set up by default, and suggested uses.
 * Folder & config structure need updated to current Webpack structure
 * Explain Particle.js and how the `Particle()` function smashes various Webpack configs together
 * Explain Webpack structure \(CSS modes, etc.\)

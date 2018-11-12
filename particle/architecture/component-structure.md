@@ -95,7 +95,7 @@ An additional readme that may describe how to use your demo, its implications, o
 ### component.yml
 An optional way to override the data in `/_data/data.yml`, to display something specific in your demo. These data structures are only included in their respective page's demos when rendering the demo's template, so they are safely separated from other pattern demos.
 
-Due to Particle including the Faker plugin of Pattern Lab, you can use the [Node.JS Faker API](https://www.npmjs.com/package/faker) to generate random data to appear in your demos! See `/_data/data.yml` for examples.
+Due to Particle including the [Faker plugin of Pattern Lab](https://github.com/pattern-lab/plugin-php-faker), you can use the [Node.JS Faker API](https://www.npmjs.com/package/faker) to generate random data to appear in your demos! See `/_data/data.yml` for examples.
 
 **Note:** If you would like to create demo data to be global between all patterns, add the variables to `/_data/data.yml`.
 

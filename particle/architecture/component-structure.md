@@ -10,10 +10,6 @@ npm run new
 
 Follow the onscreen prompts for the location, included files, and name of the new component.
 
-### For versions prior to v10.1.0:
-
-**Then make sure you edit** `source/design-system.js` **and add your new component.** Versions after this should update next time you build.
-
 ## Anatomy of a Component
 
 All components require a set of files:
@@ -40,6 +36,8 @@ Optionally, you can add a `__test__` folder to your components base directory \(
 │   └── button.test.js              # Unit test JS functions. Limited DOM manipulation
 ├── ...
 ```
+
+## Importing Assets
 
 With the power of Webpack, all static assets a component needs are `import`ed right into the `index.js` **entry point** alongside the JavaScript methods:
 
@@ -77,3 +75,26 @@ export function enable($context) {
 export default enable;
 ```
 
+## Using Demos
+
+Every component has an optional demo folder, which is automatically pulled into Pattern Lab. These files are not built to destination apps at all, so you should never do work in them that you expect to see in a final product.
+
+The Yeoman generator creates four files by default in this folder, which describe the general Phase2 way to demonstrate how to use a new component:
+
+### index.js
+Describes to Webpack the files to include when generating the Pattern Lab demos. This most likely will only need to be touched when you are creating multiple demo pages for a single component.
+
+### component.twig
+This should serve as an example twig file that shows an inclusion of the new pattern, placed with example variables and layouts so that it will appear like an intended component when viewed in the demos.
+
+The default .twig file places a standard Twig-style `include` of your new component, but you can (and should) modify this page to meet your design system better. Look at the default patters for good examples of how to create a demo template.
+
+### component.md
+An additional readme that may describe how to use your demo, its implications, or others. By default the variables that a component requires are often documented here, in addition to in the component's _component.twig file.
+
+### component.yml
+An optional way to override the data in `/_data/data.yml`, to display something specific in your demo. These data structures are only included in their respective page's demos when rendering the demo's template, so they are safely separated from other pattern demos.
+
+**Note:** If you would like to create demo data to be global between all patterns, add the variables to `/_data/data.yml`.
+
+For more information about how Pattern Lab expects variables to be added for use in patterns, see the [Pattern](https://patternlab.io/docs/data-overview.html) Lab docs.

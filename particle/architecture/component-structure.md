@@ -77,7 +77,7 @@ export default enable;
 
 ## Using Demos
 
-Every component has an optional demo folder, which is automatically pulled into Pattern Lab. These files are not built to destination apps at all, so you should never do work in them that you expect to see in a final product.
+Every component has an optional demo folder, which is automatically pulled into Pattern Lab. These files are only built for Pattern Lab, so you should never do work on them that you expect to see on a production app, such as a Drupal theme.
 
 The Yeoman generator creates four files by default in this folder, which describe the general Phase2 way to demonstrate how to use a new component:
 
@@ -87,7 +87,7 @@ Describes to Webpack the files to include when generating the Pattern Lab demos.
 ### component.twig
 This should serve as an example twig file that shows an inclusion of the new pattern, placed with example variables and layouts so that it will appear like an intended component when viewed in the demos.
 
-The default .twig file places a standard Twig-style `include` of your new component, but you can (and should) modify this page to meet your design system better. Look at the default patters for good examples of how to create a demo template.
+The default .twig file places a standard Twig-style `include` of your new component, but you can (and should) modify this page to meet your design system better. Look at the default patterns for good examples of how to create a demo template.
 
 ### component.md
 An additional readme that may describe how to use your demo, its implications, or others. By default the variables that a component requires are often documented here, in addition to in the component's _component.twig file.
@@ -97,6 +97,6 @@ An optional way to override the data in `/_data/data.yml`, to display something 
 
 Due to Particle including the [Faker plugin of Pattern Lab](https://github.com/pattern-lab/plugin-php-faker), you can use the [Node.JS Faker API](https://www.npmjs.com/package/faker) to generate random data to appear in your demos! See `/_data/data.yml` for examples.
 
-**Note:** If you would like to create demo data to be global between all patterns, add the variables to `/_data/data.yml`.
+**Note:** If you would like to create demo data to be global between all patterns, add the variables to a Yaml file in the `/_data` folder, such as `/_data/data.yml`.
 
 For more information about how Pattern Lab expects variables to be added for use in patterns, see the [Pattern](https://patternlab.io/docs/data-overview.html) Lab docs.

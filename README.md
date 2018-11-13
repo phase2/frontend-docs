@@ -8,7 +8,7 @@ Particle is an opinionated set of tools and examples to:
 
 ## Particle Features
 
-* Drupal theme, Grav theme, Pattern Lab instance
+* Drupal theme, Grav theme, [Pattern Lab](https://patternlab.io/docs/) instance
 * Strict [Atomic Design](http://atomicdesign.bradfrost.com/) component structure
 * Robust Webpack bundling of all CSS, JavaScript, font, and static assets for multiple targets
 * [Webpack Dev Server](https://github.com/webpack/webpack-dev-server) for local hosting and hot reloading of assets into Pattern Lab
@@ -21,6 +21,7 @@ Particle is an opinionated set of tools and examples to:
 
 ## Documentation To-Do List
 
+* Go over basics of Pattern Lab, the specific way Particle has Pattern Lab set up by default, and suggested uses.
 * Folder & config structure need updated to current Webpack structure
 * Explain Particle.js and how the `Particle()` function smashes various Webpack configs together
 * Explain Webpack structure \(CSS modes, etc.\)

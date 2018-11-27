@@ -2,10 +2,10 @@
 
 ## System Requirements
 
-* [Node `^6 || ^8 || ^10`](https://nodejs.org/)
-* [NPM `^5.2 || ^6`](https://www.npmjs.com/)
-* [PHP `5.6 || ^7`](https://php.net/)
-* [Composer `^1`](https://getcomposer.org/)
+- [Node `^6 || ^8 || ^10`](https://nodejs.org/)
+- [NPM `^5.2 || ^6`](https://www.npmjs.com/)
+- [PHP `5.6 || ^7`](https://php.net/)
+- [Composer `^1`](https://getcomposer.org/)
 
 ## Install System Dependencies
 
@@ -31,7 +31,7 @@ Run `source ~/.bashrc` or `source ~/.zshrc` after each step to ensure command is
 brew update && brew upgrade
 ```
 
-### Install PHP 7.2  <a id="install-php-7-2"></a>
+### Install PHP 7.2 <a id="install-php-7-2"></a>
 
 ```bash
 brew install php72
@@ -49,6 +49,41 @@ brew install composer
 All Windows instructions are for WSL \("Bash on Ubuntu on Windows"\).
 {% endhint %}
 {% endtab %}
+
+{% tab title="Debian" %}
+{% hint style="info" %}
+This guide also works on Debian-based distros like Ubuntu, Mint, etc.
+{% endhint %}
+
+### Update APT
+
+```bash
+sudo apt-get update && apt-get upgrade
+```
+
+### Install PHP 7.2
+
+```bash
+sudo apt-get install php7.2 php7.2-common
+```
+
+### Download Composer
+
+```bash
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+```
+
+### Install Composer Globally
+
+```bash
+mv composer.phar /usr/local/bin/composer
+```
+
+{% endtab %}
+
 {% endtabs %}
 
 ### Install NVM
@@ -108,4 +143,3 @@ npm start
 ### Open Particle
 
 Simply visit [http://0.0.0.0:8080/pl](http://0.0.0.0:8080/pl) or [http://localhost:8080/pl](http://localhost:8080/pl) and start editing files!
-

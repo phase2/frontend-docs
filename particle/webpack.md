@@ -51,4 +51,3 @@ npx webpack-bundle-analyzer dist/app-pl/assets/stats.json
 You'll be greeted with an open browser tab featuring a visualization at [http://localhost:8888](http://localhost:8888/):
 
 ![webpack-bundle-analyzer showing stats for the default Pattern Lab app bundle](../.gitbook/assets/image.png)
-

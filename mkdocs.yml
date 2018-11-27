@@ -1,3 +1,5 @@
+# Legacy component from the ReadTheDocs structure
+
 site_name: Particle Docs
 theme: readthedocs
 pages:

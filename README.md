@@ -1,10 +1,10 @@
-# Intro
+# What is Particle?
 
 Particle is an opinionated set of tools and examples to:
 
-1. Build an application-agnostic **design system** made of assets like Twig, Sass, JavaScript, images, etc
-2. Apply that **design system** to a locally-served Pattern Lab for rapid prototyping
-3. Apply that **design system** to other consuming apps like, Drupal, Grav, or \(soon\) Wordpress
+1. Build one or more application-agnostic **design systems** made of assets like Twig, Sass, JavaScript, images, etc
+2. Apply those **design systems** to a locally-served Pattern Lab for rapid prototyping
+3. Apply those **design systems** to other consuming apps like, Drupal, Grav, or \(soon\) Wordpress
 
 ## Particle Features
 
@@ -32,4 +32,3 @@ Particle is an opinionated set of tools and examples to:
 * Example workflows
 * Flesh out the "thinking" sections
 * Update the Drupal apps section \(what goes here vs. Drupal under Frontend?\)
-

@@ -46,7 +46,7 @@ And the kick off the Pa11y tests in another session:
 npm run test:pa11y
 ```
 
-See `./tools/tests/accessibility/pa11y.js` for [configuration options](https://github.com/pa11y/pa11y/tree/5.x#configuration). Note the ignore options are for example only; add your needed updates to the options object. Add additional pages to the test via the `testPaths` array.
+See `tools/tests/accessibility/pa11y.js` for [configuration options](https://github.com/pa11y/pa11y/tree/5.x#configuration). Note the ignore options are for example only; add your needed updates to the options object. Add additional pages to the test via the `testPaths` array.
 
 ```javascript
 const options = {
@@ -66,9 +66,8 @@ const options = {
 
 Particle does not include VRT out of the box, but there are plenty of great options out there depending on your needs. Here are some of our favorites, in alphabetical order:
 
-* [BackstopJS](https://github.com/garris/BackstopJS)
-* [PhantomJS](https://github.com/ariya/phantomjs)
-* [Puppeteer](https://github.com/GoogleChrome/puppeteer)
-* [SlimerJS](https://github.com/laurentj/slimerjs)
-* [WebdriverIO](http://webdriver.io/)
-
+- [BackstopJS](https://github.com/garris/BackstopJS)
+- [PhantomJS](https://github.com/ariya/phantomjs)
+- [Puppeteer](https://github.com/GoogleChrome/puppeteer)
+- [SlimerJS](https://github.com/laurentj/slimerjs)
+- [WebdriverIO](http://webdriver.io/)

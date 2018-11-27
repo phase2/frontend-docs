@@ -10,12 +10,16 @@ npm run new
 
 Follow the onscreen prompts for the location, included files, and name of the new component.
 
+### Versions Prior to v10.1.0
+
+**Then make sure you edit `source/design-system.js` and add your new component.** Versions after this should update next time you build.
+
 ## Anatomy of a Component
 
 All components require a set of files:
 
 ```text
-# ./source/_patterns/01-atoms/button/
+# ./source/{design-system}/_patterns/01-atoms/button/
 .
 ├── demo                            # Demo implementations; can be removed on deploy to prod
 │   ├── index.js                    # Pulls in Twig, YAML, MD inside demo/ so Webpack is aware
@@ -30,7 +34,7 @@ All components require a set of files:
 Optionally, you can add a `__test__` folder to your components base directory \(note the two underscores before and after\) for Jest unit testing like so:
 
 ```text
-# ./source/_patterns/01-atoms/button/
+# ./source/{design-system}/_patterns/01-atoms/button/
 .
 ├── __test__                        # Jest unit tests. Read automatically during "npm run test:unit"
 │   └── button.test.js              # Unit test JS functions. Limited DOM manipulation

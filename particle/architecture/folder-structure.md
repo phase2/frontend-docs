@@ -115,7 +115,7 @@ The design system is consumed by "apps". The three apps included are a Drupal th
 | :--- | :--- | :--- | :--- |
 | `source/{design-system}/_patterns/00-protons/` | `@protons` | `protons` | TBD |
 | `source/{design-system}/_patterns/01-atoms/` | `@atoms` | `atoms` | TBD |
-| `source/{design-system}/_patterns/02-molecules/` | `@molecules` | `molcules` | TBD |
+| `source/{design-system}/_patterns/02-molecules/` | `@molecules` | `molecules` | TBD |
 | `source/{design-system}/_patterns/03-organisms/` | `@organisms` | `organisms` | TBD |
 | `source/{design-system}/_patterns/04-templates/` | `@templates` | `templates` | TBD |
 | `source/{design-system}/_patterns/05-pages/` | `@pages` | `pages` | TBD |

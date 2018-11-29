@@ -6,6 +6,7 @@ If you haven't already, be sure to check out the [Development Approach](../devel
 
 ## Available Guides
 
+* [Buttons](./buttons.md)
 * [Concurrent Atomic Design Systems](./cads.md) (CADS)
 * [Colors](./colors.md)
 * [Fonts and Typefaces](./fonts.md)

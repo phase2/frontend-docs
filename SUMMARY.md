@@ -18,6 +18,7 @@
 - [Development](particle/development/README.md)
   - [Approach](particle/development/approach.md)
   - [Coding and Linting](particle/development/coding-and-linting.md)
+  - [Using Demos](particle/development/using-demos.md)
   - [Bundling](particle/development/bundling.md)
   - [Task Running](particle/development/task-running.md)
   - [Testing](particle/development/testing.md)

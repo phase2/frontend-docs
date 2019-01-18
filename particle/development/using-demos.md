@@ -82,7 +82,7 @@ type of formatter, and any options specific to that formatter.
 For example, this will save a string variable named `site_title` that consists of
 two words.
 
-```
+```yml
 site_title: Faker.words(2, true)
 ```
 
@@ -90,7 +90,7 @@ This will save an object named `year` with two properties: one string named name
 `long` which consists of a year saved in "XXXX" format, and one string named `short`
 which consists of two random numbers between 01 and 99. 
 
-```
+```yml
 year:
   long: Faker.year
   short: Faker.numberBetween(01, 99)

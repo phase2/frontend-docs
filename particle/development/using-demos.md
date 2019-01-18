@@ -76,8 +76,13 @@ thus letting one use the [Node.JS Faker API](https://www.npmjs.com/package/faker
 in order to generate random data. This can be used for anything from names to dates
 to lorem ipsum.
 
-To use Faker, call the Faker object from within your demo's .yml file, with the
-type of formatter, and any options specific to that formatter.
+{% hint style="info" %}
+Faker can only be used from within `/_data/data.yml` by default, so don't try to
+use this within a specific demo's .yml file; it won't work!
+{% endhint %}
+
+To use Faker, call the Faker object from a variable assignment in the source `data.yml`,
+with the type of formatter and any options specific to that formatter.
 
 For example, this will save a string variable named `site_title` that consists of
 two words.

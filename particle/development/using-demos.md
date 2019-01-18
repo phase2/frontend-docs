@@ -32,7 +32,7 @@ pages for a single component.
 {% hint style="info" %}
 Note the pluralization of the component name, which indicates multiple examples
 of the component!
-{% endhint}
+{% endhint %}
 
 This should serve as an example twig file that shows an inclusion of the new pattern,
 placed with example variables and layouts so that it will appear like an intended

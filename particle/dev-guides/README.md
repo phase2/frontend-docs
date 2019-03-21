@@ -1,4 +1,4 @@
-# Developer Guides
+# Development Guides
 
 ## Overview
 
@@ -6,5 +6,6 @@ If you haven't already, be sure to check out the [Development Approach](../devel
 
 ## Available Guides
 
-* [Colors](./colors.md)
-* [Fonts and Typefaces](./fonts.md)
+* [Colors](colors.md)
+* [Fonts and Typefaces](fonts.md)
+

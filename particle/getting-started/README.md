@@ -2,10 +2,10 @@
 
 ## System Requirements
 
-- [Node `^6 || ^8 || ^10`](https://nodejs.org/)
-- [NPM `^5.2 || ^6`](https://www.npmjs.com/)
-- [PHP `5.6 || ^7`](https://php.net/)
-- [Composer `^1`](https://getcomposer.org/)
+* [Node `^6 || ^8 || ^10`](https://nodejs.org/)
+* [NPM `^5.2 || ^6`](https://www.npmjs.com/)
+* [PHP `5.6 || ^7`](https://php.net/)
+* [Composer `^1`](https://getcomposer.org/)
 
 ## Install System Dependencies
 
@@ -31,7 +31,7 @@ Run `source ~/.bashrc` or `source ~/.zshrc` after each step to ensure command is
 brew update && brew upgrade
 ```
 
-### Install PHP 7.2 <a id="install-php-7-2"></a>
+### Install PHP 7.2  <a id="install-php-7-2"></a>
 
 ```bash
 brew install php72
@@ -81,9 +81,7 @@ php -r "unlink('composer-setup.php');"
 ```bash
 mv composer.phar /usr/local/bin/composer
 ```
-
 {% endtab %}
-
 {% endtabs %}
 
 ### Install NVM
@@ -143,3 +141,4 @@ npm start
 ### Open Particle
 
 Simply visit [http://0.0.0.0:8080/pl](http://0.0.0.0:8080/pl) or [http://localhost:8080/pl](http://localhost:8080/pl) and start editing files!
+

@@ -156,3 +156,4 @@ Run Yeoman generator to make new component
 ```bash
 npm run new
 ```
+

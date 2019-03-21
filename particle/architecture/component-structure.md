@@ -12,7 +12,7 @@ Follow the onscreen prompts for the location, included files, and name of the ne
 
 ### Versions Prior to v10.1.0
 
-**Then make sure you edit `source/design-system.js` and add your new component.** Versions after this should update next time you build.
+**Then make sure you edit** `source/design-system.js` **and add your new component.** Versions after this should update next time you build.
 
 ## Anatomy of a Component
 
@@ -81,7 +81,5 @@ export default enable;
 
 ## Using Demos
 
-Every component has an optional demo folder, which is automatically pulled into
-Pattern Lab for development, design, and display. For more information on demo
-folders, how to use them, and how to efficiently set up demos, see the [Using Demos](../development/using-demos.md)
-page.
+Every component has an optional demo folder, which is automatically pulled into Pattern Lab for development, design, and display. For more information on demo folders, how to use them, and how to efficiently set up demos, see the [Using Demos](https://github.com/phase2/frontend-docs/tree/f85c7fe0f730ec4b7cfcb9bd47fef81489809d62/particle/development/using-demos.md) page.
+

@@ -1,6 +1,6 @@
 # Folder Structure
 
-## General Structure {#structure}
+## General Structure <a id="structure"></a>
 
 The following are significant items at the root level:
 
@@ -17,7 +17,7 @@ The following are significant items at the root level:
 └── ...                            # Mostly just config
 ```
 
-## Source structure {#source-structure}
+## Source structure <a id="source-structure"></a>
 
 `source/` holds all assets for the design system and looks like this:
 
@@ -42,7 +42,7 @@ The following are significant items at the root level:
 
 The design system is consumed by "apps". The three apps included are a Drupal theme, Grav theme, and a Pattern Lab installation.
 
-## App structure {#app-structure}
+## App structure <a id="app-structure"></a>
 
 `apps/pl/` holds the _entry point_ for all Pattern Lab assets, as well as the PHP engine:
 

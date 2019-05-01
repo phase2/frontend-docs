@@ -6,7 +6,7 @@ Particle provides a Drupal 8 theme, although the starting steps are slightly dif
 2. Extract to `themes/` at the root of your Drupal 8 install. \(i.e. this readme should be at `{drupal-root}/themes/particle/README.md`\)
 3. Download and install the [Component Libraries module](https://www.drupal.org/project/components):
 
-   `drush dl components drush en components -y`
+   `composer require 'drupal/components:^1.0`
 
    or
 

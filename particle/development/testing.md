@@ -64,11 +64,19 @@ const options = {
 
 ## Visual Regression Testing
 
-Particle does not include VRT out of the box, but there are plenty of great options out there depending on your needs. Here are some of our favorites, in alphabetical order:
+Particle includes basic BackstopJS configuration and tests for visual regression testing. Backstop, like many VRT packages, works by allowing engineers to capture "reference" screenshots of a website prior to making or deploying changes, then, after the changes are made, taking "test" screenshots, and comparing the two sets.
 
-* [BackstopJS](https://github.com/garris/BackstopJS)
-* [PhantomJS](https://github.com/ariya/phantomjs)
-* [Puppeteer](https://github.com/GoogleChrome/puppeteer)
-* [SlimerJS](https://github.com/laurentj/slimerjs)
-* [WebdriverIO](http://webdriver.io/)
-
+To run [BackstopJS](https://garris.github.io/BackstopJS/) visual regression testing in Particle, first you'll need to install the BackstopJS npm package:
+```bash
+npm install backstopjs --save-dev
+```
+Backstop configuration is located in `./tools/tests/vrt/backstop.json`. See the full docs on [npmjs.com](https://www.npmjs.com/package/backstopjs) for help on configuring your tests; we provide two default Pattern Lab pages, but any URL can be entered for tests, including local URLs.
+Prior to making changes (such as when developing a new feature) or prior to deploying a new version of software, run references in a bash session:
+```bash
+npm run test:backstop:ref
+```
+Then, after changes are made, run the tests in a bash session:
+```bash
+npm run test:backstop:test
+```
+Your default browser should automatically open with the test results.

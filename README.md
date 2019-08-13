@@ -20,4 +20,8 @@ It's even better to configure eslint to extend the AirBnB ES6 standard, give rea
 
 ## Documentation To-Do List
 
-* [ ] 
+* [ ] Re-order sections
+* [ ] Revamp all directory references
+* [ ] Pull in architecture image
+* [ ] Reference all publicly available slides
+

@@ -131,7 +131,7 @@ Most of the design system lives in the source folders from `00-protons` to `03-o
 
 ### Templates
 
-Templates are meant to be leaner. They may or may not be used explicitly by templates in Drupal and elsewhere, but they provide guidance for where classes need to be applied, and a reliable mock for Pattern Lab.
+Templates are meant to be leaner than you might see elsewhere. They may or may not be used explicitly by templates in Drupal and elsewhere, but they provide guidance for where classes need to be applied, and a reliable mock for Pattern Lab.
 
 ### Pages
 
@@ -141,3 +141,19 @@ This is one reason that the static Pattern Lab bundle is so much larger than oth
 
 This split is the reason there are no demo folders inside of individual template components. Pages is a conglomeration of all template demos.
 
+### Debugging
+
+Twig debugging in Pattern Lab requires slightly different implementation than elsewhere, since the Twig engine is, essentially, hidden from Particle. To enable debugging functions and output, such as `dump()`, modify  /particle/apps/node-pl/patternlab-config.json to have an extra line:
+
+```JSON
+      "alterTwigEnv": [
+        {
+          "file": "./apps/node-pl/pattern-lab/alter-twig.php",
+          "functions": [
+            "addFilters",
+            "addFunctions", // Add this comma.
+            "addDebug" // Add this line.
+          ]
+        }
+      ]
+```

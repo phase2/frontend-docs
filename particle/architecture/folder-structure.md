@@ -141,7 +141,7 @@ Our reasoning for categorization of components within each is pretty close to pu
 
   > "Templates are page-level objects that place components into a layout and articulate the design’s underlying content structure." [Source.](http://atomicdesign.bradfrost.com/chapter-2/#templates)
 
-* **Pages** can be considered full "prototypes" of a design systgem, with real content, images, etc.
+* **Pages** can be considered full "prototypes" of a design system, with real content, images, etc.
 
   > "Pages are specific instances of templates that show what a UI looks like with real representative content in place." [Source.](http://atomicdesign.bradfrost.com/chapter-2/#pages)
 

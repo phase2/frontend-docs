@@ -4,8 +4,8 @@
 
 ## Particle
 
-* [What is it?](docs/particle/intro.md)
-* [Getting Started](docs/particle/getting-started/README.md)
+* [What is it?](docs/particle/README.md)
+* [Getting Started](docs/particle/getting-started.md)
   * [Drupal 8](docs/particle/getting-started/drupal-8.md)
 * [Commands](docs/particle/commands.md)
 * [Architecture](docs/particle/architecture/README.md)

@@ -4,7 +4,4 @@
   - Apps
   - [Commands](particle/commands.md)
 
-- Frontend
-
-  - Thing 1
-  - Thing 2
+- [Frontend](frontend.md)

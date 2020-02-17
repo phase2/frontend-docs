@@ -1,8 +1,4 @@
----
-description: Phase2 frontend development documentation.
----
-
-# Intro
+## Particle
 
 At Phase2 we take a two-tiered approach to frontend:
 

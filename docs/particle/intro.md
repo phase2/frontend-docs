@@ -4,7 +4,7 @@ description: Particle high-level overview
 
 # What is it?
 
-![Astrogoat is the official logo of Particle, by Lisa Jansen](../.gitbook/assets/astrogoat.png)
+![Astrogoat is the official logo of Particle, by Lisa Jansen](../../.gitbook/assets/astrogoat.png)
 
 ## What is Particle?
 

@@ -27,7 +27,7 @@
 * [Apps](docs/particle/apps/README.md)
   * [Drupal](docs/particle/apps/drupal.md)
   * [Pattern Lab](docs/particle/apps/pattern-lab.md)
-* [FAQ](docs/particle/faq/README.md)
+* [FAQ](docs/particle/faq.md)
   * [Troubleshooting](docs/particle/faq/troubleshooting.md)
   * [Contributing](docs/particle/faq/contributing.md)
 * [Appendix](docs/particle/appendix.md)

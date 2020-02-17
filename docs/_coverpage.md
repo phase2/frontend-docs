@@ -9,4 +9,4 @@
 - Apply that design system to a Drupal theme
 
 [GitHub](https://github.com/phase2/particle)
-[Getting Started](#particle)
+[Getting Started](particle/getting-started.md)

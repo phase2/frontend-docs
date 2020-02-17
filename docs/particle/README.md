@@ -1,12 +1,8 @@
----
-description: Particle high-level overview
----
+# About Particle
 
-# What is it?
+![Astrogoat is the official logo of Particle, by Lisa Jansen](../_images/astrogoat.png)
 
-![Astrogoat is the official logo of Particle, by Lisa Jansen](../../.gitbook/assets/astrogoat.png)
-
-## What is Particle?
+## What is it?
 
 Particle is an opinionated set of tools and examples to:
 
@@ -14,7 +10,7 @@ Particle is an opinionated set of tools and examples to:
 2. Apply those **design systems** to a locally-served Pattern Lab for rapid prototyping
 3. Apply those **design systems** to other consuming apps like, Drupal
 
-## Particle Features
+## Features
 
 * Drupal theme, [Pattern Lab](https://patternlab.io/docs/) instance
 * Strict [Atomic Design](http://atomicdesign.bradfrost.com/) component structure

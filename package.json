@@ -1,0 +1,25 @@
+{
+  "name": "frontend-docs",
+  "version": "1.0.0",
+  "description": "## live docs available [here](https://phase2.github.io/frontend-docs/)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phase2/frontend-docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phase2/frontend-docs/issues"
+  },
+  "homepage": "https://github.com/phase2/frontend-docs#readme",
+  "dependencies": {
+    "docsify-cli": "^4.4.0"
+  }
+}

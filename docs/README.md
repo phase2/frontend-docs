@@ -1,6 +1,6 @@
 ## Particle
 
-At Phase2 we take a two-tiered approach to frontend:
+At [Phase2](https://www.phase2technology.com) we take a two-tiered approach to frontend:
 
 1. [Document](frontend/thinking.md) the mental models, processes, tools, and conventions of frontend development
 2. Anything that can be captured and automated from the documentation is included within our tooling, called [Particle](particle/README.md).

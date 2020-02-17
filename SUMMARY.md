@@ -27,7 +27,6 @@
 * [Apps](docs/particle/apps/README.md)
   * [Drupal](docs/particle/apps/drupal.md)
   * [Pattern Lab](docs/particle/apps/pattern-lab.md)
-  * [Grav](docs/particle/apps/grav.md)
 * [FAQ](docs/particle/faq/README.md)
   * [Troubleshooting](docs/particle/faq/troubleshooting.md)
   * [Contributing](docs/particle/faq/contributing.md)
@@ -35,7 +34,7 @@
 
 ## Frontend
 
-* [Intro](docs/frontend/intro.md)
+* [Intro](docs/frontend/README.md)
 * [Thinking](docs/frontend/thinking.md)
 * [Atomic Design](docs/frontend/atomic-design.md)
 * [Drupal](docs/frontend/drupal.md)

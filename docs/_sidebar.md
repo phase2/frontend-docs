@@ -9,4 +9,8 @@
   - [How Tos](particle/how-to.md)
   - [FAQ](particle/faq.md)
 
+- Guides
+
+  - [Install System Dependencies](guides/system-dependencies.md)
+
 - [Frontend](frontend.md)

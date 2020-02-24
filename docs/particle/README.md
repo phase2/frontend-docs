@@ -22,3 +22,8 @@ Particle is an opinionated set of tools and examples to:
 * All Webpack configuration is fully configurable
 * [PostCSS](https://github.com/postcss/postcss/blob/master/README.md) transformation powered by [browserslist](https://github.com/browserslist/browserslist).
 
+## System Requirements
+
+* [Node `^8 || ^10`](https://nodejs.org/)
+* [NPM `^5.2 || ^6`](https://www.npmjs.com/)
+* [PHP `^7`](https://php.net/)

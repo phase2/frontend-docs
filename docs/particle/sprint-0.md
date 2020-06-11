@@ -13,7 +13,7 @@ That's it! Your Particle is now 100% Grav-free.
 
 ## Removing Default Patterns
 
-Particle comes by default with many different patterns based on [Bootstrap 4](https://getbootstrap.com/). If you would like to remove these default patterns in reverse order: Pages =&gt; Templates =&gt; Organisms =&gt; Molecules =&gt; Atoms. Here are a few gotchas:
+Particle comes by default with many different patterns based on [Tailwind CSS](https://tailwindcss.com/). If you would like to remove these default patterns in reverse order: Pages =&gt; Templates =&gt; Organisms =&gt; Molecules =&gt; Atoms. Here are a few gotchas:
 
 * Don't Remove Protons: these "patterns" contain largely config. Simply put, they contain a bit of the magic that makes Particle great. Once you know more about how these are working you can override them.
 * Don't Remove Atoms/Images or Atoms/SvgIcon right away: while these patterns are replaceable, they're used in a few places that may result in angry console output.
@@ -29,16 +29,6 @@ No but seriously, your linter might get mad at you. For full instruction, see th
 * ESLint: [.eslintrc.js](https://eslint.org/) [AirBnb JS Style Guide](https://github.com/airbnb/javascript)
 * Prettier: [.prettierrc.js](https://prettier.io/)
 * Stylelint: [.stylelintrc](https://stylelint.io/user-guide/)
-
-## Removing Bootstrap
-
-@todo: More info on how to remove Bootstrap JS is needed.
-
-### SCSS
-
-By default a large number of Bootstrap micro libraries are included with the base Particle components. This allows Pattern Lab to look good and usable from the jump, while also giving themers an easy ability to cut out styles and libraries they don't need.
-
-Bootstrap styles are located in `source/{design-system}/_patterns/00-protons/_bootstrap-printing.scss` As you can guess by looking at the file, you can remove any individual Bootstrap pattern by removing the line. Since Bootstrap is mostly class-based, removing any given line won't cause compile errors \(although it may make certain pages look less pretty\)
 
 ## Renaming Drupal Theme
 

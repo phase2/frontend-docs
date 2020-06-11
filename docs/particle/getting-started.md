@@ -138,5 +138,5 @@ npm start
 
 Just like the Pattern Lab [Getting Started](#pattern-lab), when Webpack output appears, visit [http://0.0.0.0:8080/app-node-pl/pl](http://0.0.0.0:8080/app-node-pl/pl) or [http://localhost:8080/app-node-pl/pl](http://localhost:8080/app-node-pl/pl) to immediately start building and previewing your design system in Pattern Lab, while all assets are being compiled to your Drupal theme.
 
-For more information on developing Drupal alongside Particle, check the [Drupal section of Apps](../apps/drupal.md).
+For more information on developing Drupal alongside Particle, check the [Drupal section of Apps](/particle/apps.md#drupal).
 

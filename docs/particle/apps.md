@@ -2,7 +2,7 @@
 
 ## About
 
-!> TODO: "apps" concept expained here
+!> TODO: "apps" concept explained here
 
 ## Adding or Removing Apps
 

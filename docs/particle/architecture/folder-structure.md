@@ -63,48 +63,28 @@ The design system is consumed by "apps". The three apps included are a Drupal th
 
 ### Drupal
 
-`apps/drupal/` holds the _entry point_ for all Drupal 8 theme assets, as well as templates, YAML, etc:
+`apps/drupal-default/` holds the _entry point_ for all Drupal 8 theme assets, as well as templates, YAML, etc:
 
 ```text
-# ./app/drupal/
+# ./apps/drupal-default/
 .
-├── scss/                           # Theme-only Sass, tweaks to Drupalisms that need not be in the design system
+├── particle_helper/                # Theme-only Sass, tweaks to Drupalisms that need not be in the design system
 │   └── _drupal-styles.scss         # Add more Drupal styles here, like _views.scss, _field.scss, etc.
-├── templates/                      # Templates integrate Drupal data with design system patterns
+│   ├── block.html.twig             # Example Drupal template integrating, say @molecules/_card.twig
+│   ├── block.html.twig             # Example Drupal template integrating, say @molecules/_card.twig
+│   ├── block.html.twig             # Example Drupal template integrating, say @molecules/_card.twig
+│   ├── block.html.twig             # Example Drupal template integrating, say @molecules/_card.twig
+├── particle_theme/                 # Templates integrate Drupal data with design system patterns
+│   ├── block.html.twig             # Example Drupal template integrating, say @molecules/_card.twig
+│   ├── block.html.twig             # Example Drupal template integrating, say @molecules/_card.twig
+│   ├── block.html.twig             # Example Drupal template integrating, say @molecules/_card.twig
 │   ├── block.html.twig             # Example Drupal template integrating, say @molecules/_card.twig
 │   └── ...                         # There can be many Drupal templates
+├── .eslintrc.js                    # Linting configuration file
+├── drupal-jquery.js                # Custom jQuery library that overrides Drupal's jQuery instance   
 ├── index.js                        # Imports and applies the design system to a bundle for Drupal
-├── particle.info.yml               # Theme information. Design system namespaces are auto-injected!
-├── particle.libraries.yml          # The output JS and CSS bundles are included here
-├── particle.theme                  # Drupal preprocess functions
-├── index.js                        # Imports and applies the design system to a bundle for Drupal
-├── webpack.drupal.dev.js           # Webpack config unique to dev, or that overrides shared
-├── webpack.drupal.prod.js          # Webpack config unique to prod, or that overrides shared
-└── webpack.drupal.shared.js        # Webpack config shared between Drupal dev and Drupal prod
-```
-
-### Grav
-
-`apps/grav/` holds the _entry point_ for all Grav theme assets, as well as templates, YAML, etc:
-
-```text
-# ./app/grav/
-.
-├── scss/                           # Theme-only Sass, tweaks to Grav that need not be in the design system
-│   └── _grav-styles.scss           # Add more Grav styles here, like _views.scss, _field.scss, etc.
-├── templates/                      # Templates integrate Drupal data with design system patterns
-│   ├── partials/                   # Smaller template snippets for use later
-│   │   └── ...                     # Headers, footers, navigation, etc.
-│   ├── default.html.twig           # Example grav template integrating, say @molecules/_card.twig
-│   └── ...                         # There can be many Grav templates
-├── blueprints.yaml                 # Grav theme information
-├── index.js                        # Imports and applies the design system to a bundle for Grav
-├── particle.php                    # Used by Grav for theme and plugin events
-├── particle.yaml                   # Theme configuration
-├── twig-namespaces.yaml            # Namespace definition
-├── webpack.grav.dev.js             # Webpack config unique to dev, or that overrides shared
-├── webpack.grav.prod.js            # Webpack config unique to prod, or that overrides shared
-└── webpack.grav.shared.js          # Webpack config shared between Grav dev and Grav prod
+├── particle.app.config.js          # Config file that allows generated design system components to work with the Drupal theme  
+└── webpack.config.js               # Webpack configuration specific for Drupal. Referenced by the "dev:drupal" and "build:drupal" commands
 ```
 
 ## Atomic Design and Namespaces

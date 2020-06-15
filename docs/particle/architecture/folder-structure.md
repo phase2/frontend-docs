@@ -75,10 +75,10 @@ The design system is consumed by "apps". The three apps included are a Drupal th
 │   ├── block.html.twig             # Example Drupal template integrating, say @molecules/_card.twig
 │   ├── block.html.twig             # Example Drupal template integrating, say @molecules/_card.twig
 ├── particle_theme/                 # Templates integrate Drupal data with design system patterns
+│   ├── particle.libraries.yml          # The output JS and CSS bundles are included here
+│   ├── particle.layouts.yml             # Example Drupal template integrating, say @molecules/_card.twig
 │   ├── block.html.twig             # Example Drupal template integrating, say @molecules/_card.twig
-│   ├── block.html.twig             # Example Drupal template integrating, say @molecules/_card.twig
-│   ├── block.html.twig             # Example Drupal template integrating, say @molecules/_card.twig
-│   ├── block.html.twig             # Example Drupal template integrating, say @molecules/_card.twig
+│   ├── particle.info.yml           # Theme information. Design system namespaces are auto-injected!
 │   └── ...                         # There can be many Drupal templates
 ├── .eslintrc.js                    # Linting configuration file
 ├── drupal-jquery.js                # Custom jQuery library that overrides Drupal's jQuery instance   

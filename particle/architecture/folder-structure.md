@@ -77,7 +77,6 @@ The design system is consumed by "apps". The three apps included are a Drupal th
 ├── particle.info.yml               # Theme information. Design system namespaces are auto-injected!
 ├── particle.libraries.yml          # The output JS and CSS bundles are included here
 ├── particle.theme                  # Drupal preprocess functions
-├── index.js                        # Imports and applies the design system to a bundle for Drupal
 ├── webpack.drupal.dev.js           # Webpack config unique to dev, or that overrides shared
 ├── webpack.drupal.prod.js          # Webpack config unique to prod, or that overrides shared
 └── webpack.drupal.shared.js        # Webpack config shared between Drupal dev and Drupal prod
